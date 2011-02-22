@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: One
+  description_nl: MyString
+  creation_date: 2008-11-19
+  creation_date_text: MyString
+  duration_minutes: 1
+  copyright: MyString
+  permalink: one
+
+two:
+  title: Two
+  description_nl: MyString
+  creation_date: 2008-11-19
+  creation_date_text: MyString
+  duration_minutes: 1
+  copyright: MyString
+  permalink: two

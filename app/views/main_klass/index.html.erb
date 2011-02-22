@@ -1,0 +1,52 @@
+  <% 
+     if navigation_letters && !params[:q] %>
+        <div id="browser-wrapper">
+          <div id="browser">
+            <ul>
+              <li id="browser-numbers">
+                <a class="a" href="#">#</a>
+                <ul>
+                  <% (0..9).each do |nr| %>
+                    <li><%= link_to nr, eval("#{controller.controller_name}_path(:letters => nr)"), :class => 'aa' %></li>
+                  <% end %>
+                </ul>
+              </li>
+              <%
+                startletters = navigation_letters.letters
+                ('A'..'Z').each do |letter| %>
+                <li class='<%= "selected" if (params[:letters] && (params[:letters].first == letter)) %> letter' id="letter-<%=letter%>" >
+                  <a class="a" href="#" onclick="$('.letter').removeClass('selected'); $('#letter-<%=letter%>').addClass('selected'); return false;"><%= letter %> </a>
+                  <ul>
+                    <%
+                      ('a'..'z').each do |subletter|
+                        currentletters = "#{letter}#{subletter}"
+                        if startletters[letter] && startletters[letter].include?(currentletters) %>
+                          <li <%= "class='selected'" if (params[:letters] && (params[:letters] == "#{letter}#{subletter}")) %>>
+                            <%= link_to "#{letter}#{subletter}", eval("#{controller.controller_name}_path(:letters => currentletters)"), :class => 'aa' %>
+                          </li>
+                        <% else %>
+                          <li></li>
+                        <% end %>
+                    <% end %>
+                  </ul>
+                </li>
+              <% end %>
+            </ul>
+            <p><%= t('label.pick_a_letter')%>&hellip;</p>
+          </div>
+        </div>
+    <% end %>
+
+  <% if @numbers.present? 
+		@numbers.each do |key, value| %>
+		  <% if value.to_i > 0 -%>
+			  <div class='document-type'>
+			    <%= link_to "#{value} #{t("title.#{key.name.underscore.pluralize}")}", eval("#{key.name.underscore.pluralize}_path")%>
+			  </div>
+			<% end -%>
+ 	<%  end
+     end %>
+
+  <%= browser_results %>
+
+

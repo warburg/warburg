@@ -1,0 +1,6 @@
+<%- @tags.each do |tag| -%>
+$("#tags").append("<%= escape_javascript(render :partial => '/tags/tag', :object => tag) %>")
+<%- end -%>
+$("#addtag")[0].reset();
+$('.add-a-tag').toggle();
+$('#tags').show();

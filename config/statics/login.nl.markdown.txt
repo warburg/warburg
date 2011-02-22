@@ -1,0 +1,19 @@
+
+__Welkom!__
+
+Door in te loggen op deze website kan je:
+
+* meer data consulteren, ook data waarop we nog niet alle kwaliteitscontroles hebben afgewerkt: het gaat dan om heel recente nieuwe gegevens, maar ook om gegevens uit de periode 1950-1993 ;
+* het archief van de CultuurDatabank sinds 2006 raadplegen ;
+* kleine privé comments en 'post-its' achterlaten als geheugensteuntje bij het raadplegen van onze bestanden ;
+* trefwoorden toevoegen waar je het relevant vindt ; deze worden publiek zichtbaar.
+
+
+Je hoeft daarvoor geen nieuw account en paswoord aan te maken. Dankzij OpenID kan je je bestaande accounts als Myspace of Flickr gebruiken. Er zijn ook diverse gratis openID-servers beschikbaar, sommige ook in het Nederlands. Meer hierover lees je hier: [openid.net](http://openid.net).
+
+
+Door in te loggen aanvaard je de [gebruiksvoorwaarden](/legal). Samengevat: Voor alle tags en notes die je aanmaakt geef je ons de toelating om te publiceren en te kopiëren. Schuttingtaal wordt niet getolereerd. Iedereen staat voor zichzelf in. We mogen je af en toe een email sturen.
+
+
+[Bel ons op](/about) als u nog vragen hebt of het niet eens bent met informatie op deze website. 
+

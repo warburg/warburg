@@ -1,0 +1,84 @@
+= EagerRecord
+
+Never pass the `:include` option to `find` again.
+
+EagerRecord is a simple extension to ActiveRecord that automates the process
+of preloading associations in a result set. Each time ActiveRecord loads a
+collection of more than one record out of the database, a reference to the
+collection is stored in each record. Then, when you first access an association
+on one of those records; EagerRecord automatically preloads that association for
+all of the records in the collection.
+
+== Basic Usage
+
+There isn't really any usage; just install the gem and add it as a dependency.
+Whereas before you might write:
+
+  Comment.all(:include => :user).each { |comment| puts comment.user }
+
+Now you get the same effect with:
+
+  Comment.all.each { |comment| puts comment.user }
+
+In the first iteration of that loop, all the comments' users are loaded in a
+single SQL query.
+
+== Scoped Preloading
+
+It isn't enabled by default, but EagerRecord has experimental support for
+"scoped preloading". If you turn it on, EagerRecord will perform preloading
+on scoped associations in the same way that it does so for normal ones. For
+instance, let's say you've got a `:ham` named scope for your `Comment` class:
+
+  Post.all.each { |post| puts post.comments.ham.inspect }
+
+In the first iteration of this loop, EagerRecord will preload all of the ham
+comments for all of the posts in the collection; the above code will only
+generate two SQL queries. A couple of caveats:
+
+* This only works for normal `has_many` associations right now. I could add
+  support for other collection types in the future.
+* The code that does this is considerably more invasive in ActiveRecord's
+  internals than the regular eager preloading code. It basically has to trick
+  ActiveRecord into thinking that there is an association collection defined
+  on your model that doesn't actually exist, and then tell it to preload that
+  association. There are a couple of tests; so I know it basically works, but
+  beware that your mileage may vary. Because of this, you have to explicitly
+  tell eager record you want to use this feature (put this line in a file in
+  `config/initializers`:
+
+  EagerRecord::ScopedPreloading.install
+
+	As an alternative to using this functionality, consider defining extra scoped
+	associations with `:readonly => true` as needed.
+
+=== Does it work with all association types?
+
+==== Mostly...
+
+The test suite covers just about all of them; if you find one that doesn't work,
+please file an issue.
+
+==== Except!
+
+There's a bug in ActiveRecord's preloading that causes it to build an invalid
+query when preloading a `has_many :through` association that defines a
+`:conditions` option that references the join table. For that reason,
+EagerRecord does not attempt to eagerly load `has_many :through` associations
+that have a `:conditions` option.
+
+=== Do I need to make any changes to my code?
+
+EagerRecord doesn't add any new methods to ActiveRecord, so you don't need to
+interact with it directly. However, you might want to make adjustments to your
+code to encourage preloading to happen at the earliest possible point. In
+particular, if you're using `size` or `first` or `last`, on a collection,
+but then later on also working with all the members of that collection, you're
+better off calling `to_a` at the beginning so that preloading happens and
+ActiveRecord doesn't make extra SQL queries.
+
+== This is free software.
+
+The author(s) of this software relinqiush all copyright on it to the maximum
+extent permitted by law. Anyone is free to copy, distribute, mangle, sell,
+improve, destroy, heckle, hate, or love this software with no restrictions.

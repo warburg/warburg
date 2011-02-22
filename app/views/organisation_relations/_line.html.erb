@@ -1,0 +1,36 @@
+<li id='<%=object.class.name.underscore %>-<%=object.id%>' class='<%= ul_id %>'>
+ <% form_for object, :html => {:name => 'line_relation_form'} do |f| %>
+    <h4><%= object.respond_to?('other_side') ? object.other_side(parent).title : object.title %></h4>
+
+    <% if object.class.respond_to?('relation_attributes') 
+          if object.class.relation_attributes.present? 
+            object.class.relation_attributes.each do |field| %>
+                <%= render_key(field, roles, :edit, f) %>
+				<!-- <%= debug object.class %> -->
+				<!-- <%= debug field %> -->
+                <%= render_value_for_edit(object.class, field, f) %>
+        		<% end %>
+	    	<% end %>
+
+          	<p><%= image_tag "spinner-save.gif", :id => "#{object.class.name.underscore}_#{object.id}_spinner",:style => "float: right; display: none; position: relative; top: 5px;" %>
+          	    
+          	<% if object.class.relation_attributes.present? %>
+           		<a href="#<%= object.class.name.underscore %>_<%= object.id %>_spinner" class="button line-relation-form-button" onclick="">
+              		<span><%=t('button.save')%></span>
+            	</a>
+            <% end %>
+
+	        <a href='#' class="remove" onclick='$.ajax({type:"POST", url:"<%= delete_relationship_path(ul_id, object.id, parent.class, parent.cached_slug) %>", dataType: "script", data: "authenticity_token=" +encodeURIComponent(<%= form_authenticity_token.inspect%>)}); return false;'>remove</a>
+      	</p>
+
+	<% else %>
+		<p>
+		    <%# <%= link_to_remote 'remove', delete_relationship_path(ul_id, parent.class, parent.cached_slug) %>
+			<a href='#' class="remove" onclick='$.ajax({type:"POST", url:"<%=delete_relationship_path(ul_id, object.id, parent.class, parent.cached_slug)%>", dataType: "script", data: "authenticity_token=" +encodeURIComponent(<%= form_authenticity_token.inspect%>)}); return false;'>remove</a>
+	        <%#<a href='#' class="remove" onclick='$.ajax({type:"DELETE", url:"<%= delete_url(object) % >", dataType: "script"}); return false;'>remove</a> %>
+		</p>
+	<% end %>
+
+<% end %>
+
+</li>

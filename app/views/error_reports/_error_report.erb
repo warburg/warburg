@@ -1,0 +1,26 @@
+<li class="postit error-report-<%=error_report.id%>">
+    <ul class="actions ">
+      <li class="edit"><a href="#" onclick="$('#edit-error-report-<%=error_report.id%>')[0].reset();$('.error-report-<%=error_report.id%>').toggle(); return false;"><%= t("error_reports.edit") %></a></li>
+      <li class="remove"><%= link_to(t('error_reports.remove'), delete_error_reports_path(error_report, @object.class, @object.id), :method => 'delete', :confirm => t('label.are_you_sure')) %></li>
+    </ul>
+
+    <h4 title="<%=error_report.user.email%>"><%= error_report.user.to_s %>: </h4>
+    <blockquote>
+        <p>&ldquo;<%=h error_report.message %>&rdquo;</p>
+    </blockquote>
+		<% if admin? %>
+			<br/>
+			<% form_tag(fix_error_reports_path(error_report.id), :id => "fix-error-reports-#{error_report.id}", :class => 'fix-error-report') do %>
+				<p><input type='checkbox' name='fixed' <%= "checked='checked'" if error_report.fixed %> onclick="$('#fix-error-reports-<%=error_report.id%>').submit();"> Fixed</p>
+			<% end %>
+		<% end %>
+
+</li><!-- error-report -->
+
+<% form_tag(edit_error_reports_path(error_report.id, @object.class, @object.id), :id => "edit-error-report-#{error_report.id}",  :class => "addpostit error-report-#{error_report.id}", :style => "display:none") do %>
+  <p>
+    <%= text_area_tag :error_report, error_report.message %>
+    <a href="#" class="button" onclick="$('#edit-error-report-<%=error_report.id%>').submit(); return false;"><span><%=t('button.save')%></span></a>
+    <a class="cancel" href="#" onclick="$('#edit-error-report-<%=error_report.id%>')[0].reset();$('.error-report-<%=error_report.id%>').toggle(); return false;"><%=t('button.cancel')%></a>
+  </p>
+<% end %>

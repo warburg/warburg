@@ -1,0 +1,711 @@
+# French translations for Ruby on Rails 
+# by Christian Lescuyer (christian@flyingcoders.com)
+# added custom values: Isabelle Meurrens & Dries Moreels
+
+fr:
+  custom:
+    name: VTI
+    home: VTI
+  
+  title:
+    show:
+      new: Nouvelle représentation
+      production: oeuvre
+      organisation: organisation
+      venue: lieu
+    press_cutting:
+      periodical: coupures de presse
+    festival:
+      new: Nouveau festival
+      organisation: organisation
+    article:
+      periodical_issue: numéro de périodique
+    grant:
+      new: Nouveau subside
+      person: personne
+      production: oeuvre
+      organisation: organisation
+    periodical:
+      periodical_issues: numéros de périodique
+    venue:
+      new: Nouvelle scène
+      organisation_venues: lieu
+    production: 
+      audio_video_title_about_productions: "audio/vidéo sur l'oeuvre"
+      article_about_productions: "articles sur l'oeuvres"
+      new: Nouvelle oeuvre
+      shows: "oeuvres chorégraphiques"
+      ico_title_about_productions: "images sur l'oeuvre"
+      ephemerum_about_productions: "ephemerum sur l'oeuvre"
+      book_title_about_productions: livre sur l'oeuvre
+      subject_of_documents: documents sur
+      press_cutting_about_productions: "coupure de presse sur l'oeuvre"
+      archive_part_about_productions: "archives sur l'oeuvre"
+      production_by_people: distribution
+      production_about_genres : par genre
+    book_title:
+      part_of_book_title: mot du titre
+      languages: langue
+      book_title_languages: langue du titre
+    languages:
+      show:
+        new: nouvelle représentation
+        production: oeuvre
+        organisation: organisation
+        venue: lieu
+    press_cutting:
+      press_cutting_about_genres: par genre
+      press_cutting_languages: langue
+      periodical: coupure de presse
+    festival:
+      new: nouveau festival
+      organisation: organisation du festival
+    article:
+      periodical_issue: numéro du périodique
+      article_about_genres: genre
+      article_languages: langue de l'article
+    ico_title:
+      archive_part: archives	
+      donation: donation
+      part_of_ico_title: mot(s) du titre
+      ico_title_about_genres: genre
+    organisation:
+      organisation_about_genres : par genre
+    book_copy:
+      warehouse : emplacement
+      book_title : titre
+      donation : donation
+    periodical_issue:
+      warehouse : emplacement                                 
+      donation : donation
+      part_of_issue : dans le numéro
+      periodical : périodique
+      articles : articles
+    person:
+      alias_of : alias
+    season:
+      new : "Nouvelle saison"
+      documents : document(s)
+    about: VTI
+#   about: Contredanse
+    actor: Acteur
+    archive_parts: Archive
+    archive_part_about_people: Archive
+    articles: Articles
+    audio_video_media: Support audio/video
+    audio_video_titles: Document audio/vidéo
+    book_copies: Exemplaires
+    book_title_by_people: Livres
+    book_titles: Livres
+    cdb_actors: Acteurs
+    cdb_addresses: Adresses
+    cdb_cities: Villes
+    cdb_event_details: Details de l'événement
+    cdb_events: Evénements
+    cdb_locations: Lieu
+    cdb_organisations: Organisateurs
+    cdb_physical_addresses: Adresses
+    date: Date
+    subject_of_documents: Documents traitant de
+    author_of_documents: Auteur des documents
+    details: Details
+    donations: Dons
+    ephemera: Ephemera
+    error_reports: Soumettre une erreur
+    festivals: Festivals
+    function: Fonction
+    help: Aide
+    ico_titles: Image
+    label: Label
+    legal: Mentions légales
+    login: S'identifier
+    logout: Se déconnecter
+    most_popular: Les plus consultés
+    name: Nom
+    object: Objet
+    organisation_relation_type: Type
+    organisations: Organisations
+    people: Personnes
+    periodical_issues: Numéro de périodique
+    press_cuttings: Coupure de presse
+    productions: Oeuvres
+    recently_added: Ajout récent
+    recently_updated: Modifications récentes
+    recently_viewed: Consultations récentes
+    results: Résultats
+    role: Rôle
+    periodicals: Périodiques
+    season_name: Saison
+    seasons: Saisons
+    sessions: S'identifier
+    shows: Représentations
+    subject: Sujet
+    tags: Mots-clefs
+    text: Texte
+    title: Titre
+    type: Type
+    users: Utilisateurs
+# Pour vti : 
+#   warehouses: Boîte d'archivage
+# pour contredanse : 
+  warehouses:
+    archive_part:
+      new: Nouvelles archives
+      archive_part_about_organisations: Concerne les organisations
+      archive_part_about_people: Concerne les personnes
+      archive_part_about_productions: Concerne les pièces
+      subject_relations: Sujet
+    article:
+      author_relations: Auteurs
+      new: Nouvel article
+      subject_relations: Sujet
+      article_about_organisations: Concerne les organisations
+      article_about_people: Concerne les personnes
+      article_about_productions: Concerne les pièces
+      article_by_organisations: Par les organisations
+      article_by_people: Par les personnes
+    audio_video_medium:
+      new: Nouveau document A/V
+      audio_video_title_on_media: Titre
+    audio_video_title:
+      author_relations: Auteurs
+      new: Nouveau document A/V
+      subject_relations: Sujet
+      audio_video_title_about_organisations: Concerne les organisations
+      audio_video_title_about_people: Concerne les personnes
+      audio_video_title_about_productions: Concerne les pièces
+      audio_video_title_by_organisations: Par les organisations
+      audio_video_title_by_people: Par les personnes
+      audio_video_title_on_media: Type de média
+    book_copy:
+      new: Nouvel Exemplaire
+    book_title:
+      author_relations: Auteurs
+      new: Nouveau livre
+      subject_relations: Sujet
+      book_copies: Exemplaires
+      book_title_about_organisations: Concerne les organisations
+      book_title_about_people: Concerne les personnes
+      book_title_about_productions: Concerne les pièces
+      book_title_by_organisations: Par les organisations
+      book_title_by_people: Par les personnes
+# in french "To order" is "Commander" is it is to buy but for a book in a library is "Réserver"
+      book_title_orders: Acquisitions
+    cdb_event:
+      new: Nouveau
+    cdb_event_detail:
+      cdb_performers: Performeurs
+    cdb_location:
+      cdb_events: Evénements
+    donation:
+      donors: Donateur
+      contains_documents: Documents
+      new: Nouveau don
+      archive_parts: Archive      
+    ephemerum:
+      author_relations: Auteur
+      new: Nouvel ephemera
+      subject_relations: Sujet
+      ephemerum_about_organisations: Concerne les organisations
+      ephemerum_about_people: Concerne les personnes
+      ephemerum_about_productions: Concerne les pièces
+      ephemerum_by_organisations: Par les organisations
+      ephemerum_by_people: Par les personnes
+    ico_title:
+      author_relations: Auteur
+      new: Nouvelle image
+      subject_relations: Sujet
+      ico_title_about_organisations: Concerne les organisations
+      ico_title_about_people: Concerne les personnes
+      ico_title_about_productions: Concerne les pièces
+      ico_title_by_organisations: Par les organisations
+      ico_title_by_people: Par les personnes
+    organisation:
+      subject_of_documents: Sujets
+      author_of_documents: Auteur de
+      new: Nouvelle organisation
+      production_by_organisations: Pièce
+      organisation_relations: Relation avec d'autres organisations
+      archive_part_about_organisations: Archives
+      article_about_organisations: Article concernant
+      article_by_organisations: Article par
+      audio_video_title_about_organisations: Audio/vidéo sur
+      audio_video_title_by_organisations: Audio/vidéo de
+      book_title_about_organisations: Livre sur
+      book_title_by_organisations: Livre de
+      creation_date: Date de création
+      end_activities_date: Fin d'activité
+      ephemerum_about_organisations: Ephemera sur
+      ephemerum_by_organisations: Ephemera de
+      grants: Subsides
+      ico_title_about_organisations: Image sur
+      ico_title_by_organisations: Image de
+      organisation_relations_to: Relations
+      organisation_venues: Ruimtes
+      press_cutting_about_organisations: Coupures de presse sur
+      press_cutting_by_organisations: Coupure de presse de
+    periodique :
+      new: Nouveau périodique
+      contains_documents: Coupure
+      press_cuttings: Coupure de presse
+    periodical_issue:
+      new: Nouveau numéro de périodique
+    person:
+      author_of_documents: Auteur de
+      subject_of_documents: Documents sur
+      new: Nouvelle personne
+      ephemerum_by_people: Ephemera
+      ico_title_about_people: Iconographie
+      archive_part_about_people: Archives
+      article_about_people: Articles sur
+      article_by_people: Articles de
+      audio_video_title_about_people: Audio/vidéo sur
+      audio_video_title_by_people: Audio/vidéo de
+      book_title_about_people: Livres sur
+      book_title_by_people: Livres de
+      ephemerum_about_people: Ephemera sur
+      ephemerum_by_people: Ephemera de
+      ico_title_about_people: Image sur
+      ico_title_by_people: Image de
+      press_cutting_about_people: Coupures de presse sur
+      press_cutting_by_people: Coupures de presse de
+      production_by_people: pièces
+    press_cutting:
+      author_relations: Auteur
+      new: Nouvelle coupure de presse
+      subject_relations: Sujet
+      press_cutting_about_organisations: Concerne les organisations
+      press_cutting_about_people: Concerne les personnes
+      press_cutting_about_productions: Concerne les pièces
+      press_cutting_by_organisations: Par les organisations
+      press_cutting_by_people: Par les personnes
+    production:
+      subject_of_documents: Documents
+      new: Nouvelle pièce
+      production_by_organisations: Organisations
+      production_by_people: Personnes
+      shows: Représentations
+      archive_part_about_productions: Archive
+      article_about_productions: Articles
+      audio_video_title_about_productions: A/V
+      book_title_about_productions: Livre
+      ephemerum_about_productions: Ephemera
+      ico_title_about_productions: Image
+      press_cutting_about_productions: Coupure de presse
+      production_about_genres: Genre
+    season:
+      documents: Documents
+      new: Nouvelle Saison
+    productions: Pièce
+    tag:
+      taggables: Items
+    user:
+      postits: Post-it
+      edits: Dernière modification
+#     warehouse:
+      new: Nouvelle boîte d'archives
+  # pour CD
+    new: Nouveau dossier d'archives
+    contains_documents: Documents
+    archive_parts: Archive
+    grants: Subsides
+    show: Représentation
+# to be confirmed by Isabelle: "many shows of one production" translates to "des représentations de la même production" 
+    festival: Festival
+    grant: Subsides
+    documents: Documentation
+    venue: Scène
+    production:
+      rerun_of: Reprise
+    vhss: VHS
+    dvds: DVD
+    venues: Scènes
+    season: 
+      productions: Productions
+      
+      
+      
+  label:
+    pages: Nombre de pages
+    location: emplacement
+    grant_state: statut des subsides
+    address_manager: même adresse
+    number_by_country: nombre de représentations par pays
+    period: période
+    postal_code: code postale
+    external_id: identification externe
+    default_start_hour: horaire usuel
+    time: temps
+    stop_text: "stop (descriptif)"
+    fax: fax
+    temporary_location: lieu temporaire
+    stop: stop
+    start: début
+    start_text: "début (descriptif)"
+    phone: téléphone
+    show_type: type de spectacle
+    grant_system: type de subsides
+    date_info: "temps (descriptif)"
+    isbn: ISBN
+    number_count: Nombre
+    creation_date_text: Date de création
+    creation_month: Mois de création
+    creation_year: Année de création
+    part_of_book_title: Partie du livre
+    address: Adresse
+    admin: Administrateur
+    alias_of: Alias de
+    alumnus_organisations: Alumnus van
+    antilope_index: Antilope Index
+    archive_part: Archive
+    archive_part_id: Archives
+    are_you_sure: Etes vous sûr?
+    audio_video_media: Media
+    audio_video_medium_type: Type de media
+    available: Disponible
+    barcode: Code barre
+    birthdate: Date de naissance
+    book_title: Titre
+    book_title_id: Titre
+    borrowable: Diponible au prêt
+    box_id: Numéro
+    box_location:  Emplacement
+    box_type: Type
+    calendarsummary: Calendrier
+    cancellation_date: Date d'annulation
+    categories: Catégories
+    cdbid: Cultuurdatabank ID
+    cdb_actor: Acteur
+    cdb_address: Adresse
+    cdb_city: Ville
+    cdb_event: Evénement
+    cdb_location: Emplacement
+    cdb_organisation: Organisation
+    cdb_physical_address: Adresse postale
+    cdb_street: Rue
+    cdb_timestamps: durée
+    child_roles: Nombre de rôle d'enfants
+    city: Ville
+    class: Classe
+    classification_code: Classification
+    code: Code
+    collation: Format
+    contactinfo: Contact
+    content: Contenu
+    copy_id: ID Exemplaire
+    copy_of: Copie de
+    copyright: Copyright
+    country: Pays
+    created_at: Crée le
+    creator: Crée par
+    creation_date: Date de création
+    date: Date
+    date_text: Date (texte)
+    dating: Datering
+    death_date: Date de décès
+    description: Description
+    description_en: Description (en)
+    description_fr: Description (fr)
+    description_nl: Description (nl)
+    donation: Don
+    donation_date: Date
+    donation_id: Don
+    donor_organisation: Donateur
+    donor_person: Donateur
+    duration_minutes: Durée (min.)
+    ean: EAN
+    edit_login_page: Modifier les paramètres d'identification
+    email: E-mail
+    end_activities_date: Fin d'activité
+    end_year: Dernière année
+    ephemerum_type: Type
+    ex_dono: Ex dono
+    externalid: Extern ID
+    female_roles: Nombre de rôles féminins
+    festivals: Festival
+    first_name: Prénom
+    function: Fonction
+    function_text: Fonction (texte)
+    gender: Genre
+    genres: Genres
+    get_your_own_openid: Créez votre OpenID
+    holdings: Holdings
+    housenr: Numéro
+    ico_type: Type
+    id: ID
+    identity_url: OpenID
+    incomplete: Cette page n'est pas complète
+    inspiration: Inspiration
+    inspiration_number: Source d'inspiration
+    inspiration_sources: Source d'inspiration
+    iso_code: Code ISO
+    issn: ISSN
+    issue_id: Exemplaire ID
+ #  key_name: Sleutelnaam : mot clé
+ #   label: Label
+    language: Langue
+    languages: Langues
+    last_name: Nom
+    legal_form: Forme juridique
+    library_location: Emplacement
+    lock_version: Version bloquée
+    login: Login
+    long_description_nl: Description (nl)
+    long_description_fr: Description (fr)
+    male_roles: Nombre de rôles masculins
+    more_details: Plus de détails
+    name: Nom
+    note: Note
+    no_title: Sans titre
+    number: numéro
+    number_of_objects: Nombre d'objets
+    number_of_roles: Nombre de rôles
+    organisation: Organisation
+    organisation_relation_type: Type de relation
+    part_of: Partie de
+#   part_of_book_title_id: Mot du titre
+    part_of_ico_title: Deel van (iconografisch materiaal)
+    part_of_ico_title_id: Deel van (iconografisch materiaal)
+    part_of_issue: Deel van tijdschrifexemplaar
+    periodical: Périodiques
+    periodical_issue: Numéro de periodique
+    periodical_id: Périodique
+    periodicity: Périodicité
+    permalink: Permalien
+    person: Personne
+    pick_a_letter: Choisis une lettre
+#   player_position: importance du rôle
+    price: Prix
+    price_description: Détail des prix
+    print_barcode: Imprimer le code barre
+    production: oeuvre
+    publication_year: Année de publication
+    publicid: ID publique
+    quality: Qualité
+    reference: Référence
+    rerun_of: Reprise de
+    rerun_of_id: Reprise de
+    role: Rôle
+    save: Sauvez
+    search_date: Date
+    season: Saison
+    season_id: Saison
+    shortdescription: Description succinte
+    short_description_nl: Description succinte (nl)
+    short_description_fr: Description succinte (fr)
+    sign_in: S'identifier
+    sign_in_with_openid: S'identifier avec votre OpenID
+    size: Taille
+    source: Source
+    source_id: Organisation
+    start_activities_date: Début d'activité
+    start_year: Première année d'activité
+    street: Rue
+    subscription_end_date: Fin d'abonnement
+    subscription_expiration_date: Date d'expiration de l'abonnement
+    subscription_periodicity: Périodicité de l'abonnement
+    subscription_running: Abonnement en cours
+    subscription_type: Type d'abonnement
+    subscription_note: Nota abonnement
+    target_audience: Public cible
+    target_audience_from: Age minimum
+    target_audience_text: Public cible texte 
+    target_audience_text_nl: Public neerlandophone(nl)
+    target_audience_text_fr: Public francophone  (fr)
+    target_audience_text_en: Public anglophone  (en)
+    target_audience_to: Age Maximum
+    title: Titre
+    title_nl: Titre (nl)
+    title_fr: Titre (fr)
+    title_extra: Sous-titre
+    type: Type
+    updated_at: Modifié le
+    updater: Modifié par
+    url: url
+    venue: scène
+    verified: vérifié
+    version: Version
+    viewed_at: Consulté le
+    views: Nombre de consultations
+    visible: Visible
+    volume: Volume
+    vti_info: Testez maintenant la nouvelle base de données du VTi - plateforme des arts de la scène. Découvrez toute la documentation sur la danse, le théâtre et le théâtre musical en Flandre.
+# Rajouté pour Contredanse
+    # Cd_info: "Découvrez la richesse du fond documentaire de Contredanse : livres, articles, revues, vidéos sur tout ce qui concerne la danse ici et ailleurs."
+    warehouse: Boîte d'archivage
+    warehouse_id: Boîte d'archivage
+# pour CD
+# warehouse: Dossier d'archives
+# warehouse_id: Dossier d'archives
+    yesno:
+      'true': Oui
+      'false': Non
+    zipcode: Code postal
+  message:
+    ean_not_valid: Le code EAN introduit n'est pas valide.
+    need_email: Nous avons besoin de votre adresse email - Elle ne nous a pas été transmise avec votre OpenID.
+    no_search_results: Votre recherche n'a donné aucun résultat.
+    top: Ce site web est une version beta- <a href="mailto:ticket+10to1.18110-179-t4sc8jen@lighthouseapp.com?subject=Feedback%20VTi%20Kennisdatabank">envoyez-nous vos commentaires</a>
+    object_saved: Sauvé.
+    errors_occurred: Une ou plusieurs fautes se sont produites!
+  button:
+    save: Sauver
+    cancel: Annuler
+    search: Chercher
+  class:
+    article: ART
+    organisation: ORGA
+    person: PERSON
+    production: PROD
+    AudioVideoTitle: A/V
+    Article: ART
+    BookCopy: LIVRE
+    BookTitle: LIVRE
+    Donation: DON
+    Ephemerum: DOCU
+    IcoTitle: ICO
+    Periodical: PERIO
+    PeriodicalIssue: NUM
+    PressCutting: PRESS
+    Organisation: ORGA
+    ArchivePart: ARCH
+  error_reports:
+    add: Soumettre une erreur
+  postits:
+    add: Nouveau post-it
+    edit: Editer le post-it
+    remove: Supprimer le post-it
+  search:
+    search: Chercher
+    people: Chercher une personne
+    productions: Chercher une pièce
+    organisations: Chercher une organisation
+    seasons: Chercher une saison
+    search_for: Chercher
+  static:
+    about: A propos du VTI
+#   about: A propos de Contredanse
+    help: Aide
+    legal: Mentions légales
+    login: S'identifier
+  tags:
+    add: Ajouter un mot-clef
+    remove: Supprimer le mot-clef
+  values:
+    more_details: détails
+
+  support:
+    array:
+      sentence_connector: ','
+  
+  
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%e %b"
+      long: "%e %B %Y"
+      long_ordinal: "%e %B %Y"
+      only_day: "%e"
+
+    day_names: [dimanche, lundi, mardi, mercredi, jeudi, vendredi, samedi]
+    abbr_day_names: [dim, lun, mar, mer, jeu, ven, sam]
+    month_names: [~, janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre]
+    abbr_month_names: [~, jan., fév., mar., avr., mai, juin, juil., août, sept., oct., nov., déc.]
+    order: [ :day, :month, :year ]
+  
+  time:
+    formats:
+      default: "%d %B %Y %H:%M"
+      time: "%H:%M"
+      short: "%d %b %H:%M"
+      long: "%A %d %B %Y %H:%M:%S %Z"
+      long_ordinal: "%A %d %B %Y %H:%M:%S %Z"
+      only_second: "%S"
+    am: 'am'
+    pm: 'pm'
+    datetime:
+    	formats:
+    		default: "%Y-%m-%dT%H:%M:%S%Z"
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "une demi-minute"
+      less_than_x_seconds:
+        zero:  "moins d'une seconde"
+        one:   "moins de 1 seconde"
+        other: "moins de {{count}} secondes"
+      x_seconds:
+        one:   "1 seconde"
+        other: "{{count}} secondes"
+      less_than_x_minutes:
+        zero:  "moins d'une minute"
+        one:   "moins de 1 minute"
+        other: "moins de {{count}} minutes"
+      x_minutes:
+        one:   "1 minute"
+        other: "{{count}} minutes"
+      about_x_hours:
+        one:   "environ une heure"
+        other: "environ {{count}} heures"
+      x_days:
+        one:   "1 jour"
+        other: "{{count}} jours"
+      about_x_months:
+        one:   "environ un mois"
+        other: "environ {{count}} mois"
+      x_months:
+        one:   "1 mois"
+        other: "{{count}} mois"
+      about_x_years:
+        one:   "environ un an"
+        other: "environ {{count}} ans"
+      over_x_years:
+        one:   "plus d'un an"
+        other: "plus de {{count}} ans"
+  
+  number:
+    format:
+      precision: 3
+      separator: ','
+      delimiter: ' '
+    currency:
+      format:
+        unit: '€'
+        precision: 2
+        format: '%n %u'
+    human:
+      storage_units: [ Octet, ko, Mo, Go, To ]
+  
+  support:
+    array:
+      sentence_connector: 'et'
+      skip_last_comma: true
+  
+  activerecord:
+    errors:
+      template:
+        header: 
+          one: "Impossible d'enregistrer {{model}}: 1 erreur"
+          other: "Impossible d'enregistrer {{model}}: {{count}} erreurs."
+        body: "Veuillez vérifier les champs suivants :"
+      messages: 
+        record_invalid: "n'est pas valide (record_invalid)"
+        inclusion: "n'est pas inclus(e) dans la liste"
+        exclusion: "n'est pas disponible"
+        invalid: "n'est pas valide"
+        confirmation: "ne concorde pas avec la confirmation"
+        accepted: "doit être accepté(e)"
+        empty: "doit être rempli(e)"
+        blank: "doit être rempli(e)"
+        too_long: "est trop long (pas plus de {{count}} caractères)"
+        too_short: "est trop court (au moins {{count}} caractères)"
+        wrong_length: "ne fait pas la bonne longueur (doit comporter {{count}} caractères)"
+        taken: "n'est pas disponible"
+        not_a_number: "n'est pas un nombre"
+        greater_than: "doit être supérieur à {{count}}"
+        greater_than_or_equal_to: "doit être supérieur ou égal à {{count}}"
+        equal_to: "doit être égal à {{count}}"
+        less_than: "doit être inférieur à {{count}}"
+        less_than_or_equal_to: "doit être inférieur ou égal à {{count}}"
+        odd: "doit être impair"
+        even: "doit être pair"

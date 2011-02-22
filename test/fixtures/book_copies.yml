@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  book_title_id: 1
+  donation_id: 1
+  library_location: MyString
+  warehouse_id: 1
+  borrowable: false
+  available: false
+
+two:
+  book_title_id: 1
+  donation_id: 1
+  library_location: MyString
+  warehouse_id: 1
+  borrowable: false
+  available: false

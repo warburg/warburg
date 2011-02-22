@@ -1,0 +1,16 @@
+Backups
+=======
+Dit document beschrijft hoe de backups van productie naar littlelenny gebeuren.
+
+Functionaliteit
+---------------
+Het backup script neemt een dump van de postgresql server op productie, zipt die, en zet die op de locatie #{RAILS_ROOT}/data/vti_production_#{timestamp}.dmp.gz
+Momenteel is #{RAILS_ROOT} /root/vti/current , en #{timestamp} is de ISO8601-geëncodeerde timestamp van wanneer de backup genomen is.
+
+Script
+------
+Het script dat wordt uitgevoerd, is Backup.backup_production. Dit bevindt zich in de file $RAILS_ROOT/lib/backup.rb
+
+Periodiciteit
+-------------
+Het script wordt met cron wekelijks uitgevoerd op zondag om 1u30 am.

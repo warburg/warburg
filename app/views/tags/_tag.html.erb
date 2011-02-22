@@ -1,0 +1,10 @@
+<% if tag.present? %>
+<li>
+    <%= link_to tag, tag, :class => (admin? ? 'hasremove' : '') %>
+    <% if admin? %>
+				<a href="#" class="remove" onclick="deleteTag(this, '<%= tag.name %>', '<%= @object.class %>', '<%= @object.id %>', '<%= form_authenticity_token%>')">
+					<%= t('tags.remove') %>
+				</a>
+    <% end %>
+</li>
+<% end %>

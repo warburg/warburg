@@ -1,0 +1,15 @@
+<%= render :partial => '/main_klass/sidebar' %>
+
+<ul id="node-grid">
+    <li class="node">
+        <h3><%=t 'title.details' %></h3>
+        <div class="content">
+            <ul class="details">
+                <%= details_rows(@object) %>
+            </ul><!-- details -->
+        </div><!-- content -->
+    </li><!-- node -->
+
+    <%= boxes_for(@object) %>
+
+</ul><!-- node-grid -->

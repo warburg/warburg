@@ -1,0 +1,1 @@
+require "set_friendly_id"

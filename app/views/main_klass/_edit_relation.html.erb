@@ -1,0 +1,31 @@
+<h3><%= t "title.#{@object.class.name.underscore}.#{relation.to_s}" %></h3>
+<div class='content'>
+  <ul id='<%= relation.to_s %>'>
+    <li class='search'>
+        <% form_tag url_for(:action => 'search', :controller => other_side_class(@object, relation).name.pluralize.underscore), :id => "search-#{relation.to_s}-form" do %>
+            <% other_side_class(@object, relation).search_fields.each do |field| %>
+                <%= label_tag field, t("label.#{field}") %>
+                <% if field == "season_id" -%>
+                  <%= select_tag field, options_for_select([["", ""]] + Season.all(:order => "start_year DESC").map { |season| [ season.name, season.id ] }) %>
+                <% else -%>
+                  <%= text_field_tag field, '', {:id => '', :class => "input-search-field"} %>
+                <% end -%>
+                <%= hidden_field_tag :parent_id, @object.to_param %>
+								<%= hidden_field_tag :parent_class, @object.class.name %>
+                <%= hidden_field_tag :relationship_type, relation.to_s %>
+            <% end %>
+
+          <p><%= image_tag "spinner-search.gif", :id => "#{@object.class.name.underscore}_#{relation.to_s}_spinner",:style => "float: right; display: none; position: relative; top: 5px;" %>
+              <a href="#" class="button" onclick="$('#<%= @object.class.name.underscore %>_<%= relation.to_s %>_spinner').css('display', 'inline'); $('#search-<%= relation.to_s %>-form').submit(); return false;"><span><%=t('button.search')%></span></a>
+          </p>
+        <% end %>
+    </li>
+    <li id='search_results_<%= relation.to_s %>' class='results'></li>
+    <%= Array(@object.send(relation.to_s)).collect{|rel| render(:partial => '/relationships/line', :object => rel, :locals => {:parent => @object, :ul_id => relation.to_s})}.join(' ') if @object.send(relation.to_s)%>
+
+    <script>
+        $(".edit_<%= relation.to_s.singularize %>").submitWithAjax();
+        $("#search-<%= relation.to_s %>-form").submitWithAjax();
+    </script>
+  </ul>
+</div>

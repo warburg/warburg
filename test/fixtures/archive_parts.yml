@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: One
+  donation_id: 1
+  warehouse_id: 1
+  classification_code: MyString
+  permalink: one
+
+two:
+  title: Two
+  donation_id: 1
+  warehouse_id: 1
+  classification_code: MyString
+  permalink: two

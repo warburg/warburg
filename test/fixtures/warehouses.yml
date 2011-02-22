@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  box_type_id: 1
+  box_location: MyString
+
+two:
+  box_type_id: 1
+  box_location: MyString

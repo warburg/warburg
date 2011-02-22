@@ -1,0 +1,50 @@
+<% unless no_li%>
+	<li class="node">
+<% end %>
+
+	<h3>
+		<%= link_to title, type == "tags" ? eval("#{object.class.name.underscore}_path(object)") : eval("#{object.class.name.underscore}_#{type}_path(object)") %>
+	</h3>
+	<div class="content">
+		<table cellspacing="0" <%= 'class="hasdetails"' if details %>  >
+			<thead>
+				<tr>
+					<%#- if details -%>
+						<th valign="top" class="details">&nbsp;</th>
+					<%#- end -%>
+					<% columns.each do |column| %>
+						<th valign="top">
+							<%# a href="#" title="Sorteer op <%= t("title.#{column[:title]}").downcase % >"><%= t("title.#{column[:title]}") % ></a %>
+							<%= t("title.#{column[:title]}") %>
+						</th>
+					<% end %>
+				</tr>
+			</thead>
+			<tbody>
+				<% items.each do |item| %>
+                  <% unless item.nil? %>
+					<tr id="<%= item.class.to_s %>-<%= item.id %>">
+						<%#- if details
+                          if has_details.call(item) -%>
+                            <td valign="top" class="details">
+                                <%= fetch_details_link(type, item) %>
+                            </td>
+                          <%# else % >
+                            <td></td>
+                          <% end % >
+						<%- end -%>
+						<% columns.each do |column| %>
+							<td valign="top">
+								<%= column[:field].call(item) %>
+							</td>
+						<% end %>
+					</tr>
+                  <% end %>
+				<% end %>
+			</tbody>
+		</table>
+	</div><!-- content -->
+	
+<% unless no_li%>
+</li><!-- node -->
+<% end %>

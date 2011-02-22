@@ -1,0 +1,30 @@
+
+__Conditions of Use__
+
+*  Liability
+
+    Although this website has been compiled with the greatest care, VTi cannot accept any liability for the information provided. The authors aim for completeness and correctness, but the data on this website are not necessarily complete, accurate and/or fully updated. If you point out to us any inaccuracies or gaps, we shall where possible quickly make the necessary changes. By visiting this site you are agreeing to this limitation on liability.
+
+*  Hyperlinks
+
+    This website contains lots of hyperlinks to web services administered by third parties. VTi is not responsible for their content, their availability, existence or the use made of them. Nor can VTi be held responsible for errors in the addresses of websites and domains. And lastly, the fact that VTi offers hyperlinks does not mean that we approve fully or partly with the content of these sites.
+
+*  Some Rights Reserved
+
+    You can consult the information on this site at will and without charge. You can download and copy it for personal use on condition that you always clearly state the source. 
+    The textual information is free by the terms of the [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/2.0/be/ "Creative Commons Attribution-Noncommercial-Share Alike 2.0 Belgium License") attached to each page. This permission does not apply to images, sound and video, as prior restrictions on their use exist, except where explicitly indicated.
+    In commercial or for-profit context, written permission in advance is always required for the reproduction and/or publication of the documents (text, image, sound and video) on this website by means of broadcast, printing, floppy disk, CD-ROM, CD-I, Internet, Intranet, video or film projection, exhibition panels or any other method. Please [contact VTi](/about) for any questions in this regard.
+
+*   Privacy
+
+    This website makes no use of spyware, nor does it in any other way attempt to breach personal privacy. The webserver keeps extensive log files of every visit to this website. These log files will be exhaustively processed and analysed statistically in order to refine the service offered here. These log files will never be passed on to third parties.
+
+*  Login
+
+    A valid openID and email address is required to use the functionalities protected by login. VTi will send you up to 10 unsollicited emails per month. You grant a [Creative Commons License](http://creativecommons.org/licenses/by-sa/3.0/ "Creative Commons Attribution-Share Alike 3.0 Unported") on all content you provide through this website.
+
+*  Disputes
+
+    Belgian law applies to all disputes concerning compliance with these conditions of use. Only the Brussels law courts have jurisdiction in such disputes.
+
+

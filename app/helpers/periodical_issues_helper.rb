@@ -1,0 +1,3 @@
+module PeriodicalIssuesHelper
+  include BoxConfiguration
+end

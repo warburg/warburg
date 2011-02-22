@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  grant_state_id: 1
+  grant_system_id: 1
+  person_id: 1
+  organisation_id: 1
+  date: 2008-11-20
+  period: MyString
+  production_id: 1
+
+two:
+  grant_state_id: 1
+  grant_system_id: 1
+  person_id: 1
+  organisation_id: 1
+  date: 2008-11-20
+  period: MyString
+  production_id: 1

@@ -1,0 +1,8 @@
+<% unless @relationship %>
+	$('.<%=@ul_id%>').remove();
+<% end %>
+
+$("<%= escape_javascript(render(:partial => 'line', :object => (@relationship || @object), :locals => {:parent => @parent, :ul_id => @ul_id})) %> ").insertAfter("li#search_results_<%=@relationship_name.underscore%>");
+$("#<%= @parent.class.name.underscore %>_<%= @relationship_name.to_s %>_spinner").css('display', 'none');
+$("li#search_results_<%=@relationship_name.underscore%>").html("");
+$("form#search-<%=@relationship_name.underscore%>-form")[0].reset();

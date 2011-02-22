@@ -1,0 +1,741 @@
+nl:
+  custom:
+    name: VTi
+    home: VTi
+      
+  title:
+    production_about_genres: Productiegenre
+    impressums: Impressum
+    about: Over VTi
+    pdf: Barcodes afdrukken
+    actor: Actor
+    archive_parts: Archiefmappen
+    archive_part_about_people: Archiefmappen
+    articles: Artikels
+    audio_video_media: A/V Dragers
+    audio_video_titles: Audio/Video
+    genres: Genres
+    book_copies: Boekexemplaren
+    book_title_by_people: Boeken
+    book_titles: Boeken
+    date: Datum
+    documents: Documenten
+    dvds: A/V drager
+    subject_of_documents: Documenten over
+    author_of_documents: Auteur van
+    details: Details
+    donations: Schenkingen
+    ephemera: Ephemera
+    error_reports: Rapporteer een fout
+    festivals: Festivals
+    function: Functie
+    grants: Subsidies
+    help: Help
+    ico_titles: Beeldmateriaal
+    label: Label
+    legal: Disclaimer & Voorwaarden
+    library_location: Vindplaats
+    login: Aanmelden
+    logout: Afmelden
+    most_popular: Meest bekeken
+    name: Naam
+    object: Object
+    organisation_relation_type: Type
+    organisations: Organisaties
+    people: Personen
+    periodical_issues: Tijdschriftnummers
+    press_cuttings: Krantenknipsels
+    productions: Producties
+    recently_added: Recent toegevoegd
+    recently_updated: Recent gewijzigd
+    recently_viewed: Laatst bekeken
+    results: Resultaten voor
+    role: Rol
+    periodicals: Tijdschriften
+    season_name: Seizoen
+    seasons: Seizoenen
+    sessions: Aanmelden
+    shows: Voorstellingen
+    subject: Onderwerp
+    tags: Tags
+    text: Tekst
+    title: Titel
+    type: Soort
+    users: Gebruikers
+    venues: Ruimtes
+    vhss: VHS
+    warehouses: Magazijndozen
+    languages: Talen
+    language:
+      new: Nieuwe taal
+    descriptions: Omschrijvingen
+    description:
+      new: Nieuwe omschrijving
+
+    cdb_actors: Actors
+    cdb_addresses: Addresses
+    cdb_cities: Cities
+    cdb_event_details: Event Details
+    cdb_events: Events
+    cdb_locations: Locations
+    cdb_organisations: Organisors
+    cdb_physical_addresses: Adresses
+    cdb_event:
+      new: New event
+    cdb_event_detail:
+      cdb_performers: Performers
+    cdb_location:
+      cdb_events: Events
+
+    impressum:
+      new: Nieuw impressum
+    archive_part:
+      new: Nieuwe archiefmap
+      archive_part_about_organisations: Over organisaties
+      archive_part_about_people: Over personen
+      archive_part_about_productions: Over producties
+      subject_relations: Over
+    article:
+      author_relations: Door
+      new: Nieuw tijdschriftartikel
+      subject_relations: Over
+      article_about_organisations: Over organisaties
+      article_about_people: Over personen
+      article_about_productions: Over producties
+      article_by_organisations: Door organisaties
+      article_about_genres: Genres
+      article_by_people: Door personen
+      periodical_issue: Tijdschriftexemplaar
+      article_languages: Talen
+    audio_video_medium:
+      new: Nieuwe A/V Drager
+      audio_video_title_on_media: Titels
+      warehouse: Magazijndoos
+      copy_of: Kopie van
+      donation: Donatie
+      source: Bron
+    audio_video_title:
+      author_relations: Door
+      new: Nieuwe Audio/Video
+      subject_relations: Over
+      description: Beschrijving
+      audio_video_title_about_organisations: Over organisaties
+      audio_video_title_about_people: Over personen
+      audio_video_title_about_productions: Over producties
+      audio_video_title_by_organisations: Door organisaties
+      audio_video_title_by_people: Door personen
+      audio_video_title_on_media: Dragers
+      audio_video_title_about_genres: Genres
+      audio_video_languages: Talen
+    book_copy:
+      new: Nieuw boekexemplaar
+      book_title: Titel boek
+      warehouse: Magazijndoos
+      donation: Schenking
+    book_title:
+      author_relations: Door
+      new: Nieuwe boektitel
+      subject_relations: Over
+      book_copies: Exemplaren
+      book_title_about_organisations: Over organisaties
+      book_title_about_people: Over personen
+      book_title_about_productions: Over producties
+      book_title_by_organisations: Door organisaties
+      book_title_by_people: Door personen
+      book_title_orders: Bestellingen
+      book_title_about_genres: Genres
+      book_title_impressums: Impressums
+      part_of_book_title: Boekdeel uit reeks
+      book_title_languages: Talen
+      languages: Talen
+    donation:
+      donors: Donor
+      contains_documents: Documenten
+      new: Nieuwe schenking
+      archive_parts: Archiefmappen      
+    ephemerum:
+      author_relations: Door
+      new: Nieuwe ephemera
+      subject_relations: Over
+      ephemerum_about_organisations: Over organisaties
+      ephemerum_about_people: Over personen
+      ephemerum_about_productions: Over producties
+      ephemerum_by_organisations: Door organisaties
+      ephemerum_by_people: Door personen
+      ephemerum_languages: Talen
+      source: Bron
+      donation: Schenking 
+      warehouse: Magazijndoos
+      ephemerum_about_genres: Genres 
+    festival:
+      new: Nieuw festival
+      organisation: Organisatie
+    grant:
+      new: Nieuwe subsidie
+      person: Persoon
+      production: Productie
+      organisation: Organisatie
+    ico_title:
+      author_relations: Door
+      new: Nieuw beeldmateriaal
+      subject_relations: Over
+      ico_title_about_organisations: Over organisaties
+      ico_title_about_people: Over personen
+      ico_title_about_productions: Over producties
+      ico_title_by_organisations: Door organisaties
+      ico_title_by_people: Door personen
+      ico_title_about_genres: Genres
+      part_of_ico_title: Deel van beeldenreeks
+      archive_part: Archiefmappen
+      donation: Schenking
+    organisation:
+      subject_of_documents: Documenten over
+      author_of_documents: Auteur van
+      new: Nieuwe organisatie
+      production_by_organisations: Producties
+      organisation_relations: Relaties met andere organisaties
+      archive_part_about_organisations: Archiefmappen
+      article_about_organisations: Artikels over
+      article_by_organisations: Artikels door
+      audio_video_title_about_organisations: Audio/Video over
+      audio_video_title_by_organisations: Audio/Video door
+      book_title_about_organisations: Boektitels over
+      book_title_by_organisations: Boektitels door
+      creation_date: Gecreëerd op
+      end_activities_date: Einde activiteiten
+      ephemerum_about_organisations: Ephemera over
+      ephemerum_by_organisations: Ephemera door
+      grants: Subsidies
+      ico_title_about_organisations: Beeldmateriaal over
+      ico_title_by_organisations: Beeldmateriaal door
+      organisation_relations_to: Relaties
+      organisation_venues: Ruimtes
+      press_cutting_about_organisations: Krantenknipsels over
+      press_cutting_by_organisations: Krantenknipsels door
+      organisation_impressums: Impressums
+      organisation_about_genres: Genres
+      alumni: Alumnus van
+      organisation_from_organisations: Van organisaties
+      organisation_to_organisations: Naar organisaties
+    periodical:
+      new: Nieuw tijdschrift
+      contains_documents: Knipsels
+      press_cuttings: Krantenknipsels
+      periodical_issues: Exemplaren
+      periodical_languages: Talen
+      periodical_impressums: Impressums
+      periodical_about_genres: Genres
+    periodical_issue:
+      new: Nieuw tijdschriftnummer
+      articles: Artikels
+      periodical: Tijdschrift
+      warehouse: Magazijndoos
+      part_of_issue: Onderdeel van een band
+      donation: Schenking
+    person:
+      alumni: Alumnus van
+      alias_of: Alias van
+      author_of_documents: Auteur van
+      subject_of_documents: Documenten over
+      new: Nieuwe persoon
+      archive_part_about_people: Archiefmappen
+      article_about_people: Artikels over
+      article_by_people: Artikels door
+      audio_video_title_about_people: Audio/Video over
+      audio_video_title_by_people: Audio/Video door
+      book_title_about_people: Boektitels over
+      book_title_by_people: Boektitels door
+      ephemerum_about_people: Ephemera over
+      ephemerum_by_people: Ephemera door
+      ico_title_about_people: Beeldmateriaal over
+      ico_title_by_people: Beeldmateriaal door
+      press_cutting_about_people: Krantenknipsels over
+      press_cutting_by_people: Krantenknipsels door
+      production_by_people: Producties
+    press_cutting:
+      author_relations: Door
+      new: Nieuw krantenknipsel
+      subject_relations: Over
+      periodical: Krant
+      press_cutting_about_organisations: Over organisaties
+      press_cutting_about_people: Over personen
+      press_cutting_about_productions: Over producties
+      press_cutting_by_organisations: Door organisaties
+      press_cutting_by_people: Door personen
+      press_cutting_languages: Talen
+      press_cutting_about_genres: Genres
+    production:
+      subject_of_documents: Documenten
+      new: Nieuwe productie
+      production_by_organisations: Organisaties
+      production_by_people: Personen
+      shows: Voorstellingen
+      archive_part_about_productions: Archiefmappen
+      article_about_productions: Artikels
+      audio_video_title_about_productions: Audio/Video
+      book_title_about_productions: Boektitels
+      ephemerum_about_productions: Ephemera
+      ico_title_about_productions: Beeldmateriaal
+      press_cutting_about_productions: Krantenknipsels
+      production_about_genres: Productiegenres
+      rerun_of: Herneming van
+      production_languages: Talen
+    season:
+      documents: Documenten
+      new: Nieuw seizoen
+      productions: Producties
+    show:
+      new: Nieuwe voorstelling
+      organisation: Organisatie
+      production: Productie
+      venue: Ruimte
+    tag:
+      taggables: Items
+      tags: Documenten
+    user:
+      postits: Notities
+      edits: Laatste wijzigingen
+    venue:
+      organisation_venues: Organisaties
+      new: Nieuwe ruimte
+      venue: Ruimte
+    warehouse:
+      new: Nieuwe magazijndoos
+      contains_documents: Bevat documenten
+      archive_parts: Archiefmappen
+
+
+# Labels
+
+
+  label:
+    genre: Genre
+    pdf:
+      print: PDF afdrukken
+      reset: reset
+    yesno:
+      'true': Ja
+      'false': Nee
+
+    cdbid: Cultuurdatabank ID
+    cdb_actor: Actor
+    cdb_address: Adres
+    cdb_city: Stad
+    cdb_event: Event
+    cdb_location: Locatie
+    cdb_organisation: Organisatie
+    cdb_physical_address: Fysiek adres
+    cdb_street: Straat
+    cdb_timestamps: Speeltijden
+
+    address_manager: ter plekke
+    address: Adres
+    admin: Administrator
+    alias_of: Alias van
+    alumnus_organisations: Alumnus van
+    antilope_index: ID in Antilope
+    archive_part_id: Archiefmap
+    archive_part: Archiefmap
+    are_you_sure: Deze bewerking is niet omkeerbaar. Heb je alles gecontroleerd?
+    audio_video_media: Drager
+    audio_video_medium_type: Type A/V drager
+    available: Beschikbaar
+    barcode: Barcode
+    birthdate: Geboren
+    book_title_id: Titel
+    book_title: Titel
+    borrowable: Uitleenbaar
+    box_id: Nummer
+    box_location: Vindplaats
+    box_type: Doostype
+    cached_slug: Permalink
+    calendarsummary: Kalender
+    cancellation_date: Opheffingsdatum
+    categories: "Categorie&euml;n"
+    child_roles: Aantal kinderrollen
+    city: Stad
+    class: Klasse
+    classification_code: Klassificatie
+    code: Code
+    collation: Collatie
+    contactinfo: Contactinformatie
+    content: Inhoud
+    copy_id: Exemplaar
+    copy_of: Kopie van
+    copyright: Copyright
+    country: Land
+    created_at: "Gecre&euml;erd op"
+    creation_date_text: Datum voorstelling
+    creation_date: Oprichtingsdatum
+    creation_month: "Oprichting: maand"
+    creation_year: "Oprichting: jaartal"
+    creator: "Gecre&euml;erd door"
+    date_info: Datuminformatie
+    date_text: Ander datumformaat
+    date: Datum
+    dating: Datering
+    death_date: Overleden
+    default_start_hour: Normaal beginuur
+    description_en: Beschrijving (en)
+    description_fr: Beschrijving (fr)
+    description_nl: Beschrijving (nl)
+    description: Beschrijving
+    donation_date: Datum schenking
+    donation_id: Schenking
+    donation: Schenking
+    donor_organisation: Donor
+    donor_person: Donor
+    duration_minutes: Duur (in minuten)
+    ean: EAN
+    edit_login_page: Wijzig aanmeldpagina
+    email: E-mail
+    end_activities_date: Activiteiten gestopt
+    end_year: Eindjaar
+    ephemerum_type: Type
+    ex_dono: Ex dono
+    external_id: Extern ID
+    externalid: Extern ID
+    fax: Fax
+    female_roles: Aantal vrouwenrollen
+    festivals: Festivals
+    first_name: Voornaam
+    function_text: Functieomschrijving
+    function: Functie
+    gender: Gender
+    genres: Genres
+    get_your_own_openid: "Cre&euml;er je eigen OpenID"
+    grant_state: Status
+    grant_system: Subsidiesysteem
+    holdings: Holdings
+    housenr: Huisnummer
+    ico_type: Type
+    id: ID
+    identity_url: OpenID
+    incomplete: Deze pagina is niet volledig
+    inspiration_number: Inspiratiebron
+    inspiration_sources: Inspiratiebronnen
+    inspiration: Inspiratie
+    isbn: ISBN
+    iso_code: ISO code
+    issn: ISSN
+    issue_id: Tijdschriftnummer
+    key_name: Sleutelnaam
+    label: Label
+    language: Taal
+    language_role: Rol
+    languages: Talen
+    last_name: Familienaam
+    legal_form: Juridische Vorm
+    library_location: Vindplaats
+    location: Vindplaats
+    lock_version: Versielock
+    login: Aanmelden
+    long_description_fr: Beschrijving (fr)
+    long_description_nl: Beschrijving (nl)
+    long_description_en: Beschrijving (en)
+    long_description: Beschrijving
+    male_roles: Aantal mannenrollen
+    more_details: Meer details
+    name_en: Naam (en)
+    name_fr: Naam (fr)
+    name_nl: Naam (nl)
+    name: Naam
+    no_title: zonder titel
+    note: Nota
+    number_by_country: Totaal gespeelde voorstellingen
+    number_count: Aantal nummers
+    number_of_objects: Aantal objecten
+    number_of_pages: Aantal bladzijden
+    number_of_roles: Aantal rollen
+    number: Nummer
+    organisation_relation_type: Type
+    organisation: Organisatie
+    pages: Aantal bladzijden
+    part_of_book_title_id: Boekdeel uit reeks
+    part_of_book_title: Boekdeel uit reeks
+    part_of_ico_title_id: Deel van beeldenreeks
+    part_of_ico_title: Deel van beeldenreeks
+    part_of_issue: Deel van tijdschrifnummer
+    part_of: Onderdeel van
+    period: Periode
+    periodical_id: Tijdschrift
+    periodical_issue: Tijdschriftnummer
+    periodical: Tijdschrift
+    periodicity: Periodiciteit
+    permalink: Permalink
+    person: Persoon
+    phone: Telefoon
+    pick_a_letter: Kies een letter
+    player_position: Afspeelpositie
+    postal_code: Postcode
+    price_description: Prijsomschrijving
+    price: Prijs
+    print_barcode: Eticket printen
+    production: Productie
+    publication_year: Jaar van uitgave
+    publicid: Publiek ID
+    publish_location: Plaats van uitgave
+    publisher: Uitgever
+    quality: Kwaliteit
+    reference: "Pagina's"
+    rerun_of_id: Herneming van
+    rerun_of: Herneming van
+    role: Rol
+    save: Opslaan
+    search_date: Datum
+    season_id: Seizoen
+    season: Seizoen
+    short_description_fr: Korte beschrijving (fr)
+    short_description_nl: Korte beschrijving (nl)
+    short_description_en: Korte beschrijving (en)
+    short_description: Korte beschrijving
+    shortdescription: Korte beschrijving
+    show_type: Type
+    sign_in_with_openid: Meld je aan met je OpenID
+    sign_in: Meld je aan
+    size: Grootte
+    source_id: Organisatie
+    source: Bron
+    start_activities_date: Activiteiten gestart
+    start_text: Start (tekst)
+    start_year: Beginjaar
+    start: Start
+    stop_text: Stop (tekst)
+    stop: Stop
+    street: Straat
+    subscription_end_date: Einddatum abonnement
+    subscription_expiration_date: Vervaldatum abonnement
+    subscription_note: Nota abonnement
+    subscription_periodicity: Periodiciteit abonnement
+    subscription_running: Abonnement loopt?
+    subscription_type: Type abonnement
+    target_audience_from: Doelpubliek van
+    target_audience_text_en: Doelpubliek (en)
+    target_audience_text_fr: Doelpubliek (fr)
+    target_audience_text_nl: Doelpubliek (nl)
+    target_audience_text: Omschrijving doelpubliek 
+    target_audience_to: Doelpubliek tot
+    target_audience: Doelpubliek
+    temporary_location: Tijdelijke locatie
+    time: Tijdstip
+    title_extra: Extra titelinformatie
+    title_fr: Titel (fr)
+    title_nl: Titel (nl)
+    title_en: Titel (en)
+    title: Titel
+    type: Type
+    updated_at: Gewijzigd op
+    updater: Gewijzigd door
+    url: Link
+    venue: Ruimte
+    verified: Dubbel nagekeken?
+    version: Huidige versie
+    viewed_at: Bekeken op
+    views: Aantal keer bekeken
+    visible: Zichtbaar op internet?
+    volume: Jaargang
+    vti_info: Test nu de nieuwe databank van VTi - Steunpunt voor de podiumkunsten. Ontdek onze documentatie over dans, theater en muziektheater in Vlaanderen.
+    warehouse_id: Magazijndoos
+    warehouse: Magazijndoos
+    zipcode: Postcode
+
+
+# Diverse hulpjes
+
+
+  message:
+    ean_not_valid: De opgegeven EAN code kon niet gevalideerd worden. We verwachten hier het volledige ISBN-13 ; een ISBN-10 moet eerst worden omgerekend.
+    need_email: We kregen via OpenID geen emailadres meegeleverd, maar dat is echt nodig om de toegang tot onze databank te kunnen garanderen. Vul een geldig emailadres via OpenID.
+    no_search_results: Geen resultaten gevonden. Probeer misschien meer of minder letters in te geven, wij houden sowieso rekening met alternatieve spellingen.
+    top: Deze website is beta - <a href="mailto:ticket+10to1.18110-wujtknu6@lighthouseapp.com?subject=Feedback%20VTi%20Kennisdatabank">Geef ons feedback</a>
+    object_saved: Opgeslagen.
+    errors_occurred: Eén of meerdere problemen verhinderden het correct opslaan van de informatie. Een en ander is niet bewaard.
+
+
+  button:
+    save: Opslaan
+    cancel: Annuleren
+    search: Zoeken
+
+
+  class:
+    article: ART
+    organisation: ORG
+    person: PERSON
+    production: PRODUCT
+    AudioVideoTitle: A/V
+    Article: ART
+    BookCopy: BOOK
+    BookTitle: BOOK
+    Donation: EXDONO
+    Ephemerum: DOCU
+    IcoTitle: ICO
+    Periodical: MAG
+    PeriodicalIssue: ISSUE
+    PressCutting: PRESS
+    Organisation: ORG
+    ArchivePart: ARCHIVE
+
+
+  error_reports:
+    add: Suggereer een verbetering voor onze informatie
+
+
+  postits:
+    add: Voeg een notitie toe
+    edit: Pas deze notitie aan
+    remove: Verwijder deze notitie
+
+
+  search:
+    search: Zoeken
+    people: Personen zoeken
+    productions: Producties zoeken
+    organisations: Organisaties zoeken
+    seasons: Seizoenen zoeken
+    search_for: Zoeken naar
+
+
+  static:
+    about: Over VTi
+    help: Help
+    legal: Disclaimer & Voorwaarden
+    login: Aanmelden
+
+
+  tags:
+    add: Voeg een tag toe
+    remove: Verwijder deze tag
+
+
+  values:
+    more_details: meer
+
+
+
+
+# Basic building blocks: time, data, numbers...
+
+  support:
+    array:
+      sentence_connector: ','
+
+
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%e %b"
+      long: "%e %B %Y"
+      only_day: "%e"
+    day_names: [Zondag, Maandag, Dinsdag, Woensdag, Donderdag, Vrijdag, Zaterdag]
+    abbr_day_names: [Zo, Ma, Di, Wo, Do, Vr, Za]
+    month_names: [~, Januari, Februari, Maart, April, Mei, Juni, Juli, Augustus, September, Oktober, November, December]
+    abbr_month_names: [~, Jan, Feb, Mrt, Apr, Mei, Jun, Jul, Aug, Sep, Okt, Nov, Dec]
+    order: [:day, :month, :year]
+
+
+  time: 
+    formats: 
+      default: "%d %b %Y %H:%M"
+      time: "%H:%M"
+      short: "%d %b %H:%M"
+      long: "%d %B %Y %H:%M"
+      only_second: "%S"
+    datetime: 
+      formats: 
+        default: "%Y-%m-%dT%H:%M:%S%Z"      
+    am: "'s ochtends"
+    pm: "'s middags"
+  
+
+  datetime: 
+    distance_in_words: 
+      half_a_minute: 'een halve minuut'
+      less_than_x_seconds: 
+        zero: 'minder dan een seconde'
+        one: 'minder dan 1 seconde'
+        other: 'minder dan {{count}} seconden'
+      
+      x_seconds: 
+        one: '1 seconde'
+        other: '{{count}} seconden'
+      
+      less_than_x_minutes: 
+        zero: 'minder dan een minuut'
+        one: 'minder dan 1 minuut'
+        other: 'minder dan {{count}} minuten'
+      
+      x_minutes: 
+        one: "1 minuut"
+        other: "{{count}} minuten"
+      
+      about_x_hours: 
+        one: 'ongeveer 1 uur'
+        other: 'ongeveer {{count}} uren'
+      
+      x_days: 
+        one: '1 dag'
+        other: '{{count}} dagen'
+      
+      about_x_months: 
+        one: 'ongeveer 1 maand'
+        other: 'ongeveer {{count}} maanden'
+      
+      x_months: 
+        one: '1 maand'
+        other: '{{count}} maanden'
+      
+      about_x_years: 
+        one: 'ongeveer 1 jaar'
+        other: 'ongeveer {{count}} jaren'
+      
+      over_x_years: 
+        one: 'langer dan 1 jaar'
+        other: 'langer dan {{count}} jaren'
+  
+  
+  number: 
+    format: 
+      precision: 2
+      separator: ','
+      delimiter: '.'
+    currency: 
+      format: 
+        unit: '€'
+        precision: 2
+        format: '%u %n'
+      
+
+
+# Active Record
+
+  activerecord: 
+    errors: 
+      template: 
+        header: 
+          one: "Er was een probleem bij het opslaan van het object {{model}} in de databank."
+          other: "Er waren {{count}} problemen bij het opslaan van het object {{model}} in de databank."
+        
+        body: "Je kan ons misschien helpen met de informatie in de volgende velden:"
+      
+      messages: 
+        inclusion: "is niet in de lijst opgenomen"
+        exclusion: "is niet beschikbaar"
+        invalid: "is ongeldig"
+        confirmation: "komt niet overeen met de bevestiging"
+        accepted: "moet worden geaccepteerd"
+        empty: "mag niet leeg blijven"
+        blank: "mag niet leeg blijven"
+        too_long: "is te lang (niet meer dan {{count}} karakters)"
+        too_short: "is te kort (niet minder dan {{count}} karakters)"
+        wrong_length: "heeft niet de juiste lengte (moet precies {{count}} karakters zijn)"
+        taken: "is niet beschikbaar"
+        not_a_number: "moet een een getal zijn"
+        greater_than: "moet groter zijn dan {{count}}"
+        greater_than_or_equal_to: "moet groter of gelijk zijn aan {{count}}"
+        equal_to: "moet gelijk zijn aan {{count}}"
+        less_than: "moet minder zijn dan {{count}}"
+        less_than_or_equal_to: "moet minder of gelijk zijn aan {{count}}"
+        odd: "moet oneven zijn"
+        even: "moet even zijn"
+        record_invalid: "heeft foutieve gegevens."

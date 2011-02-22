@@ -1,0 +1,19 @@
+
+__Bienvenue!__
+
+Lorsque vous vous identifiez ici, le site vous offre d'avantage:
+
+* plus de données à consulter, même des données sur lesquelles les dernières contrôles de qualité manquent: là, il s'agit de nouvelles informations complémentaires, de données de productions futures, mais aussi des données datant de l'époque 1950-1993 ;
+* accéder aux archives du CultuurDatabank depuis janvier 2006 ;
+* laisser des commentaires privés et des 'post-its' comme mémento lors de la recherche dans nos ressources ;
+* ajouter des mots clefs ou 'tags' là où il semble pertinent ; ceux-çi seront lisibles publiquement.
+
+
+Pas besoin d'un nouveau mot de passe: grâce à OpenID vous pouvez réutiliser vos identités de chez Myspace ou Flickr, par exemple. Il y a également des services gratuits dédiés à vous fournir votre OpenID. De plus amples explications se trouvent ici: [openid.net](http://openid.net).
+
+
+En passant par l'identification, vous acceptez les [conditions d'emploi](/legal). Bref: Une licence Creative Commons (droit de copier, droit de publier) nous est garantie pour tous les tags et commentaires que vous créez. Un minimum de délicatesse morale est expecté dans tous ces contributions. Tout le monde est responsable pour ces actions. Nous vous enverrons un courriel de temps en temps.
+
+
+[Appellez-nous](/about) si vous avez encore des questions ou bien avec des soucis après lecture de nos pages web.
+

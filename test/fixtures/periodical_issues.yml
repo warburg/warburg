@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  periodical_id: 1
+  volume: MyString
+  number: MyString
+  date_text: MyString
+  search_date: 2008-11-18
+  library_location: MyString
+  warehouse_id: 1
+  available: false
+  part_of_issue_id: 1
+
+two:
+  title: MyString
+  periodical_id: 1
+  volume: MyString
+  number: MyString
+  date_text: MyString
+  search_date: 2008-11-18
+  library_location: MyString
+  warehouse_id: 1
+  available: false
+  part_of_issue_id: 1

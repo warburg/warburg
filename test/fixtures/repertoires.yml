@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: One
+  inspiration_sources: MyString
+  creation_date: 2008-11-25
+  number_of_roles: 1
+  female_roles: 1
+  male_roles: 1
+  child_roles: 1
+  permalink: one
+
+two:
+  title: Two
+  inspiration_sources: MyString
+  creation_date: 2008-11-25
+  number_of_roles: 1
+  female_roles: 1
+  male_roles: 1
+  child_roles: 1
+  permalink: two

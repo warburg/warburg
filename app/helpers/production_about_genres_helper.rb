@@ -1,0 +1,3 @@
+module ProductionAboutGenresHelper
+  include BoxConfiguration
+end

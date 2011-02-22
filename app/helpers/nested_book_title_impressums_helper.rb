@@ -1,0 +1,3 @@
+module NestedBookTitleImpressumsHelper
+  include OrganisationsHelper
+end

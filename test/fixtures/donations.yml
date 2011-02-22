@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  code: MyString
+  title: MyString
+  donation_date: 2008-11-06
+  ex_dono: MyString
+  person_id: 1
+  organisation_id: 1
+  donor_person_id: 1
+  donor_organisation_id: 1
+  size: MyString
+  content: MyString
+  dating: MyString
+
+two:
+  code: MyString
+  title: MyString
+  donation_date: 2008-11-06
+  ex_dono: MyString
+  person_id: 1
+  organisation_id: 1
+  donor_person_id: 1
+  donor_organisation_id: 1
+  size: MyString
+  content: MyString
+  dating: MyString

@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>
+			<%= page_title(@parent, @object) %>
+    </title>
+	  <%= stylesheet_link_tag 'master.css' %>
+	  <%= stylesheet_link_tag 'errors.css' %>
+ 	  <%= stylesheet_link_tag 'jquery.autocomplete.css' %>
+
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+	  <%= javascript_include_tag "jquery-1.4.2.min", "application",
+                "jquery-autocomplete/lib/jquery.bgiframe.min.js",
+                'jquery-autocomplete/jquery.autocomplete.js' %>
+ 
+	</head>
+	<body class="<%= body_class %>">
+		<p id="skip"><a href="#content">Skip to content</a></p>
+        
+        <p id="beta-bar"><strong><%= markdown_without_paragraph t('message.top') %></strong></p>
+
+        <div id="masthead">
+            <h1><%= link_to 'VTI: Plug in &amp; Play', root_path %></h1>
+			<ul id="sec-navigation">
+				<li id="static-links">
+					<strong>Static:</strong>
+					<ul>
+                      <% if logged_in? %>
+						<li><%= link_to t('title.help'), help_path %></li>
+					  <% end%>
+						<li><%= link_to t('title.about'), about_path %></li>
+						<li><%= link_to t('title.legal'), legal_path %></li>
+					</ul>
+				</li><!-- static-links -->
+				<li id="profile-links">
+					<strong>Profile:</strong>
+					<ul>
+                      <% if logged_in? %>
+                        <li><%= link_to t('title.logout'), logout_path %> (<%= current_user.identity_url %>)</li>
+                        <% if admin? %>
+                            <%= link_to t('label.edit_login_page'), edit_static_path('login') %>
+                        <% end %>
+                      <% else %>
+						<li><%= link_to t('title.login'), login_path %> </li>
+                      <% end %>
+					</ul>
+				</li><!-- profile-links -->
+				<li id="language-links">
+					<strong><%= t('label.language') %>:</strong>
+					<ul>
+						<% %w(nl fr en).each do |lang| %>
+							<li <%= "class='selected'" if (lang == I18n.locale) %> ><%= link_to lang.upcase, current_path(:lang => lang) %></li>
+						<% end %>
+					</ul>
+				</li><!-- language-links -->
+			</ul><!-- sec-navigation -->
+
+			<form id="search" action='<%= search_form_action %>' method='GET'>
+				<p>
+                  <input type='hidden' name='lang' value='<%= I18n.locale %>'/>
+                  <%= search_field %>
+                  <a href="#" onclick="$('#search').submit()" class="button"><span><%= t("search.search") %></span></a>
+                  <a id="search-options" href="#" onclick="$('#search ul').toggle()">Open search-options</a>
+                  <ul class="more-menu-field">
+                     <li><p><%= t("title.#{search_field_default_class}") %></p></li>
+				  </ul>
+                  <ul class="more-menu">
+                    <li class="close"><a href="#" title="Close menu" onclick="$('#search ul').toggle();">Close menu</a></li>
+                    <% searchable_classes.each_with_index do |klass, i| %>
+                        <li class="	<%= "klass" %> <%='selected' if (klass == search_field_default_class) %>">
+                            <a href="#" onclick="<%= search_onclick_value(klass) %>">
+                            	<%= t("title.#{klass}").downcase %>
+                            </a>
+                        </li>
+                    <% end %>
+                  </ul>
+				</p>
+			</form><!-- search -->
+			<ul id="navigation">
+				<% main_classes.each do |klass| %>
+					<li <%= "class='selected'" if controller.controller_name == klass %>><%= link_to "<span>#{t("title.#{klass}")}</span>", eval("#{klass}_path") %>
+                      <% if admin? && (klass != 'documents')%>
+                        <%= link_to 'New', eval("new_#{klass.singularize}_path"), :class => 'new' %>
+                      <% end %>
+                    </li>
+				<% end %>
+
+                <% if admin? %>
+                  <li id="nav-more">
+                    <strong onclick="$('#nav-more ul').toggle();">More</strong>
+                    <ul class="more-menu2">
+                      <li class="close"><a href="#" title="Close menu" onclick="$('#nav-more ul').toggle();">Close menu</a></li>
+                      <%= help_classes_menu_items %>
+                    </ul>
+                  </li>
+                  <li id="barcodes">
+                    <strong onclick="window.location = '<%= pdf_index_path %>'">More</strong>
+                  </li>
+                <% end %>
+
+			</ul><!-- navigation -->
+		</div><!-- masthead -->
+		
+
+        <div id="title">
+			<% unless logged_in? %>
+            <p id="info">
+                <%= image_tag('info.gif', :width => 25, :height => 26, :alt => 'Info') %>
+                <%=t 'label.vti_info' %>
+            </p>
+			<% end %>
+
+            <% unless %w(static).include?(controller_name)  %>
+              <%= link_delete(@object) %>
+	            <%= link_edit(@object) %>
+              <%= link_clone(@object) %>
+              <h2 style="clear: both">
+                 <%= heading %>
+							</h2>
+							
+							<%= linktrail(@parent, @object)%>
+            <% end %>
+
+        </div><!-- title -->
+
+        <div id="content">
+
+          <%#	<p style="color: green"><%= flash[:notice] % ></p> %>
+          <% if flash[:error] %>
+            <p id="error"><%= flash[:error] %></p>
+          <%   flash[:error] = nil
+             end %>
+          <% if flash[:info] %>
+            <p id="info-msg"><%= flash[:info] %></p>
+          <%   flash[:info] = nil
+             end %>
+
+          <%= yield %>
+		</div><!-- content -->
+
+        <div id="footer">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/be/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/2.0/be/88x31.png" /></a><br />
+			<span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dc:title" rel="dc:type">data.vti.be</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://data.vti.be/about" property="cc:attributionName" rel="cc:attributionURL">VTi</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/be/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 Belgium License</a>.<br />
+			Based on a work at <a xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://data.vti.be" rel="dc:source">data.vti.be</a>.<br />
+			Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="http://data.vti.be/legal" rel="cc:morePermissions">
+			 http://data.vti.be/legal</a>.
+		</div><!-- footer -->
+	</body>
+
+</html>
+<!--
+	Design: Made by Elephant (http://madebyelephant.com/)
+	Development: 10to1 (http://10to1.be/)
+-->

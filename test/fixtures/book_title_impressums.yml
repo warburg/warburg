@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  book_title_id: 1
+  impressum_id: 1
+  sequence_number: 1
+
+two:
+  book_title_id: 1
+  impressum_id: 1
+  sequence_number: 1

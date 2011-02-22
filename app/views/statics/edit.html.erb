@@ -1,0 +1,7 @@
+<% form_for @object do |f| %>
+  <% available_locales.each do |locale| %>
+    <%= f.label "text_#{locale}", locale %>
+    <%= f.text_area "text_#{locale}", :width => 500 %><br/>
+  <% end %>
+  <%= f.submit %>
+<% end %>

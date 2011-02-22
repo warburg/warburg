@@ -1,0 +1,6 @@
+rippled_invisible_by_season:  
+  production: rippled_invisible_by_season
+  
+rippled_visible_by_season:  
+  production: rippled_visible_by_season
+

@@ -1,0 +1,17 @@
+dutch:
+  iso_code: DUT
+  name_en: name_nl
+  name_nl: Nederlands
+  name_fr: néerlandais
+
+english:
+  iso_code: ENG
+  name_en: name_en
+  name_nl: Engels
+  name_fr: anglais
+
+french:
+  iso_code: FRE
+  name_en: name_fr
+  name_nl: Frans
+  name_fr: français

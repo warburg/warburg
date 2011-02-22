@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  impressum_id: 1
+  periodical_id: 1
+  creator_id: 1
+  updated_id: 1
+
+two:
+  impressum_id: 1
+  periodical_id: 1
+  creator_id: 1
+  updated_id: 1

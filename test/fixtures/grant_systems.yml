@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  code: MyString
+  description: MyString
+  legal_base: MyString
+  type: MyString
+  grant_genre_id: 1
+  organisation_form: MyString
+
+two:
+  code: MyString
+  description: MyString
+  legal_base: MyString
+  type: MyString
+  grant_genre_id: 1
+  organisation_form: MyString

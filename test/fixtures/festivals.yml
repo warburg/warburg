@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  organisation_id: 1
+  periodicity: MyString
+  start: 2008-11-20
+  start_text: MyString
+  stop: 2008-11-20
+  stop_text: MyString
+  type: MyString
+
+two:
+  organisation_id: 1
+  periodicity: MyString
+  start: 2008-11-20
+  start_text: MyString
+  stop: 2008-11-20
+  stop_text: MyString
+  type: MyString

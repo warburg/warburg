@@ -1,0 +1,4 @@
+my_relation:
+    type: ArticleByPerson
+    person: jos
+    article: one    

@@ -1,0 +1,39 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: One
+  season: MyString
+  target_audience_text_nl: MyString
+  target_audience_from: 1
+  target_audience_to: 1
+  rerun_of_id: 1
+  verified: false
+  permalink: one
+
+two:
+  title: Two
+  season: MyString
+  target_audience_text_nl: MyString
+  target_audience_from: 1
+  target_audience_to: 1
+  rerun_of_id: 1
+  verified: false
+  permalink: two
+  
+rippled_invisible_by_season:  
+  title: Three
+  target_audience_text_nl: MyString
+  target_audience_from: 1
+  target_audience_to: 1
+  verified: false
+  visible: true
+  season: ripple_invisible
+  
+rippled_visible_by_season:  
+  title: Four
+  target_audience_text_nl: MyString
+  target_audience_from: 1
+  target_audience_to: 1
+  verified: false
+  visible: false
+  season: ripple_visible

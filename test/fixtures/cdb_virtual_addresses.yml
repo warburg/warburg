@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  cdb_address_id: 1
+  title: MyString
+
+two:
+  cdb_address_id: 1
+  title: MyString

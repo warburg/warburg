@@ -1,0 +1,6 @@
+Nieuwe kennisbank voor het VTi (data.vti.be)
+
+Het fundament van deze applicatie is een relationele databank, bij VTi is dat postgresql. Daarop is deze RoR webapplicatie ge‘nt waarmee de databank kan worden aangevuld, aangepast enzovoort.  Het is ook deze applicatie die ingelogde users extra mogelijkheden biedt (tagging, extra data, schrijfrechten, e.d.). Daarnaast is er ook een D2R server op de databank aangesloten, bestaande software (http://www4.wiwiss.fu-berlin.de/bizer/d2r-server/) waarmee de data in de specifieke formaten voor het semantische web (RDF browsing, RDF dumps en SPARQL endpoint) wordt gepubliceerd.
+
+De ontwikkeling gebeurde van februari 2009 tot juni 2010, de datamigratie in december 2010 en in voorjaar 2010 stapten de medewerkers van VTi stap voor stap over op de nieuwe databank.
+In oktober 2010 is de applicatie vrijgegeven als open source: www.github.com/warburg/warburg.

@@ -1,0 +1,22 @@
+<ul id="tags">
+	<%- for tag in tags.tags -%>
+				<%= render :partial => 'tags/tag', :object => tag %>
+	<%- end -%>
+</ul><!-- tags -->
+<% if tags.tags.blank? %>
+	<script>$('#tags').hide();</script>
+<% end %>
+<%- user_area do -%>
+	<p class="add add-a-tag"><a href="#" onclick="$('.add-a-tag').toggle(); return false;"><%= t('tags.add') %>&hellip;</a></p>
+	<%- form_tag(add_tags_path(tags.class, tags.id), :id => "addtag", :class => "add-a-tag", :style => "display:none") do -%>
+	<h4><%= t('tags.add') %></h4>
+	<p>
+		<%= text_field_tag("tagfield") %>
+		<a href="#" class="button" onclick="$('#addtag').submit(); return false;"><span><%=t('button.save')%></span></a>
+		<a class="cancel" href="#" onclick="$('#addtag')[0].reset();$('.add-a-tag').toggle(); return false;"><%=t('button.cancel')%></a>
+	</p>
+	<%- end -%>
+<%- end -%>
+<script lang="javascript">
+  $("#tagfield").autocomplete('/tags/autocomplete');
+</script>

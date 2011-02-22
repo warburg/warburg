@@ -1,0 +1,3950 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<cdbxml xmlns="http://www.cultuurdatabank.com/XMLSchema/CdbXSD/3.0/FINAL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cultuurdatabank.com/XMLSchema/CdbXSD/3.0/FINAL http://www.cultuurdatabank.com/XMLSchema/CdbXSD/3.0/FINAL/CdbXSD.xsd">
+	<metadata>
+		<versions>
+			<categorisation url="http://www.cultuurdatabank.com/XMLSchema/CdbXSD/3.0/FINAL/categories/1.8/categorisation.xml"/>
+			<regions url="http://www.cultuurdatabank.com/XMLSchema/CdbXSD/3.0/FINAL/regions/1.0/regions.xml"/>
+		</versions>
+	</metadata>
+	<events>
+		<!-- 1. Onegin (Voorbeeld voor beschrijvende velden: titel, korte en lange beschrijving, prijs) -->
+		<event availablefrom="2006-05-29T17:43:39+01:00" availableto="2006-06-10T20:00:00+01:00" cdbid="80D08D93-9BCF-C1D1-EBAFA2BBAD0E5586" externalid="Antwerpen deSingel Invoerders:aanbod_7255">
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2006-06-09</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<mail>info@toneelhuis.be</mail>
+				<phone>+32 3 2248844</phone>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.3.0.0.0">Nationaal</publicscope>
+				<themes>
+					<theme catid="1.3.0.0.0">Theater</theme>
+				</themes>
+				<types>
+					<type catid="0.2.0.0.0">Voorstellingen (concert, optreden, vertoning,...)</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>vrijdag 09/06/2006 om 20:00</calendarsummary>
+					<longdescription>De jonge erfgenaam Onegin raakt bevriend met de melancholische dichter Lenski, die verloofd is met Olga, een meisje uit de buurt. Tijdens een bezoek van de twee vrienden aan de familie van Olga, ontmoet Onegin haar intrigerende zus, Tatjana, die meteen valt voor zijn charmes. Onegin wijst haar vriendelijk maar kordaat af. Jaren later ontmoeten ze elkaar opnieuw in Moskou. De gelaten Tatjana is ondertussen getrouwd met een saaie generaal. Deze keer wordt Onegin wel verliefd op haar. Tatjana is echter niet van plan haar eed van trouw te verbreken.
+
+Bijgestaan door Peter Missotten van De Filmfabriek voor de vormgeving en Dominique Pauwels van LOD voor de muziek ensceneert Guy Cassiers dit verhaal op zijn eigen, gekende manier. Samen met de Toneelhuis-acteurs zal hij door het gebruik van camera's op scène de illusie van het sprookje ontmantelen.</longdescription>
+					<media>
+						<file>
+							<copyright>Toneelhuis</copyright>
+							<filename>Onegin.jpg</filename>
+							<filetype>jpeg</filetype>
+							<hlink>Onegin.jpg</hlink>
+							<title>Het Toneelhuis</title>
+						</file>
+					</media>
+					<price>
+						<pricevalue>9</pricevalue>
+						<pricedescription>A: 16 euro, Rang B: 9 euro en Reductie (-26/+65): 8 euro</pricedescription>
+					</price>
+					<shortdescription>Jewgeni Onegin, de roman in verzen van Poesjkin, is een van de grootste werken uit de negentiende-eeuwse Russische literatuur. Guy Cassiers liet zich voor zijn eerste grote regie bij Het Toneelhuis inspireren door dit hyperromantische verhaal over een onmogelijke liefde.</shortdescription>
+					<title>Onegin</title>
+				</eventdetail>
+			</eventdetails>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Antwerpen</city>
+						<country>BE</country>
+						<street>Komedieplaats 18</street>
+						<zipcode>2000</zipcode>
+					</physical>
+				</address>
+				<label>Het Toneelhuis</label>
+			</location>
+			<organiser>
+				<label>Het Toneelhuis</label>
+			</organiser>
+			<!-- Onderstaand properties element is specifiek voor dit XML voorbeeld bestand. -->
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Beschrijvende velden, vb. titel</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/eventdetails</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+						<p>"Onegin" is een standaard en eenvoudig voorbeeld. Gebruik dit voor verwerken van beschrijvende velden. Als je dit voorbeeld kan interpreteren, kan je om met het overgrote deel van de gegevens in CultuurDatabank.<p>
+						<table cellspacing="0" cellpadding="0">
+						  <tr>
+							<td>Veld</td>
+							<td>Element</td>
+							<td>Type</td>
+							<td>Verpl.</td>
+						  </tr>
+						  <tr>
+							<td>Titel</td>
+							<td>//event/eventdetails/eventdetail/label</td>
+							<td>String(250)</td>
+							<td>X</td>
+						  </tr>
+						  <tr>
+							<td>Korte beschrijving</td>
+							<td>//eventdetail/shortdescription</td>
+							<td>String(600)</td>
+							<td>X</td>
+						  </tr>
+						  <tr>
+							<td>Lange beschrijving</td>
+							<td>//eventdetail/longdescription</td>
+							<td>String</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<td>Prijs</td>
+							<td>//eventdetail/price</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<td>&nbsp;</td>
+							<td>//price/pricevalue</td>
+							<td>Double</td>
+							<td>X</td>
+						  </tr>
+						  <tr>
+							<td>&nbsp;</td>
+							<td>//price/pricedescription</td>
+							<td>String(1024)</td>
+							<td>&nbsp;</td>
+						  </tr>
+						  <tr>
+							<td colspan="4">Het price element is niet verplicht. Als het element niet beschikbaar is, is de prijs onbepaald. Als price.pricevalue 0 is, is het aanbod gratis. price.pricevalue bevat de "standaard prijs" en is van het type double. Overige prijsomschrijvingen en kortingen worden opgeslagen in price.pricedescription, een veld met een lengte van 1024 karakters.</td>
+						  </tr>
+						</table>					
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<!-- 2. De boeken van deBuren: Radioboeken (Voorbeeld voor attributen van informatie-eendheden: cdbid, externe id, private, availablefrom, availableto) -->
+		<event availablefrom="2006-04-07T16:29:14+01:00" availableto="2006-06-26T19:00:00+01:00" cdbid="74C1BC5B-EC4F-0B70-B9EF3B69131B6B55" externalid="Brussel SKB:SKB00001_135329">
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2006-04-23</date>
+						<timestart>19:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-07</date>
+						<timestart>19:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-21</date>
+						<timestart>19:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-06-11</date>
+						<timestart>19:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-06-18</date>
+						<timestart>19:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-06-25</date>
+						<timestart>19:00:00+01:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<mail>info@vl-nl.be</mail>
+				<phone>02-212.19.30</phone>
+				<phone type="fax">02-212.19.49</phone>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.3.0.0.0">Nationaal</publicscope>
+				<themes>
+					<theme catid="1.10.0.0.0">Literatuur</theme>
+				</themes>
+				<types>
+					<type catid="0.2.0.0.0">Voorstellingen (concert, optreden, vertoning,...)</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>zondag 23/04/2006 om 19:00, zondag 07/05/2006 om 19:00, zondag 21/05/2006 om 19:00, zondag 11/06/2006 om 19:00, zondag 18/06/2006 om 19:00, zondag 25/06/2006 om 19:00</calendarsummary>
+					<price>
+						<pricevalue>0</pricevalue>
+					</price>
+					<shortdescription>Radioboeken zijn verhalen, door Nederlandse en Vlaamse auteurs geschreven op verzoek van deBuren. De schrijvers lezen hun verhalen voor en Klara verzorgt de opname en de radiouitzending.</shortdescription>
+					<title>De boeken van deBuren: Radioboeken</title>
+				</eventdetail>
+			</eventdetails>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Brussel</city>
+						<country>BE</country>
+						<housenr>6</housenr>
+						<street>Leopoldstr.</street>
+						<zipcode>1000</zipcode>
+					</physical>
+				</address>
+				<label>Vlaams-Nederlands Huis deBuren</label>
+			</location>
+			<organiser>
+				<label>Vlaams-Nederlands Huis deBuren</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Attributen, vb. cdbid</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>"De boeken van deBuren: Radioboeken" is een standaard en eenvoudig voorbeeld van een aanbod. Gebruik dit voor verwerken van attributen:</p>
+					<table cellspacing="0" cellpadding="0">
+					  <tr>
+						<td>Veld</td>
+						<td>Element</td>
+						<td>Type</td>
+						<td>Verpl.</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">Geen van de attributen van hoofd informatie-eenheden is verplicht omdat deze velden enkel door CultuurDatabank kunnen voorzien worden en dus niet door andere publishers. Subscribers zullen echter wel altijd deze attributen ingevuld ontvangen.</td>
+					  </tr>
+					  <tr>
+						<td>Databank ID</td>
+						<td>//@cdbid</td>
+						<td>string(60)</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">cdbid is een UUID (Universally Unique IDentifier). We defini&euml;ren echter string als datatype omdat het formaat in de toekomst kan wijzigen.</td>
+					  </tr>
+					  <tr>
+						<td>Externe ID</td>
+						<td>//@externalid</td>
+						<td>string(60)</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">externalid bevat de identifier die door een publisher werd voorzien in geval het in CultuurDatabank ge&iuml;mporteerde gegevens betreft.</td>
+					  </tr>
+					  <tr>
+						<td>Publicatie mag vanaf</td>
+						<td>//@availablefrom</td>
+						<td>Datetime</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>Datum archivering</td>
+						<td>//@availableto</td>
+						<td>Datetime</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">In availablefrom wordt bijgehouden vanaf wanneer het aanbod mag gepubliceerd worden. availableto bevat het moment waarop de gegevens verlopen zijn. CultuurDatabank berekent deze waarde: als een invoerder gegevens archiveert wordt deze waarde op gisteren gezet. Standaard wordt availableto echter gelijkgesteld aan de dag na de laatste dag dat het aanbod doorgaat. Als subscriber kan je zelf beslissen of je de gegevens vervolgens fysiek verwijdert.</td>
+					  </tr>
+					  <tr>
+						<td>Publiek beschikbaar</td>
+						<td>//@private</td>
+						<td>boolean (default: 0)</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">"55-plussersfeest" is een voorbeeld dat dieper ingaat op //@private.</td>
+					  </tr>
+					</table>					
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<!-- 3. Bol de wereld (Voorbeeld voor gebruik van categorieën: type aanbod, thema, publieksbereik, voorzieningen, specifieke doelgroep) -->
+		<event availablefrom="2005-08-09T00:00:00+01:00" availableto="2006-05-25T00:00:00+01:00" cdbid="407B8B11-FAB0-9137-4D03F71230CAD1EA">
+			<agefrom>3</agefrom>
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>15:00:00+01:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<phone type="phone">+32 15 250770</phone>
+				<phone type="fax">+32 15 251360</phone>
+				<url>http://www.4hoog.be</url>
+				<url reservation="true">http://www.zwaneberg.be</url>
+			</contactinfo>
+			<eventcategories>
+				<facilities>
+					<facility catid="3.3.0.0.0">Eetgelegenheid</facility>
+					<facility catid="3.4.0.0.0">Drankgelegenheid</facility>
+					<facility catid="3.5.0.0.0" description="op het marktplein van Heist-o/d-Berg">Autoparking</facility>
+					<facility catid="2.1.1.0.0">Gezinnen</facility>
+				</facilities>
+				<publicscope catid="6.3.0.0.0">Nationaal</publicscope>
+				<themes>
+					<theme catid="1.3.0.0.0">Theater</theme>
+				</themes>
+				<types>
+					<type catid="0.2.0.0.0">Voorstellingen (concert, optreden, vertoning,...)</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>woensdag 24/05/2006 om 15:00</calendarsummary>
+					<estimatedtime>50</estimatedtime>
+					<performers>
+						<performer>
+							<label>4Hoog Productiehuis</label>
+						</performer>
+					</performers>
+					<price>
+						<pricevalue>7</pricevalue>
+					</price>
+					<shortdescription>'Bol de wereld' gaat over onze wereld, jouw wereld, mijn wereld. Mijn wereldje. En over al onze andere werelden. Na 'Specht' pakt 4hoog uit met 'Bol de wereld', een bruisende theatervoorstelling boordevol muziek voor kinderen vanaf 6 jaar. Mark Jeanty schrijft opnieuw de tekst, samen met Raf Walschaerts die ook regisseert. Met Han Coucke, Katrien De Muynck en Helder Deploige.</shortdescription>
+					<title>Bol de wereld</title>
+				</eventdetail>
+			</eventdetails>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Heist-Op-Den-Berg</city>
+						<country>BE</country>
+						<housenr>z/n</housenr>
+						<street>Bergstraat</street>
+						<zipcode>2220</zipcode>
+					</physical>
+				</address>
+				<label>Cultuurcentrum Zwaneberg</label>
+			</location>
+			<organiser>
+				<label>Cultuurcentrum Zwaneberg</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Categorieën</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/categories</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>In "Bol de wereld" ligt de nadruk op categorie&euml;n. CutuurDatabank categorisatie is een boomstructuur. Documentatie en categorisation.xml zijn beschikbaar op <a href="http://www.cultuurdatabank.be/XMLSchema/CdbXSD/3.0/FINAL/">http://www.cultuurdatabank.be/XMLSchema/CdbXSD/3.0/FINAL/</a>.<p>
+					<p>Gebruik categorie&euml;n voor selectie, gestructureerd zoeken of navigatie, bijv. al het aanbod van type concert, al het aanbod met thema popmuziek.</p>
+					<p>De hoofdnode van categorisation.xml heeft een version attribuut. Grondige wijzigingen aan de categorisatie komen zelden voor en worden begeleid van een mapping. Wel kunnen te allen tijde categorie&euml;n worden toegevoegd. Wijzigingen vind je ook terug op bovenstaande Internet adres.</p>
+					<table cellspacing="0" cellpadding="0">
+					  <tr>
+						<td>Veld</td>
+						<td>Element</td>
+						<td>Type</td>
+						<td>Verpl.</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//event/categories</td>
+						<td>&nbsp;</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">categories bevat verplichte en optionele categorie&euml;n. type en theme zijn verplicht. publicscope wordt altijd voorzien (behalve voor de link hoofd informatie-eenheid).</td>
+					  </tr>
+					  <tr>
+						<td>Type aanbod</td>
+						<td>//categories/types</td>
+						<td>&nbsp;</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//categories/types/type</td>
+						<td>string(60)</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//categories/types/type/@catid</td>
+						<td>string</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">catids zijn betekenisloze, unieke ID&rsquo;s vb.
+						  <p>
+						<p>&lt;item catid=&quot;1.7.12.0.0&quot; label=&quot;Tekenfilms&quot;/&gt; .</td>
+					  </tr>
+					  <tr>
+						<td>Thema</td>
+						<td>//categories/themes</td>
+						<td>&nbsp;</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//categories/themes /theme</td>
+						<td>string(60)</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//categories/themes/theme/@catid</td>
+						<td>string</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td>Publieksbereik</td>
+						<td>//categories/publicscope</td>
+						<td>string(60)</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//categories/publicscope/@catid</td>
+						<td>string</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>Voorzieningen</td>
+						<td>//categories/optional/category</td>
+						<td>string(60)</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//categories/optional/category/@catid</td>
+						<td>string</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//categories/optional/category/@description</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">Bij voorzieningen kan een toelichting ( //@description ) worden toegevoegd zoals in dit voorbeeld gebeurd voor "autoparking".</td>
+					  </tr>
+					  <tr>
+						<td>Doelgroep</td>
+						<td>//categories/optional/category</td>
+						<td>string</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//categories/optional/category/@catid</td>
+						<td>string</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">Type, thema zijn verplicht. Publieksbereik wordt niet verplicht door XSD maar wordt standaard op buurt/wijk gezet indien niet voorzien, voorzieningen en doelgroepen vind je onder optionele categorie&euml;n. Andere "dimensies" zoals voorzieningen en doelgroepen voor aanbod zijn "toegankelijkheid" en "type locatie". Andere hoofd informatie-eenheden hebben eigen dimensies (sector, type persoon, type organisatie voor actor , type link voor link. ) De dimensie Thema is beschikbaar voor alle informatie-eenheden.</td>
+					  </tr>
+					</table>
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<!-- 4. Vitalski's Week-Up lounge (Voorbeeld voor gebruik van externe mediabestanden) -->
+		<event availablefrom="2006-12-12T00:00:00+01:00" availableto="2007-08-11T00:00:00+01:00" cdbid="6EA01405-DF7A-AD6E-DFC901865360880C">
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2007-08-10</date>
+						<timestart>16:00:00+01:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<phone>03/2264963</phone>
+				<url>http://www.petrolclub.be/</url>
+				<url reservation="true">http://www.vitalski.com/</url>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.2.0.0.0">Regionaal</publicscope>
+				<themes>
+					<theme catid="1.10.0.0.0">Literatuur</theme>
+					<theme catid="1.8.0.0.0">Muziek</theme>
+					<theme catid="1.10.5.0.0">Poëzie</theme>
+					<theme catid="1.8.0.0.0">Muziek</theme>
+					<theme catid="1.8.2.0.0">Jazz en blues</theme>
+					<theme catid="1.8.3.0.0">Moderne muziek</theme>
+					<theme catid="1.8.3.1.0">Pop en rock</theme>
+					<theme catid="1.8.3.4.0">Chanson en kleinkunst</theme>
+				</themes>
+				<types>
+					<type catid="0.49.0.0.0">Uitgaan</type>
+					<type catid="0.26.0.0.0">Bals, Fuiven, en Nightlife</type>
+					<type catid="0.39.0.0.0">Uitgaan, Eten, en Drinken</type>
+					<type catid="0.2.0.0.0">Voorstellingen (concert, optreden, vertoning,...)</type>
+					<type catid="0.50.4.0.0">Concert</type>
+					<type catid="0.4.0.0.0">Literaire voordrachten</type>
+					<type catid="0.50.7.0.0">Matinee</type>
+					<type catid="0.50.8.0.0">Performance</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<performers>
+						<performer>
+							<role>Band</role>
+							<label>The O'Haras</label>
+						</performer>
+						<performer>
+							<role>Dichter-cabaretier-singer-song</role>
+							<label>Vitalski &amp; Martin Jansen</label>
+						</performer>
+						<performer>
+							<role>Band</role>
+							<label>Sammy De Burggraeve</label>
+						</performer>
+						<performer>
+							<role>Luchtgitarist</role>
+							<label>Fixkes</label>
+						</performer>
+						<performer>
+							<label>Philip Heylen</label>
+						</performer>
+					</performers>
+					<longdescription>THE O'HARAS (B, LIVE, WWW.OHARAS.BE)
+2 woorden: Antwerp's finest! Flamencosurfabilly door een zootje ongeregeld uit het Antwerpse gesereveerd met punk &amp; western, ska en jazz. Meer moet dat niet zijn.
+
+VITALSKI &amp; MARTIN JANSEN (B, LIVE, WWW.VITALSKI.COM, WWW.DEZWARTEKOMEDIE.BE)
+De nachtburgemeester zoals u hem nooit eerder zag: als vertolker van de mooiste tearjerkers uit de Vaderlandsche muziekgeschiedenis. En wie speelt daar magistraal piano aan zijn flank? Dit is toch niet...? Kan het zijn dat... Jazeker: Martin Jansen _ kind aan huis in De Zwarte Komedie, beroemd geworden met zijn composities voor 'de zwarte toetsen'.
+
+PHILIP HEYLEN (B, WWW.PHILIPHEYLEN.BE)
+Naast de nachtburgemeester is nog plaats voor de Schepen van Cultuur te Antwerpen. Tevens begenadigd dichter en bereid om dat te komen bewijzen. Hulde!
+
+SAMMY DE BURGGRAEVE (B, LIVE)
+Is hij dichter, cabaretier of singer-songwriter? Nee, hij is gewoon steengoed, meneer! Kom 'm zien nu hij nog betaalbaar is!
+
+FIXKES (B, LIVE, www.myspace.com/stabroek)
+Akoestisch, hiphop, downtempo... Toekomstige sensatie in muziekland, recht uit de enige echte place to be: Stabroek County. Oproep: hij is op zoek naar een trekzak!
+
+BUCKETBUTT (B)
+Belgisch kampioen luchtgitaar spelen. Onwijs graaf! De enige die de natie de overwinning kan schenken op Eurosong.
+
+TAMARA (B)
+Na het paaldansen de nieuwste sensatie in Boogieland. Deze sensuele Amazone toont ons alvast het klappen van de zweep. Hit me, baby!
+
+CROONYTUNES (B, LIVE)
+Sinatra uit het graf gehaald en flink dooreengeschud.
+
+DR. INGER LEEMANS (B)
+Doctor in De Vroegmoderne Pornografische Aangelegenheden en Handtastelijk Seksuologe. Eindelijk iemand die u iets nuttigs kan vertellen. Draag wel uw rubberen handschoenen!
+
+ANDREA URBANKOVA (B)
+Heaven must be missing an Angel. De zuiverste stem op ons halfrond gaat zich te buiten aan experimentele aria's. </longdescription>
+					<media>
+						<file>
+							<copyright>The O'Haras</copyright>
+							<filename>hara_sutra.mp3</filename>
+							<filetype>mp3</filetype>
+							<hlink>http://www.cultuurdatabank.com/CultuurDemo/delivery/hara_sutra.mp3</hlink>
+							<mediatype>audio</mediatype>
+							<title>The O'Haras - Hara Sutra</title>
+						</file>
+						<file>
+							<copyright>Klasse</copyright>
+							<filename>KVL16148.pdf</filename>
+							<filetype>pdf</filetype>
+							<hlink>http://www.cultuurdatabank.com/CultuurDemo/delivery/KVL16148.pdf</hlink>
+							<mediatype>brochure</mediatype>
+							<title>Er zijn toch ook avontuurlijke schoolmeesters</title>
+						</file>
+						<file>
+							<copyright>5 voor 12</copyright>
+							<filename>vwul_poster.jpg</filename>
+							<filetype>jpeg</filetype>
+							<hlink>vwul_poster.jpg</hlink>
+							<mediatype>poster</mediatype>
+							<title>Vitalski's Week-up Lounge</title>
+						</file>
+						<file main="true">
+							<copyright>wintertuin.nl</copyright>
+							<filename>VitalskiArnhem.jpg</filename>
+							<filetype>jpeg</filetype>
+							<hlink>VitalskiArnhem.jpg</hlink>
+							<mediatype>photo</mediatype>
+						</file>
+						<file>
+							<copyright>Vital</copyright>
+							<filename>vitalski_groep.jpg</filename>
+							<filetype>jpeg</filetype>
+							<hlink>vitalski_groep.jpg</hlink>
+							<mediatype>photo</mediatype>
+						</file>
+					</media>
+					<shortdescription>Vitalski's Week Up Lounge: de gekste én de beste acts - van operadiva's tot metalheads, van topmodellen tot van hun sokkel gevallen charmezangers. Uw gastheer geeft de maat aan en verwent u verder met diepte-interviews, kortfilms en de venijnigste beats uit dj-land. Bovendien wordt u onder handen genomen in de kap- en massagesalons én zijn er taartjes voor iedereen!</shortdescription>
+					<title>Vitalski's Week-Up Lounge</title>
+				</eventdetail>
+			</eventdetails>
+			<location>
+				<address>
+					<physical>
+						<city>Antwerpen</city>
+						<country>BE</country>
+						<housenr>21</housenr>
+						<street>D'Herbouvillekaai</street>
+						<zipcode>2000</zipcode>
+					</physical>
+				</address>
+				<label>Petrol - De Breekmolen</label>
+			</location>
+			<organiser>
+				<label>5 voor 12</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Media</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/eventdetails/eventdetail/media</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>In "Vitalski's Week-Up lounge" ligt de nadruk op media. Dit zijn verwijzingen naar bestanden (vb. afbeeldingen, audiobestanden, videobestanden, brochures)</p>
+					<table cellspacing="0" cellpadding="0">
+					  <tr>
+						<td>Veld</td>
+						<td>Element</td>
+						<td>Type</td>
+						<td>Verpl.</td>
+					  </tr>
+					  <tr>
+						<td>Media</td>
+						<td>//media</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//media/hlink</td>
+						<td>String(400)</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">hlink kan een absoluut pad zijn naar een directory op het web beschikbaar via http of kan een relatief pad zijn. In het laatste geval worden afbeeldingen mee voorzien in een compressiebestand (ZIP).</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//media/copyright</td>
+						<td>String(250)</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//media/filename</td>
+						<td>String(250)</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//media/filetype</td>
+						<td>Enumaration</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">Jpeg, gif, png, mp3, qt, mov, wmv, wav, rm, avi, mpg, swf, pfd, rtf, doc, xls, txt, htm(l), zip, onbepaald. Let op, dit zijn niet de extensies van een bestand, maar aanduidingen van het soort bestand.</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//media/label</td>
+						<td>String(400)</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">Het is mogelijk extra toelichting bij een bestand te voegen zoals bij de PDF in dit voorbeeld.</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//media/mediatype</td>
+						<td>String(400)</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">Mediatype is een enumeratie die aangeeft of het een poster, brochure, foto, audio, video, logo, wegbeschrijving of tekst is.</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//media/@main</td>
+						<td>Boolean</td>
+						<td valign="top"></td>
+					  </tr>
+					  <tr>
+						<td colspan="4">Main wordt gebruikt als er meerdere afbeeldingen voorkomen. Afbeelding met @main is WAAR geldt als hoofdafbeelding voor publicaties en kan je dus bijvoorbeeld gebruiken in overzichtslijsten.</td>
+					  </tr>
+					</table>
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<!-- 5. Sleeping Beauty (Voorbeeld voor gebruik van contactgegevens) -->
+		<event availablefrom="2006-05-30T08:05:45+01:00" availableto="2006-06-19T15:00:00+01:00" cdbid="83E5D2BB-D11D-739E-D3F55D5FDA759B1A" externalid="TiNCK Validatoren:3406SB_5CGB4">
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2006-06-16</date>
+						<timestart>19:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-06-17</date>
+						<timestart>13:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-06-17</date>
+						<timestart>19:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-06-18</date>
+						<timestart>15:00:00+01:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<mail>info@balletvlaanderen.be</mail>
+				<phone>+32 3 234 34 38</phone>
+				<url reservation="true">https://ticket.tinck.be/events_zaal1.aspx?CDBEventID=3406SB</url>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.3.0.0.0">Nationaal</publicscope>
+				<themes>
+					<theme catid="1.9.1.0.0">Klassieke dans en Ballet</theme>
+				</themes>
+				<types>
+					<type catid="0.50.4.0.0">Concert</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>vrijdag 16/06/2006 om 19:30, zaterdag 17/06/2006 om 13:30, zaterdag 17/06/2006 om 19:30, zondag 18/06/2006 om 15:00</calendarsummary>
+					<media>
+						<file>
+							<copyright>Koninklijk Ballet Van Vlaanderen</copyright>
+							<filename>Media_sleepingbeauty_M.jpg</filename>
+							<filetype>jpeg</filetype>
+							<hlink>Media_sleepingbeauty_M.jpg</hlink>
+							<title>Sleeping Beauty</title>
+						</file>
+					</media>
+					<price>
+						<pricevalue>36.50</pricevalue>
+					</price>
+					<shortdescription>Deze productie van Marcia Haydée omvat alles wat men van een klassieke balletavond verwacht: spectaculaire dansscènes en prachtige decors en kostuums, getekend door de jonge Chileense ontwerper Pablo Nuñez. Choreografie Marcia Haydée, naar Marius Petipa Muziek Pjotr Ilyich Tsjaikowski, live uitgevoerd door deFilharmonie, leiding Brett Morris, Scènebeelden en kostuums Pablo NuñezData.</shortdescription>
+					<title>Sleeping Beauty</title>
+				</eventdetail>
+			</eventdetails>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Brugge</city>
+						<country>BE</country>
+						<housenr>34</housenr>
+						<street>'t Zand</street>
+						<zipcode>8000</zipcode>
+					</physical>
+				</address>
+				<label>Concertzaal</label>
+			</location>
+			<organiser>
+				<label>Koninklijk Ballet v Vlaanderen</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Contactgegevens</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/contactinfo</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>Voorbeeld "Sleeping Beauty" betreft de contactgegevens. Voor elk aanbod is er minstens &eacute;&eacute;n contactinformatie beschikbaar, d.i. ofwel een fysiek adres, een fax of telefoonnummer, een e-mailadres of URL. Als men bij dit contact (ook) terecht kan voor reservaties is dit aangeduid met een boolean attribuut. Let er op dat je het fysieke adres dat bij contactgegevens wordt voorzien niet gebruikt als adres van de locatie.</p>
+					
+					<table cellspacing="0" cellpadding="0">
+					  <tr>
+						<td>Veld</td>
+						<td>Element</td>
+						<td>Type</td>
+						<td>Verpl.</td>
+					  </tr>
+					
+					  <tr>
+						<td>Contactgegevens</td>
+						<td>//event/contactinfo</td>
+						<td>&nbsp;</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+					
+						<td colspan="4">contactinfo is een verplichte keuzelijst met vier subnodes: address, mail, phone en url.</td>
+					  </tr>
+					  <tr>
+						<td>URL voor reservaties</td>
+						<td>//contactinfo/url</td>
+						<td>String(400)</td>
+						<td>&nbsp;</td>
+					
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//contactinfo/url/@main</td>
+						<td>Boolean</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+					
+						<td colspan="4">Het @main attribuut is van belang als er meerdere contactgegevens van hetzelfde type worden voorzien, bijv. meerdere URL&rsquo;s. Het elemenent met @main true is dan het belangrijkste contactpunt van dat type.</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//contactinfo/url/@reservation</td>
+						<td>Boolean</td>
+						<td>&nbsp;</td>
+					
+					  </tr>
+					  <tr>
+						<td colspan="4">@reservations krijgt de waarde true als men op het contactpunt niet enkel voor informatie maar ook voor tickets en reserveringen terecht kan.</td>
+					  </tr>
+					</table>
+					<p>Merk op dat //phone naast @main en @reservations over het attribuut @type beschikt. D.i. een enumeratie met waarden "phone" en "fax". De default waarde is phone . Meer info over het address element in "Salsa Titanico: salsa dans en muziek".</p>
+					]]></value>
+				</property>
+			</properties>
+			<reservations>
+				<label>TiNCK</label>
+			</reservations>
+		</event>
+		<!-- 6. Salsa Titanico: salsa dans en muziek (Voorbeeld voor adresgegevens) -->
+		<event availablefrom="2005-09-15T00:00:00+01:00" cdbid="5908C45F-067C-2B73-C9C3CCD880522484">
+			<calendar>
+				<permanentopeningtimes>
+					<permanent>
+						<weekscheme>
+							<monday opentype="open"/>
+							<tuesday opentype="closed"/>
+							<wednesday opentype="closed"/>
+							<thursday opentype="closed"/>
+							<friday opentype="closed"/>
+							<saturday opentype="open"/>
+							<sunday opentype="closed"/>
+						</weekscheme>
+					</permanent>
+				</permanentopeningtimes>
+			</calendar>
+			<contactinfo>
+				<phone>03/2350893</phone>
+				<url>http://www.salsatitanico.be</url>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.3.0.0.0">Nationaal</publicscope>
+				<themes>
+					<theme catid="1.9.0.0.0">Dans</theme>
+					<theme catid="1.9.4.0.0">Werelddans</theme>
+					<theme catid="1.8.0.0.0">Muziek</theme>
+					<theme catid="1.8.4.0.0">Wereldmuziek</theme>
+					<theme catid="1.55.0.0.0">Uitgaan</theme>
+				</themes>
+				<types>
+					<type catid="0.3.0.0.0">Educatieve Activiteiten</type>
+					<type catid="0.3.1.0.0">Cursussen en Workshops</type>
+					<type catid="0.44.0.0.0">Evenementen</type>
+					<type catid="0.8.0.0.0">Feesten</type>
+					<type catid="0.49.0.0.0">Uitgaan</type>
+					<type catid="0.2.0.0.0">Voorstellingen (concert, optreden, vertoning,...)</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>Open op maandag, zaterdag, gesloten op dinsdag, woensdag, donderdag, vrijdag, zondag</calendarsummary>
+					<shortdescription>Salsa Titanico organiseert regelmatig een mega-salsaparty "Noche de Salsa!" met LIVE OPTREDEN in Hof Ter Lo", Borgerhout (Antwerpen) met live optredens, salsa initiatie, salsa dansoptredens,... De SALSA TITANICO dansschool heeft een uitgebreide waaier aan mogelijkheden voor SALSA CURSUSSEN &amp; WORKSHOPS.</shortdescription>
+					<title>Salsa Titanico: salsa dans en muziek</title>
+				</eventdetail>
+			</eventdetails>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city cdbid="2140_BORGERHOUT">Borgerhout (Antwerpen)</city>
+						<country>BE</country>
+						<gis>
+							<xcoordinate>4.42348</xcoordinate>
+							<ycoordinate>51.24978</ycoordinate>
+						</gis>
+						<housenr>28-30</housenr>
+						<street>Noordersingel</street>
+						<zipcode>2140</zipcode>
+					</physical>
+				</address>
+				<actor availablefrom="2005-04-11T14:35:06+01:00" cdbid="31418110-9846-3670-5712872CCBB81E0B" externalid="Cultuurnet:organisation_33493">
+					<actorcategories>
+						<publicscope catid="6.3.0.0.0">Nationaal</publicscope>
+						<themes>
+							<theme catid="1.8.0.0.0">Muziek</theme>
+						</themes>
+						<types>
+							<type catid="8.6.0.0.0">Culturele- en Gemeenschapscentra</type>
+							<type catid="8.21.4.0.0">Jeugdhuizen</type>
+							<type catid="8.15.0.0.0">Lokatie</type>
+							<type catid="8.11.0.0.0">Organisatoren van aanbod</type>
+						</types>
+					</actorcategories>
+					<actordetails>
+						<actordetail lang="nl">
+							<shortdescription>Concertzaal Hof ter Lo - met een capaciteit van 1100 bezoekers - wordt beheerd door cultuurcentrum Luchtbal. Cultuurcentrum Luchtbal / Hof ter Lo organiseert er zelf - al dan niet in coproductie met partners - op regelmatige basis concerten. Ook andere organisatoren kunnen van de zaal gebruik maken voor het organiseren van eigen concerten.</shortdescription>
+							<title>Hof ter Lo</title>
+						</actordetail>
+					</actordetails>
+					<contactinfo>
+						<address>
+							<physical>
+								<city cdbid="2140_BORGERHOUT">Borgerhout (Antwerpen)</city>
+								<country>BE</country>
+								<gis>
+									<xcoordinate>4.42348</xcoordinate>
+									<ycoordinate>51.24978</ycoordinate>
+								</gis>
+								<housenr>28-30</housenr>
+								<street>Noordersingel</street>
+								<zipcode>2140</zipcode>
+							</physical>
+						</address>
+						<address>
+							<physical>
+								<city>Antwerpen 3 (Antwerpen)</city>
+								<country>BE</country>
+								<housenr>110</housenr>
+								<street>Columbiastraat</street>
+								<zipcode>2030</zipcode>
+							</physical>
+						</address>
+						<phone>+32 3 543 90 30</phone>
+						<url>http://www.ccluchtbal.org</url>
+					</contactinfo>
+				</actor>
+			</location>
+			<organiser>
+				<label>Salsa Titanico</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Adresgegevens</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/location/locationpart/address</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>Gebruik voorbeeld "Salsa Titanico: salsa dans en muziek" als voorbeeld voor het //address element.<p>
+					<table cellspacing="0" cellpadding="0">
+					  <tr>
+						<td>Veld</td>
+						<td>Element</td>
+						<td>Type</td>
+						<td>Verpl.</td>
+					  </tr>
+					  <tr>
+						<td>Locatie &ndash; adres</td>
+						<td>//address</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//address/physical<br/>
+						  //address/virtual</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">Er wordt een onderscheid gemaakt tussen adressen die in de fysieke werkelijkheid bestaan en virtuele adressen zoals URL&rsquo;s of televisie- en radiozenders omdat voor fysieke adressen stad en land verplicht zijn en voor virtuele adressen een label volstaat. Virtuele adressen worden gebruikt voor virtueel aanbod (televisieprogramma&rsquo;s, webcasts enz.). "The Violent Husbands :: livestream" is een voorbeeld van viruteel aanbod</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//address/physical/street</td>
+						<td>string(250)</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//address/physical/housenr</td>
+						<td>string(15)</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//address/physical/zipcode</td>
+						<td>string(4..15)</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//address/physical/city</td>
+						<td>string(250)</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//address/physical/city/@cdbid</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">Vlaamse en Brusselse gemeenten en steden hebben een unieke code in CultuurDatabank die bestaat uit postcode en gemeente verbonden met underscores in hoofdletters en met speciale karakters verwijderd, bijvoorbeeld 3798_S_GRAVENVOEREN. Dit zorgt voor een betere consistentie en maakt het mogelijk aanbod onder te verdelen in regio&rsquo;s. Hierdoor kan gezocht worden op al het aanbod dat doorgaat in de omstreken van bijvoorbeeld Ieper, Kortrijk, Mechelen, Vilvoorde enz.</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//address/physical/gis</td>
+						<td valign="top"></td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">het address element van het ge&euml;mbedde actor object "Hof Ter Lo" werden geografische gegevens opgenomen. Deze gegevens bevestigen dat het opgegeven adres van de locatie accuraat is. Daarnaast bieden GIS-co&ouml;rdinaten de mogelijkheid om maps te genereren.</td>
+					  </tr>
+					</table>
+					<p>In tegenstelling tot de meeste andere voorbeelden werd de locatie "Hof Ter Lo" als rijke informatie ge&euml;mbed in het aanbod. Het voorbeeld dat ge&euml;mbedde rijke actor informatie behandelt is "The Violent Husbands".</p>
+					
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<!-- 7. The Violent Husbands :: livestream (Voorbeeld voor virtueel aanbod) -->
+		<event availablefrom="2006-06-15T00:00:00+01:00" availableto="2006-06-30T00:00:00+01:00" cdbid="D7B00748-997F-5BEE-AEBBC6D2E0072D54">
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2006-06-29</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<mail>info@abconcerts.be</mail>
+				<phone>02/548.24.99</phone>
+				<url>http://www.theviolenthusbands.be/</url>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.2.0.0.0">Regionaal</publicscope>
+				<themes>
+					<theme catid="1.8.0.0.0">Muziek</theme>
+					<theme catid="1.8.3.0.0">Moderne muziek</theme>
+					<theme catid="1.8.3.1.0">Pop en rock</theme>
+				</themes>
+				<types>
+					<type catid="0.2.0.0.0">Voorstellingen (concert, optreden, vertoning,...)</type>
+					<type catid="0.50.6.0.0">Filmvoorstelling</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>donderdag 29/06/2006 om 20:00</calendarsummary>
+					<estimatedtime>125</estimatedtime>
+					<performers>
+						<performer>
+							<role>Groep</role>
+							<label>The Violent Husbands</label>
+						</performer>
+					</performers>
+					<shortdescription>The Violent Husbands, een Gents trio met Brugse roots, werd officieel pas in de zomer van 2004 geboren. Ze schrijven kleppers van nummers als was het niets en toveren op het podium telkens weer nieuwe instrumenten te voorschijn. En dat terwijl ze ook nog eens onwaarschijnlijk interessante zever uit hun strot duwen tussen de nummers door.</shortdescription>
+					<title>The Violent Husbands :: livestream</title>
+				</eventdetail>
+			</eventdetails>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<virtual>
+						<title>http://www.abconcerts.tv/index.html</title>
+					</virtual>
+				</address>
+				<label>http://www.abconcerts.tv/index.html</label>
+			</location>
+			<organiser>
+				<label>Ancienne Belgique</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Virtueel aanbod</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/location/locationpart/address</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>Gebruik voorbeeld "The Violent Husbands :: livestream" als voorbeeld voor virtueel aanbod. Virtueel aanbod gaat door op een virtuele locatie. Een virtuele locatie heeft een virtueel adres. Voorbeelden zijn televisieprogramma&rsquo;s, webcasts of radio-uitzendingen. Een virtueel adres verschilt van een fysiek adres in dat het enkel over een label beschikt. Het voorbeeld dat fysieke adressen behandelt is "Salsa Titanico: salsa dans en muziek".<p>
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<!-- 8. Flat Earth Society (Voorbeeld voor tijdstype "timestamp")  -->
+		<event availablefrom="2006-05-16T21:58:03+01:00" availableto="2006-06-10T20:00:00+01:00" cdbid="3EC6CCBE-F388-3B03-855F5192E150927D" externalid="Brussel SKB:SKB00001_137581">
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2006-06-09</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<mail>info@abconcerts.be</mail>
+				<phone>02/548.24.24</phone>
+				<phone reservation="true">02/548.24.00</phone>
+				<phone type="fax">02/548.24.99</phone>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.3.0.0.0">Nationaal</publicscope>
+				<themes>
+					<theme catid="1.8.3.1.0">Pop en rock</theme>
+				</themes>
+				<types>
+					<type catid="0.50.4.0.0">Concert</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>vrijdag 09/06/2006 om 20:00</calendarsummary>
+					<performers>
+						<performer>
+							<label>Flat Earth Society</label>
+						</performer>
+					</performers>
+					<price>
+						<pricevalue>10</pricevalue>
+					</price>
+					<shortdescription>FLAT EARTH SOCIETY ofte: het big band projekt van ex-X-LEGGED SALLY-man PETER VERMEERSCH. Gelauwerd door MIKE PATTON, die op zijn eigenste IPECAC-label het door hem zelf samengestelde album 'Fes-ism' compileerde en hen op tour nam doorheen de Benelux, Italië en UK. Dra verschijnt alweer een eigenzinnig werkstuk, 'Psychoscout' genaamd. Live stream.</shortdescription>
+					<title>Flat Earth Society</title>
+				</eventdetail>
+			</eventdetails>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Brussel</city>
+						<country>BE</country>
+						<housenr>110</housenr>
+						<street>Anspachln.</street>
+						<zipcode>1000</zipcode>
+					</physical>
+				</address>
+				<label>Ancienne Belgique</label>
+			</location>
+			<organiser>
+				<label>Ancienne Belgique</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Kalender: tijdstype "timestamp"</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/calendar</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>"Flat Earth Society" is voorbeeld van een aanbod dat op &eacute;&eacute;n tijdstip plaatsvindt. O.a. "De boeken van deBuren: Radioboeken" (eenvoudig) en "Volver" (uitgebreid) bevat meerdere tijdstippen.<p>
+					<p>Merk ook //eventdetail/calendarsummary op. Deze informatie is niet even volledig als de gestructureerde kalenderinformatie maar wordt geschikt geacht voor detailpagina&rsquo;s.<p>
+					<p>Gebruik dit voorbeeld voor verwerken van kalendergegevens van het type tijdstippen:</p>
+					<table cellspacing="0" cellpadding="0">
+					  <tr>
+						<td>Veld</td>
+						<td>Element</td>
+						<td>Type</td>
+						<td>Verpl.</td>
+					  </tr>
+					  <tr>
+						<td>Kalender</td>
+						<td>//event/calendar</td>
+						<td>&nbsp;</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">calendar heeft een choice node met drie subnodes: periods , permanentopeningtimes en timestamps .
+						  <p>
+						  <p>periods kan &eacute;&eacute;n period bevatten en wordt gebruikt voor aanbod dat gedurende een periode doorgaat (datefrom-dateto), bijv. tijdelijke tentoonstellingen. Voor een voorbeeld: zie "Ren&eacute; Heyvaert".<p>
+							<p>permanentopeningtimes kan &eacute;&eacute;n permanentopeningtime bevatten en wordt bijvoorbeeld gebruikt voor een monument. Permanentopeningtime werkt volgens hetzelfde principe als period, maar beschikt niet over de datefrom en dateto velden. Als voorbeeld, zie "Monument Abdij Vlierbeek Leuven".<p>
+						<p>timestamps kan &eacute;&eacute;n of meerdere timestamp elementen bevatten en wordt gebruikt voor bijvoorbeeld tournees of filmvoorstellingen. Noteer dat calender verplicht is voor een aanbod.</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//calendar/timestamps/timestamp</td>
+						<td>&nbsp;</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//timestamp/date</td>
+						<td>date</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">Date is een verplicht veld, bijv. het aanbod gaat door op 9 juni &rsquo;07.</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//timestamp/timestart</td>
+						<td>time</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">timestart geeft het startuur aan, bijv. het aanbod gaat door op 9 juni &rsquo;07 om 20 uur.</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//timestamp/timeend</td>
+						<td>time</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">timeend geeft het einduur aan, bijv. het aanbod gaat door op 9 juni &rsquo;07 van 20 uur tot 22 uur. Een voorbeeld hiervoor is "Kinderdansfestival".</td>
+					  </tr>
+					</table>
+					<p>Ook interessant in dit voorbeeld zijn de contactgegevens waar drie maal een phone tag wordt gebruikt, &eacute;&eacute;n maal als nummer voor informatie, &eacute;&eacute;n maal als nummer voor reservaties en &eacute;&eacute;n maal als fax, meer over contactgegevens in het voorbeeld "Sleeping Beauty".<p>
+
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<!-- 9. René Heyvaert (Voorbeeld voor tijdstype "period") -->
+		<event availablefrom="2006-03-31T00:00:00+01:00" availableto="2006-09-18T00:00:00+01:00" cdbid="5099579F-DD49-2709-3CCDABC0EFEF8188">
+			<calendar>
+				<periods>
+					<period>
+						<datefrom>2006-05-06</datefrom>
+						<dateto>2006-09-17</dateto>
+						<exceptions>
+							<timestamp opentype="open">
+								<date>2006-06-05</date>
+								<timestart>10:00:00+01:00</timestart>
+								<timeend>18:00:00+01:00</timeend>
+							</timestamp>
+						</exceptions>
+						<weekscheme>
+							<monday opentype="closed"/>
+							<tuesday opentype="open">
+								<openingtime from="10:00:00+01:00" to="18:00:00+01:00"/>
+							</tuesday>
+							<wednesday opentype="open">
+								<openingtime from="10:00:00+01:00" to="18:00:00+01:00"/>
+							</wednesday>
+							<thursday opentype="open">
+								<openingtime from="10:00:00+01:00" to="18:00:00+01:00"/>
+							</thursday>
+							<friday opentype="open">
+								<openingtime from="10:00:00+01:00" to="18:00:00+01:00"/>
+							</friday>
+							<saturday opentype="open">
+								<openingtime from="10:00:00+01:00" to="18:00:00+01:00"/>
+							</saturday>
+							<sunday opentype="open">
+								<openingtime from="10:00:00+01:00" to="18:00:00+01:00"/>
+							</sunday>
+						</weekscheme>
+					</period>
+				</periods>
+			</calendar>
+			<contactinfo>
+				<phone type="phone">+32 9 2211703</phone>
+				<phone type="fax">+32 9 2217109</phone>
+			</contactinfo>
+			<eventcategories>
+				<facilities>
+					<facility catid="3.11.0.0.0">Toiletten voor rolstoelgebruikers</facility>
+					<facility catid="3.0.0.0.0">Giftshop</facility>
+					<facility catid="3.1.0.0.0">Bibliotheek</facility>
+					<facility catid="3.3.0.0.0">Eetgelegenheid</facility>
+					<facility catid="3.4.0.0.0">Drankgelegenheid</facility>
+					<facility catid="3.14.0.0.0">Educatieve dienstverlening</facility>
+				</facilities>
+				<publicscope catid="6.4.0.0.0">Internationaal</publicscope>
+				<themes>
+					<theme catid="1.0.0.0.0">Beeldende kunsten</theme>
+					<theme catid="1.0.3.0.0">Installatiekunst</theme>
+				</themes>
+				<types>
+					<type catid="0.0.0.0.0">Tentoonstellingen</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>Van 06/05/2006 tot 17/09/2006, open op dinsdag om 10:00, woensdag om 10:00, donderdag om 10:00, vrijdag om 10:00, zaterdag om 10:00, zondag om 10:00, gesloten op maandag. Uitzonderlijk open maandag 06/05/2006 om 10:00.</calendarsummary>
+					<media>
+						<file main="true">
+							<copyright>S.M.AK.</copyright>
+							<filename>Heyvaert.jpg</filename>
+							<filetype>jpeg</filetype>
+							<hlink>Heyvaert.jpg</hlink>
+							<title>René Heyvaert</title>
+						</file>
+						<file>
+							<copyright>S.M.A.K.</copyright>
+							<filename>MarcH4_web.jpg</filename>
+							<filetype>jpeg</filetype>
+							<hlink>MarcH4_web.jpg</hlink>
+							<title>René Heyvaert</title>
+						</file>
+						<file>
+							<copyright>S.M.A.K.</copyright>
+							<filename>MarcH7_web.jpg</filename>
+							<filetype>jpeg</filetype>
+							<hlink>MarcH7_web.jpg</hlink>
+							<title>René Heyvaert</title>
+						</file>
+					</media>
+					<price>
+						<pricevalue>5</pricevalue>
+						<pricedescription>Prijsomschrijving: 3,80 euro: groepen vanaf 15 personen en reductiehouders (studenten, -25-jarigen, 60-plussers,_) 2,50 euro: schoolgroepen</pricedescription>
+					</price>
+					<shortdescription>De sobere vormentaal van René Heyvaert hangt tussen het constructivistische van zijn tijd en het in zwang gerakende minimalisme. Het creatieve proces echter was de eigenlijke energie, het feitelijke spanningsveld tussen de idee en uitvoering.</shortdescription>
+					<title>René Heyvaert</title>
+				</eventdetail>
+			</eventdetails>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Gent</city>
+						<country>BE</country>
+						<housenr>z/n</housenr>
+						<street>Citadelpark</street>
+						<zipcode>9000</zipcode>
+					</physical>
+				</address>
+				<label>S.M.A.K.</label>
+			</location>
+			<organiser>
+				<label>S.M.A.K.</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Kalender: tijdstype "period"</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/calendar</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>"Ren&eacute; Heyvaert" is aanbod dat gedurende een periode doorgaat. Meer info over de parent node calender staat in "Flat Earth Society". Gebruik dit voorbeeld voor verwerken van kalendergegevens van het type periode:</p>
+					<table cellspacing="0" cellpadding="0">
+					  <tr>
+						<td>Veld</td>
+						<td>Type</td>
+						<td>Verpl.</td>
+					  </tr>
+					  <tr>
+						<td>//calendar/periods/period</td>
+						<td>&nbsp;</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td>//period/datefrom</td>
+						<td>date</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td>//period/dateto</td>
+						<td>date</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td>//period/weekscheme</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="3">weekscheme bevat de openingstijden voor het aanbod. Dikwijls is dit een kopie van de openingstijden van de locatie waar het aanbod doorgaat. Zie voorbeeld "The Violent Husbands" in het organiser element voor nog een voorbeeld van een weekscheme.</td>
+					  </tr>
+					  <tr>
+						<td>//period/weekscheme/*</td>
+						<td>&nbsp;</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td colspan="3">In weekscheme zijn velden monday t/m Sunday verplicht.</td>
+					  </tr>
+					  <tr>
+						<td>//period/weekscheme/monday/@opentype</td>
+						<td>enumeration</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="3">De velden monday t/m sunday bevatten een attribuut dat bepaalt of de locatie voor dat aanbod open, gesloten (closed) of op afspraak (byappointment) open is (zie "'t Spelleke van Folklore" voor een voorbeeld van "op afspraak" ).</td>
+					  </tr>
+					  <tr>
+						<td>//period/ weekscheme/monday/openingtime</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="3">Als de locatie voor dat aanbod open is, of open op afspraak kunnen uren voorzien worden. Bijvoorbeeld: open van 9:00 tot 12:00 en van 13:00 tot 17:00.</td>
+					  </tr>
+					  <tr>
+						<td>//period/weekscheme/monday/openingtime/@from</td>
+						<td>time</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>//period/weekscheme/monday/openingtime/@to</td>
+						<td>time</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>//period/exceptions</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="3">exceptions geven aan dat binnen de periode de locatie open, gesloten of enkel open op afspraak is. exception heeft dezelfde opbouw als timestamp (zie "Flat Earth Society") op het extra element opentype na.</td>
+					  </tr>
+					  <tr>
+						<td>//period/exceptions/exception</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>//period/exceptions/exception/date</td>
+						<td>date</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td>//period/exceptions/exception/opentype</td>
+						<td>date</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td>//period/exceptions/exception/timestart</td>
+						<td>time</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>//period/exceptions/exception/timeend</td>
+						<td>time</td>
+						<td>&nbsp;</td>
+					  </tr>
+					</table>
+					<p>Noteer ook dat de voorzieningen van de locatie (het S.M.A.K.) werden gekopieerd naar het aanbod. Een mooie manier om met voorzieningen om te springen is werken met iconen. Meer over voorzieningen in het voorbeeld over categorisatie "Bol de wereld".</p>
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<!-- 10. Monument Abdij Vlierbeek Leuven (Voorbeeld voor tijdstype "permanent") -->
+		<event availablefrom="2005-05-23T00:00:00+01:00" cdbid="CCFB6C54-A93D-C9E4-5EA59111F59142B5">
+			<calendar>
+				<permanentopeningtimes>
+					<permanent>
+						<weekscheme>
+							<monday opentype="closed"/>
+							<tuesday opentype="closed"/>
+							<wednesday opentype="closed"/>
+							<thursday opentype="closed"/>
+							<friday opentype="closed"/>
+							<saturday opentype="closed"/>
+							<sunday opentype="open">
+								<openingtime from="09:00:00+01:00" to="18:00:00+01:00"/>
+							</sunday>
+						</weekscheme>
+					</permanent>
+				</permanentopeningtimes>
+			</calendar>
+			<contactinfo>
+				<address>
+					<physical>
+						<city>Kessel-Lo</city>
+						<country>BE</country>
+						<street>Abdijkerk Vlierbeek</street>
+						<zipcode>3010</zipcode>
+					</physical>
+				</address>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.3.0.0.0">Nationaal</publicscope>
+				<themes>
+					<theme catid="1.2.0.0.0">Architectuur en Vormgeving</theme>
+					<theme catid="1.40.0.0.0">Cultureel erfgoed</theme>
+				</themes>
+				<types>
+					<type catid="0.48.0.0.0">Monumenten en landschappen</type>
+					<type catid="0.14.0.0.0">Monumenten en bouwwerken</type>
+					<type catid="0.14.1.0.0">Religieuze bouwwerken</type>
+					<type catid="0.15.0.0.0">Landschappen</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>Open op zondag 09:00, gesloten op maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag</calendarsummary>
+					<price>
+						<pricevalue>0</pricevalue>
+					</price>
+					<shortdescription>Deze abdij werd in 1127 gesticht door de Benedictijnen van Affligem. Tijden het Franse bewind werd het klooster opgeheven. Behalve de abdijhoeve, bleven ook de kerk en het abtsgebouw, beide in classicistische stijl, bewaard. Op het kerkhof bevinden zich grafmonumenten van beroemde personen. Op zondag (van 9u00 tot 18u00) is de kerk toegankelijk voor bezoek.</shortdescription>
+					<title>Monument Abdij Vlierbeek Leuven</title>
+				</eventdetail>
+			</eventdetails>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Kessel-Lo</city>
+						<country>BE</country>
+						<street>Abdij Vlierbeek</street>
+						<zipcode>3010</zipcode>
+					</physical>
+				</address>
+				<label>Abdijkerk Vlierbeek</label>
+			</location>
+			<organiser>
+				<label>Abdijkerk Vlierbeek</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Permanent aanbod</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/calendar/permanentopeningtimes</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>"Monument Abdij Vlierbeek Leuven" is aanbod dat permanent beschikbaar is. Meer info over de parent node calender vind je in het voorbeeld "Flat Earth Society". Meer info over weekscheme vind je terug in "Ren&eacute; Heyvaert". Het verschil tussen permanent aanbod en periodiek aanbod ("Ren&eacute; Heyvaert") is dat bij permanent aanbod geen datefrom (van) en dateto (tot) velden worden voorzien.<p>					
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<!-- 11. Pukema Rock (Voorbeeld met nadruk op relatie event actor) -->
+		<event availablefrom="2006-05-10T00:00:00+01:00" availableto="2006-09-16T00:00:00+01:00" cdbid="1E9A25A3-AFA1-3546-6DE7DA49FC3189C3">
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2006-09-15</date>
+						<timestart>19:00:00+01:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<phone type="phone">0477/345927</phone>
+				<url>http://www.pukemarock.be</url>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.2.0.0.0">Regionaal</publicscope>
+				<themes>
+					<theme catid="1.8.0.0.0">Muziek</theme>
+				</themes>
+				<types>
+					<type catid="0.5.0.0.0">Festivals</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>vrijdag 15/09/2006 om 19:00</calendarsummary>
+					<performers>
+						<performer>
+							<label>Milkshakers</label>
+						</performer>
+						<performer>
+							<label>Sandrine</label>
+						</performer>
+						<performer>
+							<label>Belle Perez</label>
+						</performer>
+						<performer>
+							<label>Natalia</label>
+						</performer>
+						<performer>
+							<label>DJ Dirk Stoops</label>
+						</performer>
+						<performer>
+							<label>DJ TLP</label>
+						</performer>
+						<performer>
+							<label>Buscemi</label>
+						</performer>
+					</performers>
+					<shortdescription>Het Puurse feel good festival Pukemarock verovert jaar na jaar Noord Vlaanderen en Zuidnederland met zijn 4B's: Betaalbaarheid, Bereikbaarheid Bangelijke sfeer en Beestig fijne muziek. In de funky festivaltent en op de blitse buitenwei kan je de binnen-en buitenlandse live-acts voelen, de ambiance proeven en oren, ogen en slokdarm vullen voor geen geld.</shortdescription>
+					<title>Pukema Rock 15/09/2006</title>
+				</eventdetail>
+			</eventdetails>
+			<eventrelations>
+				<relatedproduction cdbid="3409DCC1-D94C-D42E-A259917C360CDDCC">Pukema Rock</relatedproduction>
+			</eventrelations>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Puurs</city>
+						<country>BE</country>
+						<street>Kerkhofstraat</street>
+						<zipcode>2870</zipcode>
+					</physical>
+				</address>
+				<label>Festivalterrein Puurs</label>
+			</location>
+			<organiser>
+				<label>Pukema Rock</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Relatie event actor</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/performers
+cdbxml/events/event/location
+cdbxml/events/event/organiser
+cdbxml/events/event/reservations</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+<p>Voorbeelden "Pukema Rock" en "The Violent Husbands" betreffen de relatie tussen het aanbod (//event ) en actoren (//actor). De benaming actor komt van culturele actoren, dit zijn organisaties en personen met culturele relevantie.<p>
+<p>In relatie tot aanbod treden actoren op als locatie, organisator, uitvoerder of reservations. De locatie is de plaats waar het aanbod doorgaat, de organisator is degene die het aanbod organiseert, een uitvoerder kan een regisseur, muziekgroep, auteur enz. zijn. De reservations is waar men terecht kan voor reserveringen en tickets.</p>
+<p>Standaard worden bij een event voor uitvoerders, organisatoren en reservationsen enkel de benaming getoond. Voor locaties moet naast benaming een adres worden voorzien.</p>
+<p>Het is echter mogelijk om voor bepaalde actoren rijke informatie als embedded XML-fragment te ontvangen. Dit moet je als subscriber expliciet aanvragen bij <a href="mailto:julian.cox@cultuurnet.be">julian.cox@cultuurnet.be</a>. "The Violent Husbands" geldt als voorbeeld van embedded actor informatie.</p>
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <td>Veld</td>
+    <td>Element</td>
+    <td>Type</td>
+    <td>Verpl.</td>
+  </tr>
+  <tr>
+    <td>Door</td>
+    <td>//event/eventdetails/details/performer</td>
+    <td>&nbsp;</td>
+    <td valign="top"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>//performer/label</td>
+    <td>String(250)</td>
+    <td>X</td>
+  </tr>
+  <tr>
+    <td colspan="4">label bevat de titel maar wijkt af van het //label element</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>//performer/role</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="4">//performer/role is een vrij tekstveld waarin wordt toegelicht in welke hoedanigheid de uitvoerder optreedt t.o.v. het aanbod, vb. als muzikant, dirigent, regisseur, lezer. In tegenstelling tot de andere elementen in CdbXML 3.0 is de volgorde in //performer niet alfabetisch: role komt voor label. Dit heeft te maken met het alternatief voor role, m.n. actor. Role werd toegepast in voorbeeld "Vitalski's Week-Up lounge"</td>
+  </tr>
+  <tr>
+    <td>Locatie</td>
+    <td>//event/location</td>
+    <td>&nbsp;</td>
+    <td>X</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>// location /locationpart/label</td>
+    <td>&nbsp;</td>
+    <td>X</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>// location /locationpart/address</td>
+    <td>&nbsp;</td>
+    <td>X</td>
+  </tr>
+  <tr>
+    <td colspan="4">Address is een verplicht veld voor locaties. Hierin onderscheidt location zich van performer, organiser en reservations. Hoe address wordt opgebouwd staat in het voorbeeld "Salsa Titanico".</td>
+  </tr>
+  <tr>
+    <td>Organisator</td>
+    <td>//event/organiser</td>
+    <td>&nbsp;</td>
+    <td>X</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>// organiser /label</td>
+    <td>&nbsp;</td>
+    <td>X</td>
+  </tr>
+  <tr>
+    <td>Reserveringen</td>
+    <td>//event/reservations</td>
+    <td>&nbsp;</td>
+    <td valign="top"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>//reservations/label</td>
+    <td>&nbsp;</td>
+    <td>X</td>
+  </tr>
+</table>
+<p>Dit voorbeeld is trouwens een festival waarbij uitzonderlijk per dag een apart aanbod werd aangemaakt zodat ook per dag kan gezocht worden welke artiesten die dag aantreden. Dit is net als "Volver" een voorbeeld van een speellijst.</p>					
+					]]></value>
+				</property>
+			</properties>
+			<reservations>
+				<label>KBC Ticket Shop</label>
+			</reservations>
+		</event>
+		<event availablefrom="2006-10-05T00:00:00+01:00" availableto="2006-09-17T00:00:00+01:00" cdbid="1EA98E81-DEE9-55A4-78FE761660F9ED24">
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2006-09-16</date>
+						<timestart>14:00:00+01:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<phone type="phone">0477/345927</phone>
+				<url>http://www.pukemarock.be</url>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.2.0.0.0">Regionaal</publicscope>
+				<themes>
+					<theme catid="1.8.0.0.0">Muziek</theme>
+				</themes>
+				<types>
+					<type catid="0.5.0.0.0">Festivals</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>zaterdag 16/09/2006 om 14:00</calendarsummary>
+					<performers>
+						<performer>
+							<label>Hunt</label>
+						</performer>
+						<performer>
+							<label>A Brand</label>
+						</performer>
+						<performer>
+							<label>Absynthe Minded</label>
+						</performer>
+						<performer>
+							<label>El Tattoo Del Tigre</label>
+						</performer>
+						<performer>
+							<label>Zornik</label>
+						</performer>
+						<performer>
+							<label>Praga Khan</label>
+						</performer>
+						<performer>
+							<label>Discobar Galaxie</label>
+						</performer>
+						<performer>
+							<label>Hermanos Inglesos</label>
+						</performer>
+						<performer>
+							<label>DJ 414</label>
+						</performer>
+						<performer>
+							<label>Gerrit K.</label>
+						</performer>
+					</performers>
+					<shortdescription>Het Puurse feel good festival Pukemarock verovert jaar na jaar Noord Vlaanderen en Zuidnederland met zijn 4B's: Betaalbaarheid, Bereikbaarheid Bangelijke sfeer en Beestig fijne muziek. In de funky festivaltent en op de blitse buitenwei kan je de binnen-en buitenlandse live-acts voelen, de ambiance proeven en oren, ogen en slokdarm vullen voor geen geld.</shortdescription>
+					<title>Pukema Rock 16/09/2006</title>
+				</eventdetail>
+			</eventdetails>
+			<eventrelations>
+				<relatedproduction cdbid="3409DCC1-D94C-D42E-A259917C360CDDCC">Pukema Rock</relatedproduction>
+			</eventrelations>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Puurs</city>
+						<country>BE</country>
+						<street>Kerkhofstraat</street>
+						<zipcode>2870</zipcode>
+					</physical>
+				</address>
+				<label>Festivalterrein Puurs</label>
+			</location>
+			<organiser>
+				<label>Pukema Rock</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Relatie event actor</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/performers
+cdbxml/events/event/location
+cdbxml/events/event/organiser
+cdbxml/events/event/reservations</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>Zie Pukema Rock 15/09/2006</p>					
+					]]></value>
+				</property>
+			</properties>
+			<reservations>
+				<label>KBC Ticket Shop</label>
+			</reservations>
+		</event>
+		<!-- 12. The Violent Husbands (Voorbeeld voor "rijke actor informatie" ipv "label") -->
+		<event availablefrom="2005-10-24T00:00:00+01:00" availableto="2006-10-11T00:00:00+01:00" cdbid="226EA5A0-AC00-6DF8-FB558CF9F2963914">
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2006-10-10</date>
+						<timestart>20:30:00+01:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<phone reservation="true">03/821 01 36</phone>
+				<mail reservation="true">kern@stad.antwerpen.be</mail>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.2.0.0.0">Regionaal</publicscope>
+				<themes>
+					<theme catid="1.8.0.0.0">Muziek</theme>
+					<theme catid="1.8.3.0.0">Moderne muziek</theme>
+					<theme catid="1.8.3.1.0">Pop en rock</theme>
+				</themes>
+				<types>
+					<type catid="0.2.0.0.0">Voorstellingen (concert, optreden, vertoning,...)</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>dinsdag 10/10/2006 om 20:30</calendarsummary>
+					<performers>
+						<performer>
+							<label>The Violent Husbands</label>
+						</performer>
+					</performers>
+					<price>
+						<pricevalue>0</pricevalue>
+					</price>
+					<shortdescription>The Violent Husbands is jong talent uit Brugge. Hun muziek is een nooit gehoorde mix tussen country, jazz en elektronica met héél veel nadruk op de teksten. Let maar op. Ze zingen over huiselijk geweld, zwakke knieën en de pijn en genot van volwassen worden; alle ingrediënten dus om je een breuk te lachen. Hun podiumact is een beetje cabaret en staat garant voor een zeer leuke avond.</shortdescription>
+					<title>The Violent Husbands</title>
+				</eventdetail>
+			</eventdetails>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Antwerpen-Kiel</city>
+						<country>BE</country>
+						<housenr>157</housenr>
+						<street>Sint Bernardsesteenweg</street>
+						<zipcode>2020</zipcode>
+					</physical>
+				</address>
+				<actor availablefrom="2005-04-11T15:59:50+01:00" cdbid="318F1449-F774-4752-19CA258481F8AB9D" externalid="Cultuurnet:organisation_120477">
+					<actorcategories>
+						<publicscope catid="6.3.0.0.0">Nationaal</publicscope>
+						<themes>
+							<theme catid="1.7.0.0.0">Film</theme>
+							<theme catid="1.8.0.0.0">Muziek</theme>
+							<theme catid="1.55.0.0.0">Uitgaan</theme>
+						</themes>
+						<types>
+							<type catid="8.15.0.0.0">Lokatie</type>
+						</types>
+					</actorcategories>
+					<actordetails>
+						<actordetail lang="nl">
+							<shortdescription>NB</shortdescription>
+							<title>Cultuurcafé De Rits</title>
+						</actordetail>
+					</actordetails>
+					<contactinfo>
+						<address>
+							<physical>
+								<city>Antwerpen-Kiel</city>
+								<country>BE</country>
+								<housenr>157</housenr>
+								<street>Sint Bernardsesteenweg</street>
+								<zipcode>2020</zipcode>
+							</physical>
+						</address>
+						<mail>cultuurcafe.derits@antwerpen.be</mail>
+						<phone>0486/484368</phone>
+						<url>http://www.antwerpen.be/dekern/pages/nova/nova.html</url>
+					</contactinfo>
+					<weekscheme>
+						<monday opentype="closed"/>
+						<tuesday opentype="closed"/>
+						<wednesday opentype="closed"/>
+						<thursday opentype="open">
+							<openingtime from="20:00:00+01:00" to="23:00:00+01:00"/>
+						</thursday>
+						<friday opentype="closed"/>
+						<saturday opentype="closed"/>
+						<sunday opentype="closed"/>
+					</weekscheme>
+				</actor>
+			</location>
+			<organiser>
+				<actor availablefrom="2005-07-28T11:23:45+01:00" cdbid="5CC12204-AC4C-6BB8-0E3CA986913D76E2">
+					<actorcategories>
+						<publicscope catid="6.3.0.0.0">Nationaal</publicscope>
+						<themes>
+							<theme catid="1.7.0.0.0">Film</theme>
+							<theme catid="1.10.0.0.0">Literatuur</theme>
+							<theme catid="1.8.0.0.0">Muziek</theme>
+							<theme catid="1.3.0.0.0">Theater</theme>
+						</themes>
+						<types>
+							<type catid="8.6.0.0.0">Culturele- en Gemeenschapscentra</type>
+						</types>
+					</actorcategories>
+					<actordetails>
+						<actordetail lang="nl">
+							<shortdescription>Cultuur moet mensen doen lachen en ontroeren.Geheel in de lijn van dit credo zorgt Cultuurcentrum De Kern met zijn programmering voor een ontmoetingsplaats en biedt het een podium aan jonge artiesten.</shortdescription>
+							<title>Cultuurcentrum De Kern</title>
+						</actordetail>
+					</actordetails>
+					<contactinfo>
+						<address>
+							<physical>
+								<city>Wilrijk (Antwerpen)</city>
+								<country>BE</country>
+								<housenr>18</housenr>
+								<street>Kern</street>
+								<zipcode>2610</zipcode>
+							</physical>
+						</address>
+						<phone>03/821 01 36</phone>
+						<url>http://www.antwerpen.be/dekern</url>
+					</contactinfo>
+					<weekscheme>
+						<monday opentype="open">
+							<openingtime from="09:00:00+01:00" to="12:00:00+01:00"/>
+							<openingtime from="13:00:00+01:00" to="16:00:00+01:00"/>
+						</monday>
+						<tuesday opentype="open">
+							<openingtime from="09:00:00+01:00" to="12:00:00+01:00"/>
+							<openingtime from="13:00:00+01:00" to="18:30:00+01:00"/>
+						</tuesday>
+						<wednesday opentype="open">
+							<openingtime from="09:00:00+01:00" to="12:00:00+01:00"/>
+							<openingtime from="13:00:00+01:00" to="16:00:00+01:00"/>
+						</wednesday>
+						<thursday opentype="open">
+							<openingtime from="09:00:00+01:00" to="12:00:00+01:00"/>
+							<openingtime from="13:00:00+01:00" to="16:00:00+01:00"/>
+						</thursday>
+						<friday opentype="open">
+							<openingtime from="09:00:00+01:00" to="12:00:00+01:00"/>
+							<openingtime from="13:00:00+01:00" to="16:00:00+01:00"/>
+						</friday>
+						<saturday opentype="open">
+							<openingtime from="09:00:00+01:00" to="12:00:00+01:00"/>
+							<openingtime from="13:00:00+01:00" to="16:00:00+01:00"/>
+						</saturday>
+						<sunday opentype="closed"/>
+					</weekscheme>
+				</actor>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Rijke actor informatie</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/performers
+cdbxml/events/event/location
+cdbxml/events/event/organiser
+cdbxml/events/event/reservations</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>Voorbeelden "Pukema Rock" en "The Violent Husbands" betreffen de relatie tussen het aanbod (//event ) en actoren ( //actor ). De benaming actor komt van culturele actoren, dit zijn organisaties en personen met culturele relevantie.<p>
+					<p>In relatie tot aanbod treden actoren op als locatie, organisator, uitvoerder of reservations. De locatie is de plaats waar het aanbod doorgaat, de organisator is degene die het aanbod organiseert, een uitvoerder kan een regisseur, muziekgroep, auteur enz. zijn. De reservations is waar men terecht kan voor reserveringen en tickets.</p>
+					<p>Standaard worden bij een event voor uitvoerders, organisatoren en reservationsen enkel de benaming getoond. Voor locaties moet naast benaming een adres worden voorzien.</p>
+					<p>Het is echter mogelijk om voor bepaalde actoren rijke informatie als ge&euml;mbed XML-fragment te ontvangen. Dit moet je als subscriber expliciet aanvragen bij <a href="mailto:julian.cox@cultuurnet.be">julian.cox@cultuurnet.be</a>.<p>
+					<p>"The Violent Husbands" is een voorbeeld van ge&euml;mbedde XML-fragmenten. Noteer dat dit het XML-bestand aanzienlijk zal uitbreiden.</p>
+					<p>Rijke informatie is niet mogelijk voor alle culturele actoren. Voor grote zalen en CC&rsquo;s zal bijvoorbeeld wel rijke informatie beschikbaar zijn, voor een locatie als "De grote markt van Leuven" of een amateur-kunstenaar die aan Week van de Amateurkunsten deelnam niet.</p>
+					<table cellspacing="0" cellpadding="0">
+					  <tr>
+						<td>Veld</td>
+						<td>Element</td>
+						<td>Type</td>
+						<td>Verpl.</td>
+					  </tr>
+					  <tr>
+						<td>Locatie</td>
+						<td>//location</td>
+						<td>&nbsp;</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//location/actor</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>Organisator</td>
+						<td>//organiser</td>
+						<td valign="top"></td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//organiser/actor</td>
+						<td>&nbsp;</td>
+						<td valign="top"></td>
+					  </tr>
+					  <tr>
+						<td colspan="4">Actoren hebben dezelfde verplichte velden als aanbod (benaming, korte beschrijving, type, thema). Daarnaast zullen locaties &ndash; hoewel niet verplicht - specifiek ook beschikken over openingstijden, contactgegevens, een adres en voorzieningen.
+						  <p>
+						<p>Het is mogelijk om gebruik van te maken van CultuurDatabank om een gegevensbank op te zetten met culturele actoren. Hiervoor abonneer je op een actor feed ipv een event feed. Daarnaast beschikt de CultuurDatabank ook over een gegevensbank met links. Dit zijn referenties naar sites met culturele relevantie.</td>
+					  </tr>
+					</table>					
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<!-- 13. 't Spelleke van Folklore (Voorbeeld voor werking agefrom attribuut, d.i. leeftijdsklasse) -->
+		<event availablefrom="2005-06-20T00:00:00+01:00" cdbid="990A2C12-C8D9-419F-75EEC003FCAB7B88">
+			<agefrom>3</agefrom>
+			<calendar>
+				<permanentopeningtimes>
+					<permanent>
+						<exceptions>
+							<timestamp opentype="closed">
+								<date>2005-12-25</date>
+							</timestamp>
+							<timestamp opentype="closed">
+								<date>2006-01-01</date>
+							</timestamp>
+						</exceptions>
+						<weekscheme>
+							<monday opentype="closed"/>
+							<tuesday opentype="closed"/>
+							<wednesday opentype="byappointment">
+								<openingtime from="14:30:00+01:00" to="16:00:00+01:00"/>
+							</wednesday>
+							<thursday opentype="closed"/>
+							<friday opentype="closed"/>
+							<saturday opentype="byappointment">
+								<openingtime from="14:30:00+01:00" to="16:00:00+01:00"/>
+							</saturday>
+							<sunday opentype="closed"/>
+						</weekscheme>
+					</permanent>
+				</permanentopeningtimes>
+			</calendar>
+			<contactinfo>
+				<mail>huis.alijn@gent.be</mail>
+				<phone type="phone">+32 9 269 23 50</phone>
+				<phone type="fax">+32 9 269 23 58</phone>
+				<url>http://www.huisvanalijn.be/kindersite/index.html</url>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.3.0.0.0">Nationaal</publicscope>
+				<targetaudiences>
+					<targetaudience catid="2.1.1.0.0">Gezinnen</targetaudience>
+				</targetaudiences>
+				<themes>
+					<theme catid="1.3.0.0.0">Theater</theme>
+					<theme catid="1.40.0.0.0">Cultureel erfgoed</theme>
+				</themes>
+				<types>
+					<type catid="0.2.0.0.0">Voorstellingen (concert, optreden, vertoning,...)</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>Open op afspraak woensdag 14:30, zaterdag 14:30, gesloten op maandag, dinsdag, donderdag, vrijdag, zondag. Uitzonderlijk gesloten op 25/12/2005, 01/01/2006.</calendarsummary>
+					<estimatedtime>90</estimatedtime>
+					<price>
+						<pricevalue>2.50</pricevalue>
+						<pricedescription>Een drankje in het 'cafeetse' kost ongeveer 1 euro.</pricedescription>
+					</price>
+					<shortdescription>Elke woensdag- en zaterdagmiddag steelt Pierke de show op de zolder van het Huis van Alijn. Pierke, geboren uit Pierrotje, staat voor poppentheater in de aloude traditie van de Gentse binnenstad. Voor kinderen die verjaren tijdens de voorstelling, schrobt hij zijn witte pak en blinkt hij zijn rode knoopjes op!</shortdescription>
+					<title>'t Spelleke van Folklore</title>
+				</eventdetail>
+			</eventdetails>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Gent</city>
+						<country>BE</country>
+						<housenr>65</housenr>
+						<street>Kraanlei</street>
+						<zipcode>9000</zipcode>
+					</physical>
+				</address>
+				<label>Huis van Alijn</label>
+			</location>
+			<organiser>
+				<label>Huis van Alijn</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Leeftijdsklasse</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/@agefrom</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>In leeftijdsklasse wordt de minimum leeftijd gegevens vanaf wanneer het aanbod geschikt is. Het is een numerieke waarde die in dit voorbeeld weergeeft dat het aanbod geschikt is voor kinderen vanaf 3 jaar.<p>
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<!-- 14. Volver (Voorbeeld voor talen en duur van het aanbod, en voor samenstellen van een speellijst: d.i. een lijst van locaties waar het betreffende aanbod doorgaat -->
+		<event availablefrom="2006-05-15T17:09:56+01:00" availableto="2006-05-31T22:15:00+01:00" cdbid="3898A851-D94C-D42E-A259917C360CDDCC" externalid="Cultuurnet:aanbod_438461">
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2006-05-23</date>
+						<timestart>15:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-23</date>
+						<timestart>17:45:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-23</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-23</date>
+						<timestart>22:15:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>13:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>15:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>17:45:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>22:15:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-25</date>
+						<timestart>13:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-25</date>
+						<timestart>15:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-25</date>
+						<timestart>17:45:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-25</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-25</date>
+						<timestart>22:15:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-26</date>
+						<timestart>13:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-26</date>
+						<timestart>15:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-26</date>
+						<timestart>17:45:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-26</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-26</date>
+						<timestart>22:15:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-27</date>
+						<timestart>13:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-27</date>
+						<timestart>15:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-27</date>
+						<timestart>17:45:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-27</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-27</date>
+						<timestart>22:15:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-28</date>
+						<timestart>13:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-28</date>
+						<timestart>15:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-28</date>
+						<timestart>17:45:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-28</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-28</date>
+						<timestart>22:15:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-29</date>
+						<timestart>15:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-29</date>
+						<timestart>17:45:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-29</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-29</date>
+						<timestart>22:15:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-30</date>
+						<timestart>15:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-30</date>
+						<timestart>17:45:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-30</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-30</date>
+						<timestart>22:15:00+01:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<phone>03/2329632</phone>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.4.0.0.0">Internationaal</publicscope>
+				<themes>
+					<theme catid="1.7.0.0.0">Film</theme>
+				</themes>
+				<types>
+					<type catid="0.50.6.0.0">Filmvoorstelling</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>dinsdag 23/05/2006 om 15:30, dinsdag 23/05/2006 om 17:45, dinsdag 23/05/2006 om 20:00, dinsdag 23/05/2006 om 22:15, woensdag 24/05/2006 om 13:30, woensdag 24/05/2006 om 15:30, woensdag 24/05/2006 om 17:45, woensdag 24/05/2006 om 20:00, woensdag 24/05/2006 om 22:15, donderdag 25/05/2006 om 13:30, donderdag 25/05/2006 om 15:30, donderdag 25/05/2006 om 17:45, donderdag 25/05/2006 om 20:00, donderdag 25/05/2006 om 22:15, vrijdag 26/05/2006 om 13:30, vrijdag 26/05/2006 om 15:30, vrijdag 26/05/2006 om 17:45, vrijdag 26/05/2006 om 20:00, vrijdag 26/05/2006 om 22:15, zaterdag 27/05/2006 om 13:30, zaterdag 27/05/2006 om 15:30, zaterdag 27/05/2006 om 17:45, zaterdag 27/05/2006 om 20:00, zaterdag 27/05/2006 om 22:15, zondag 28/05/2006 om 13:30, zondag 28/05/2006 om 15:30, zondag 28/05/2006 om 17:45, zondag 28/05/2006 om 20:00, zondag 28/05/2006 om 22:15, maandag 29/05/2006 om 15:30, maandag 29/05/2006 om 17:45, maandag 29/05/2006 om 20:00, maandag 29/05/2006 om 22:15, dinsdag 30/05/2006 om 15:30, dinsdag 30/05/2006 om 17:45, dinsdag 30/05/2006 om 20:00, dinsdag 30/05/2006 om 22:15</calendarsummary>
+					<estimatedtime>121</estimatedtime>
+					<performers>
+						<performer>
+							<role>Regisseur</role>
+							<label>Pedro Almodóvar</label>
+						</performer>
+						<performer>
+							<role>Acteur</role>
+							<label>Carmen Maura</label>
+						</performer>
+						<performer>
+							<role>Acteur</role>
+							<label>Penelope Cruz</label>
+						</performer>
+						<performer>
+							<role>Acteur</role>
+							<label>Lola Duenos</label>
+						</performer>
+					</performers>
+					<shortdescription>Een grootmoeder keert na haar dood terug naar haar familie. Ze wil dingen veranderen die ze in het eigenlijke leven niet kon realiseren. Haar optreden geeft veel steun aan haar dochters en kleinkind. Een verhaal over drie generaties voruwen</shortdescription>
+					<title>Volver</title>
+				</eventdetail>
+			</eventdetails>
+			<eventrelations>
+				<relatedproduction cdbid="3398A851-D94C-D42E-A259917C360CDDCC">Volver</relatedproduction>
+			</eventrelations>
+			<languages>
+				<language type="spoken">ES</language>
+				<language type="subtitles">NL</language>
+				<language type="subtitles">FR</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Antwerpen</city>
+						<country>BE</country>
+						<housenr>4-6</housenr>
+						<street>Kaasstraat</street>
+						<zipcode>2000</zipcode>
+					</physical>
+				</address>
+				<label>Cartoon's Cinema</label>
+			</location>
+			<organiser>
+				<label>Cartoon's Cinema</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Talen en duur van het aanbod en speellijsten</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/eventrelations/relatedproduction
+cdbxml/events/event/languages
+cdbxml/events/event/eventdetails/estimatedtime</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>Voorbeeld "Volver" is een film. Gebruik dit voorbeeld voor samenstellen van speellijsten, voor voorzien van talen waarin het aanbod beschikbaar is en om de duur van het aanbod weer te geven.<p>
+					<p>Speellijsten voegen de locaties samen waar het aanbod plaatsvindt.</p>
+					<table cellspacing="0" cellpadding="0">
+					  <tr>
+						<td>Veld</td>
+						<td>Element</td>
+						<td>Type</td>
+						<td>Verpl.</td>
+					  </tr>
+					  <tr>
+						<td>Speellijst</td>
+						<td>//event/eventrelations/relatedproduction</td>
+						<td>string(250)</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//relatedproduction/@cdbid</td>
+						<td>string(60)</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">Een speellijst vat de locaties samen waar het aanbod doorgaat. Je kan speellijsten samenstellen op basis van gelijke ID&rsquo;s in //relatedproduction/@cdbid. Echter, voor &eacute;lk aanbod bestaat in de CultuurDatabank een production object, zo ook voor aanbod dat geen deel uitmaakt van een speellijst maar op zich staat. Subscribers die speellijsten willen samenstellen moeten dus in de eigen database zoeken naar bestaande productie ID&rsquo;s.</td>
+					  </tr>
+					  <tr>
+						<td>Taal v/h aanbod</td>
+						<td>//event/languages</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//event/languages/language</td>
+						<td>string(250)</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">Er kunnen meerdere talen gekoppeld worden aan een aanbod. Deze talen kunnen in het @type attribuut getypeerd worden als ondertiteld, dubbed, gesproken.</td>
+					  </tr>
+					  <tr>
+						<td>Duur</td>
+						<td>//event/eventdetails/estimatedtime</td>
+						<td>string(60)</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">Beschrijving van de duur van de voorstelling.</td>
+					  </tr>
+					</table>
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<event availablefrom="2006-05-15T17:09:56+01:00" availableto="2006-06-01T22:30:00+01:00" cdbid="3898A8F3-B6E6-694C-2540CA0E0EF57951" externalid="Cultuurnet:aanbod_438538">
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2006-05-23</date>
+						<timestart>17:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-23</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-23</date>
+						<timestart>22:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>14:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>17:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>22:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-25</date>
+						<timestart>14:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-25</date>
+						<timestart>17:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-25</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-25</date>
+						<timestart>22:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-26</date>
+						<timestart>14:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-26</date>
+						<timestart>17:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-26</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-26</date>
+						<timestart>22:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-27</date>
+						<timestart>14:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-27</date>
+						<timestart>17:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-27</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-27</date>
+						<timestart>22:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-28</date>
+						<timestart>14:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-28</date>
+						<timestart>17:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-28</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-28</date>
+						<timestart>22:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-29</date>
+						<timestart>17:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-29</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-29</date>
+						<timestart>22:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-30</date>
+						<timestart>17:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-30</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-30</date>
+						<timestart>22:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-31</date>
+						<timestart>14:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-31</date>
+						<timestart>17:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-31</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-31</date>
+						<timestart>22:30:00+01:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<mail>info@sphinx-cinema.be</mail>
+				<phone>09/2256086</phone>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.4.0.0.0">Internationaal</publicscope>
+				<themes>
+					<theme catid="1.7.0.0.0">Film</theme>
+				</themes>
+				<types>
+					<type catid="0.50.6.0.0">Filmvoorstelling</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>dinsdag 23/05/2006 om 17:00, 20:00, 22:30, woensdag 24/05/2006 om 14:30, 17:00, 20:00, 22:30, donderdag 25/05/2006 om 14:30, 17:00, 20:00, 22:30, vrijdag 26/05/2006 om 14:30, 17:00, 20:00, 22:30, zaterdag 27/05/2006 om 14:30, 17:00, 20:00, 22:30, zondag 28/05/2006 om 14:30, 17:00, 20:00, 22:30, maandag 29/05/2006 om 17:00, 20:00, 22:30, dinsdag 30/05/2006 om 17:00, 20:00, 22:30, woensdag 31/05/2006 om 14:30, 17:00, 20:00, 22:30</calendarsummary>
+					<estimatedtime>121</estimatedtime>
+					<performers>
+						<performer>
+							<role>Regisseur</role>
+							<label>Pedro Almodóvar</label>
+						</performer>
+						<performer>
+							<role>Acteur</role>
+							<label>Carmen Maura</label>
+						</performer>
+						<performer>
+							<role>Acteur</role>
+							<label>Penelope Cruz</label>
+						</performer>
+						<performer>
+							<role>Acteur</role>
+							<label>Lola Duenos</label>
+						</performer>
+					</performers>
+					<shortdescription>Een grootmoeder keert na haar dood terug naar haar familie. Ze wil dingen veranderen die ze in het eigenlijke leven niet kon realiseren. Haar optreden geeft veel steun aan haar dochters en kleinkind. Een verhaal over drie generaties voruwen</shortdescription>
+					<title>Volver</title>
+				</eventdetail>
+			</eventdetails>
+			<eventrelations>
+				<relatedproduction cdbid="3398A851-D94C-D42E-A259917C360CDDCC">Volver</relatedproduction>
+			</eventrelations>
+			<languages>
+				<language type="spoken">ES</language>
+				<language type="subtitles">NL</language>
+				<language type="subtitles">FR</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Gent</city>
+						<country>BE</country>
+						<housenr>3</housenr>
+						<street>Sint-Michielshelling</street>
+						<zipcode>9000</zipcode>
+					</physical>
+				</address>
+				<label>Sphinx</label>
+			</location>
+			<organiser>
+				<label>Sphinx</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Talen en duur van het aanbod en speellijsten</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/eventrelations/relatedproduction
+cdbxml/events/event/languages
+cdbxml/events/event/eventdetails/estimatedtime</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>Zie beschrijving Volver in Cartoon's Cinema</p>
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<event availablefrom="2006-05-15T17:09:56+01:00" availableto="2006-05-31T20:30:00+01:00" cdbid="3898A909-96B4-A676-EAEF582F6FF77031" externalid="Cultuurnet:aanbod_438540">
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2006-05-23</date>
+						<timestart>12:15:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-23</date>
+						<timestart>15:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-23</date>
+						<timestart>17:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-23</date>
+						<timestart>20:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>12:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>15:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>18:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>20:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-25</date>
+						<timestart>12:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-25</date>
+						<timestart>15:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-25</date>
+						<timestart>18:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-25</date>
+						<timestart>20:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-26</date>
+						<timestart>12:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-26</date>
+						<timestart>15:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-26</date>
+						<timestart>18:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-26</date>
+						<timestart>20:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-27</date>
+						<timestart>12:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-27</date>
+						<timestart>15:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-27</date>
+						<timestart>18:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-27</date>
+						<timestart>20:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-28</date>
+						<timestart>12:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-28</date>
+						<timestart>15:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-28</date>
+						<timestart>18:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-28</date>
+						<timestart>20:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-29</date>
+						<timestart>12:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-29</date>
+						<timestart>15:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-29</date>
+						<timestart>18:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-29</date>
+						<timestart>20:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-30</date>
+						<timestart>12:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-30</date>
+						<timestart>15:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-30</date>
+						<timestart>18:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-30</date>
+						<timestart>20:30:00+01:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<phone>0900/10440</phone>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.4.0.0.0">Internationaal</publicscope>
+				<themes>
+					<theme catid="1.7.0.0.0">Film</theme>
+				</themes>
+				<types>
+					<type catid="0.50.6.0.0">Filmvoorstelling</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>dinsdag 23/05/2006 om 12:15, 15:00, 17:30, 20:30, 12:30, woensdag 24/05/2006 om 15:00, 18:00, 20:30, 12:30, 15:00, donderdag 25/05/2006 om 18:00, 20:30, vrijdag om 12:30, 15:00, 18:00, 20:30, zaterdag 27/05/2006 om 12:30, 15:00, 18:00, 20:30, zondag 28/05/2006 om 12:30, 15:00, 18:00, 20:30, maandag 29/05/2006 om 12:30, 15:00, 18:00, 20:30, dinsdag 30/05/2006 om 12:30, 15:00, 18:00, 20:30</calendarsummary>
+					<estimatedtime>121</estimatedtime>
+					<performers>
+						<performer>
+							<role>Regisseur</role>
+							<label>Pedro Almodóvar</label>
+						</performer>
+						<performer>
+							<role>Acteur</role>
+							<label>Carmen Maura</label>
+						</performer>
+						<performer>
+							<role>Acteur</role>
+							<label>Penelope Cruz</label>
+						</performer>
+						<performer>
+							<role>Acteur</role>
+							<label>Lola Duenos</label>
+						</performer>
+					</performers>
+					<shortdescription>Een grootmoeder keert na haar dood terug naar haar familie. Ze wil dingen veranderen die ze in het eigenlijke leven niet kon realiseren. Haar optreden geeft veel steun aan haar dochters en kleinkind. Een verhaal over drie generaties voruwen</shortdescription>
+					<title>Volver</title>
+				</eventdetail>
+			</eventdetails>
+			<eventrelations>
+				<relatedproduction cdbid="3398A851-D94C-D42E-A259917C360CDDCC">Volver</relatedproduction>
+			</eventrelations>
+			<languages>
+				<language type="spoken">ES</language>
+				<language type="subtitles">NL</language>
+				<language type="subtitles">FR</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Elsene (Brussel)</city>
+						<country>BE</country>
+						<housenr>8</housenr>
+						<street>Gulden Vlieslaan</street>
+						<zipcode>1050</zipcode>
+					</physical>
+				</address>
+				<label>UGC Toison d'Or</label>
+			</location>
+			<organiser>
+				<label>UGC Toison d'Or</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Talen en duur van het aanbod en speellijsten</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/eventrelations/relatedproduction
+cdbxml/events/event/languages
+cdbxml/events/event/eventdetails/estimatedtime</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>Zie beschrijving Volver in Cartoon's Cinema</p>
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<event availablefrom="2006-05-15T17:09:56+01:00" availableto="2006-05-31T22:00:00+01:00" cdbid="3898A898-FF03-4306-2CC19D42854DDBAF" externalid="Cultuurnet:aanbod_438496">
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2006-05-23</date>
+						<timestart>11:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-23</date>
+						<timestart>14:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-23</date>
+						<timestart>16:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-23</date>
+						<timestart>19:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-23</date>
+						<timestart>22:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>11:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>14:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>16:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>19:35:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>22:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-25</date>
+						<timestart>11:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-25</date>
+						<timestart>14:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-25</date>
+						<timestart>16:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-25</date>
+						<timestart>19:35:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-25</date>
+						<timestart>22:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-26</date>
+						<timestart>11:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-26</date>
+						<timestart>14:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-26</date>
+						<timestart>16:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-26</date>
+						<timestart>19:35:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-26</date>
+						<timestart>22:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-27</date>
+						<timestart>11:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-27</date>
+						<timestart>14:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-27</date>
+						<timestart>16:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-27</date>
+						<timestart>19:35:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-27</date>
+						<timestart>22:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-28</date>
+						<timestart>11:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-28</date>
+						<timestart>14:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-28</date>
+						<timestart>16:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-28</date>
+						<timestart>19:35:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-28</date>
+						<timestart>22:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-29</date>
+						<timestart>11:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-29</date>
+						<timestart>14:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-29</date>
+						<timestart>16:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-29</date>
+						<timestart>19:35:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-29</date>
+						<timestart>22:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-30</date>
+						<timestart>11:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-30</date>
+						<timestart>14:00:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-30</date>
+						<timestart>16:30:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-30</date>
+						<timestart>19:35:00+01:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-30</date>
+						<timestart>22:00:00+01:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<phone>0900/10440</phone>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.4.0.0.0">Internationaal</publicscope>
+				<themes>
+					<theme catid="1.7.0.0.0">Film</theme>
+				</themes>
+				<types>
+					<type catid="0.50.6.0.0">Filmvoorstelling</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>dinsdag 23/05/2006 om 11:30, 14:00, 16:30, 19:30, 22:00, woensdag 24/05/2006 om 11:30, 14:00, 16:30, 19:35, 22:00, donderdag 25/05/2006 om 11:30, 14:00, 16:30, 19:35, 22:00, vrijdag 26/05/2006 om 11:30, 14:00, 16:30, 19:35, 22:00, zaterdag 27/05/2006 om 11:30, 14:00, 16:30, 19:35, 22:00, zondag 28/05/2006 om 11:30, 14:00, 16:30, 19:35, 22:00, maandag 29/05/2006 om 11:30, 14:00, 16:30, 19:35, 22:00, dinsdag 30/05/2006 om 11:30, 14:00, 16:30, 19:35, 22:00</calendarsummary>
+					<estimatedtime>121</estimatedtime>
+					<performers>
+						<performer>
+							<role>Regisseur</role>
+							<label>Pedro Almodóvar</label>
+						</performer>
+						<performer>
+							<role>Acteur</role>
+							<label>Carmen Maura</label>
+						</performer>
+						<performer>
+							<role>Acteur</role>
+							<label>Penelope Cruz</label>
+						</performer>
+						<performer>
+							<role>Acteur</role>
+							<label>Lola Duenos</label>
+						</performer>
+					</performers>
+					<shortdescription>Een grootmoeder keert na haar dood terug naar haar familie. Ze wil dingen veranderen die ze in het eigenlijke leven niet kon realiseren. Haar optreden geeft veel steun aan haar dochters en kleinkind. Een verhaal over drie generaties voruwen</shortdescription>
+					<title>Volver</title>
+				</eventdetail>
+			</eventdetails>
+			<eventrelations>
+				<relatedproduction cdbid="3398A851-D94C-D42E-A259917C360CDDCC">Volver</relatedproduction>
+			</eventrelations>
+			<languages>
+				<language type="spoken">ES</language>
+				<language type="subtitles">NL</language>
+				<language type="subtitles">FR</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Brussel</city>
+						<country>BE</country>
+						<housenr>38</housenr>
+						<street>De Brouckèreplein</street>
+						<zipcode>1000</zipcode>
+					</physical>
+				</address>
+				<label>UGC De Brouckère</label>
+			</location>
+			<organiser>
+				<label>UGC De Brouckère</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Talen en duur van het aanbod en speellijsten</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/eventrelations/relatedproduction
+cdbxml/events/event/languages
+cdbxml/events/event/eventdetails/estimatedtime</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>Zie beschrijving Volver in Cartoon's Cinema</p>
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<!-- 15. Mechelen Kinderstad (Voorbeeld van koepelaanbod) -->
+		<event availablefrom="2006-01-06T00:00:00+01:00" availableto="2006-03-22T00:00:00+01:00" cdbid="9F494785-C218-1783-C420F3561DB61D07">
+			<agefrom>6</agefrom>
+			<calendar>
+				<periods>
+					<period>
+						<datefrom>2005-12-21</datefrom>
+						<dateto>2006-06-21</dateto>
+					</period>
+				</periods>
+			</calendar>
+			<contactinfo>
+				<mail>saar.casteels@mechelen.be</mail>
+				<phone>+32 15 201125</phone>
+				<url>http://www.mechelen.be/kinderstad</url>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.3.0.0.0">Nationaal</publicscope>
+				<themes>
+					<theme catid="1.0.0.0.0">Beeldende kunsten</theme>
+					<theme catid="1.9.0.0.0">Dans</theme>
+					<theme catid="1.7.0.0.0">Film</theme>
+					<theme catid="1.10.0.0.0">Literatuur</theme>
+					<theme catid="1.8.0.0.0">Muziek</theme>
+					<theme catid="1.3.0.0.0">Theater</theme>
+					<theme catid="1.40.0.0.0">Cultureel erfgoed</theme>
+					<theme catid="1.57.0.0.0">Recreatie</theme>
+					<theme catid="1.51.0.0.0">Sport</theme>
+					<theme catid="1.15.0.0.0">Volkscultuur</theme>
+				</themes>
+				<types>
+					<type catid="0.5.0.0.0">Festivals</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>Van 21/12/2005 tot 21/03/2006</calendarsummary>
+					<media>
+						<file cdbid="B9B26B1E-D9D5-B0A2-E32EB886CEF8B14C">
+							<copyright>Mechelen Kinderstad</copyright>
+							<filename>KIND_24RGB.jpg</filename>
+							<filetype>jpeg</filetype>
+							<hlink>KIND_24RGB.jpg</hlink>
+							<title>Mechelen Kinderstad</title>
+						</file>
+					</media>
+					<shortdescription>Mechelen Kinderstad steunt op de unieke samenwerking tussen meer dan 40 kindgerichte stedelijke en niet-stedelijke diensten en organisaties in Mechelen. Al deze partners bundelen hun krachten om samen Mechelen steeds verder als kindvriendelijke stad uit te bouwen. In Mechelen Kinderstad kan je terecht voor een veelzijdig aanbod kinderactiviteiten en -evenementen en meerdere duurzame initiatieven.</shortdescription>
+					<title>Mechelen Kinderstad</title>
+				</eventdetail>
+			</eventdetails>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Mechelen</city>
+						<country>BE</country>
+						<housenr>1</housenr>
+						<street>Wollemarkt</street>
+						<zipcode>2800</zipcode>
+					</physical>
+				</address>
+				<label>Mechelen Kinderstad</label>
+			</location>
+			<organiser>
+				<label>Mechelen Kinderstad</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Koepelaanbod</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/evenrelations/parentevent</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>Mechelen Kinderstad is een voorbeeld van koepelaanbod. De ouder wordt bij koepelaanbod gerefereerd vanuit &eacute;&eacute;n of meer kinderen. Het koepelaanbod wordt niet ge&euml;mbed in het kind, enkel de titel (verplicht) en ID's worden opgenomen. Er kunnen meerdere ouders aan &eacute;&eacute;n kind toegewezen worden.</p>
+					<table cellspacing="0" cellpadding="0">
+					  <tr>
+						<td>Veld</td>
+						<td>Element</td>
+						<td>Type</td>
+						<td>Verpl.</td>
+					  </tr>
+					  <tr>
+						<td>In het kader van (zie kind objecten)</td>
+						<td>//evenrelations/parentevent</td>
+						<td>&nbsp;</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">Omdat een koepelaanbod niet altijd onderdeel uitmaakt van een feed is &ndash; als er een koepelaanbod voorzien wordt - de titel een verplicht veld.</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//parentevent/@cdbid</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//parentevent/@externalid</td>
+						<td valign="top"></td>
+						<td>&nbsp;</td>
+					  </tr>
+					</table>
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<event availablefrom="2006-02-22T00:00:00+01:00" availableto="2006-04-17T00:00:00+01:00" cdbid="8EF62EDF-C512-3339-CC08BC602EA7F106">
+			<agefrom>6</agefrom>
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2006-04-16</date>
+						<timestart>14:30:00+01:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<phone>+32 15 29 49 10</phone>
+				<url>http://www.lamot-erfgoedcentrum.be</url>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.2.0.0.0">Regionaal</publicscope>
+				<themes>
+					<theme catid="1.40.0.0.0">Cultureel erfgoed</theme>
+					<theme catid="1.15.0.0.0">Volkscultuur</theme>
+					<theme catid="1.15.1.0.0">Heemkunde en lokale geschiedenis</theme>
+				</themes>
+				<types>
+					<type catid="0.3.0.0.0">Educatieve Activiteiten</type>
+					<type catid="0.3.1.0.0">Cursussen en Workshops</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>zondag 16/04/2006 om 14:30</calendarsummary>
+					<price>
+						<pricevalue>0</pricevalue>
+					</price>
+					<shortdescription>Erfgoed een saaie bedoening? Niet in Mechelen. Verkleed je met oude kostuums en bouw je eigen reus. Concurreren met de echte Mechelse reuzen, die vorig jaar als werelderfgoed uitgeroepen werden door de UNESCO, zal moeilijk zijn. Maar je kan ze wel van 1 - 17 april bewonderen in het Erfgoedcentrum Lamot.</shortdescription>
+					<title>Kinderatelier Stoetenstad</title>
+				</eventdetail>
+			</eventdetails>
+			<eventrelations>
+				<parentevent cdbid="9F494785-C218-1783-C420F3561DB61D07">Mechelen Kinderstad</parentevent>
+			</eventrelations>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Mechelen</city>
+						<country>BE</country>
+						<housenr>8/10</housenr>
+						<street>Van Beethovenstraat</street>
+						<zipcode>2800</zipcode>
+					</physical>
+				</address>
+				<label>Erfgoedcentrum Lamot</label>
+			</location>
+			<organiser>
+				<label>Erfgoedcentrum Lamot</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Koepelaanbod</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/evenrelations/parentevent</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>Zie Mechelen Kinderstad</p>
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<event availablefrom="2006-02-27T00:00:00+01:00" cdbid="AB105F16-AB4D-0FD2-A550DFFF06EB2C82">
+			<agefrom>6</agefrom>
+			<calendar>
+				<permanentopeningtimes>
+					<permanent>
+						<weekscheme>
+							<monday opentype="closed"/>
+							<tuesday opentype="byappointment">
+								<openingtime from="13:00:00+01:00" to="17:00:00+01:00"/>
+							</tuesday>
+							<wednesday opentype="byappointment">
+								<openingtime from="13:00:00+01:00" to="17:00:00+01:00"/>
+							</wednesday>
+							<thursday opentype="byappointment">
+								<openingtime from="13:00:00+01:00" to="17:00:00+01:00"/>
+							</thursday>
+							<friday opentype="byappointment">
+								<openingtime from="13:00:00+01:00" to="17:00:00+01:00"/>
+							</friday>
+							<saturday opentype="closed"/>
+							<sunday opentype="closed"/>
+						</weekscheme>
+					</permanent>
+				</permanentopeningtimes>
+			</calendar>
+			<contactinfo>
+				<phone type="phone" reservation="true">015 29 40 30</phone>
+				<phone type="fax" reservation="true">015 29 40 31</phone>
+				<url>http://www.mechelen.be/stedelijkemusea</url>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.3.0.0.0">Nationaal</publicscope>
+				<themes>
+					<theme catid="1.40.0.0.0">Cultureel erfgoed</theme>
+					<theme catid="1.11.0.0.0">Geschiedenis</theme>
+					<theme catid="1.52.0.0.0">Mens en maatschappij</theme>
+				</themes>
+				<types>
+					<type catid="0.3.0.0.0">Educatieve Activiteiten</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>Open op afspraak dinsdag 13:00, woensdag 13:00, donderdag 13:00, vrijdag 13:00, gesloten op maandag, zaterdag, zondag</calendarsummary>
+					<estimatedtime>120</estimatedtime>
+					<price>
+						<pricevalue>62.50</pricevalue>
+						<pricedescription>Prijs per rondleiding (max. 25 personen): 62,50 euro (inbegrepen: educatieve gids + materiaalgebruik in het atelier)</pricedescription>
+					</price>
+					<shortdescription>In deze Museumklas verneem je meer over de eetgewoontes en het voedsel uit de tijd van ridders en prinsessen, ambachtsmensen en bedelaars.</shortdescription>
+					<title>"Oesters &amp; Karakollen" (Museumklas Stedelijke Musea Mechelen)</title>
+				</eventdetail>
+			</eventdetails>
+			<eventrelations>
+				<parentevent cdbid="9F494785-C218-1783-C420F3561DB61D07">Mechelen Kinderstad</parentevent>
+			</eventrelations>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Mechelen</city>
+						<country>BE</country>
+						<housenr>z/n</housenr>
+						<street>Kruispunt Hoogstraat-Ring</street>
+						<zipcode>2800</zipcode>
+					</physical>
+				</address>
+				<label>Stedelijk Museum Brusselpoort</label>
+			</location>
+			<organiser>
+				<label>Stedelijke Musea Mechelen : : Educatieve dienst</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Koepelaanbod</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/evenrelations/parentevent</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>Zie Mechelen Kinderstad</p>
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<event availablefrom="2006-02-21T00:00:00+01:00" availableto="2006-03-26T00:00:00+01:00" cdbid="8BE06FAA-E152-5FDE-FCAE72C79A5489C8">
+			<agefrom>6</agefrom>
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2006-03-25</date>
+						<timestart>14:00:00+01:00</timestart>
+						<timeend>17:00:00+01:00</timeend>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<mail>de_harlekijntjes@hotmail.com</mail>
+				<phone>015 630106</phone>
+				<url>http://www.mechelen.be/jeugd</url>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.1.0.0.0">Lokaal</publicscope>
+				<targetaudiences>
+					<targetaudience catid="2.1.1.0.0">Gezinnen</targetaudience>
+				</targetaudiences>
+				<themes>
+					<theme catid="1.9.0.0.0">Dans</theme>
+				</themes>
+				<types>
+					<type catid="0.2.0.0.0">Voorstellingen (concert, optreden, vertoning,...)</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>zaterdag 25/03/2006 om 14:00</calendarsummary>
+					<performers>
+						<performer>
+							<label>Kinder- en Jeugddansatelier De Harlekijntjes</label>
+						</performer>
+					</performers>
+					<price>
+						<pricevalue>2</pricevalue>
+					</price>
+					<shortdescription>Het Kinderdansfestival is voor groot en klein. Kinderen kunnen een hele namiddag plezier maken en dansen op bekende en minder bekende muziekjes. Inkom bedraagt 2 euro (drankje inbegrepen).</shortdescription>
+					<title>Kinderdansfestival</title>
+				</eventdetail>
+			</eventdetails>
+			<eventrelations>
+				<parentevent cdbid="9F494785-C218-1783-C420F3561DB61D07">Mechelen Kinderstad</parentevent>
+			</eventrelations>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Mechelen</city>
+						<country>BE</country>
+						<housenr>119</housenr>
+						<street>Kruisbaan</street>
+						<zipcode>2800</zipcode>
+					</physical>
+				</address>
+				<label>Kinder- en Jeugddansatelier De Harlekijntjes</label>
+			</location>
+			<organiser>
+				<label>Kinder- en Jeugddansatelier De Harlekijntjes</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Koepelaanbod</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/evenrelations/parentevent</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>Zie Mechelen Kinderstad</p>
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<!-- 16. 55 plussersfeest (Voorbeeld voor gebruik van private attribuut en toegangsvoorwaarden) -->
+		<event availablefrom="2006-04-03T00:00:00+01:00" availableto="2006-05-23T00:00:00+01:00" cdbid="6132A5D7-04E0-C175-03152B0AD9676BDA" private="true">
+			<agefrom>55</agefrom>
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2006-05-22</date>
+						<timestart>18:30:00+01:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<address>
+					<physical>
+						<city>Putte</city>
+						<country>BE</country>
+						<street>Kerkhoflei</street>
+						<zipcode>2580</zipcode>
+					</physical>
+				</address>
+			</contactinfo>
+			<eventcategories>
+				<admittance catid="5.1.0.0.0">Gesloten</admittance>
+				<publicscope catid="6.0.0.0.0">Wijk/buurt</publicscope>
+				<targetaudiences>
+					<targetaudience catid="2.1.5.0.0">Senioren</targetaudience>
+				</targetaudiences>
+				<themes>
+					<theme catid="1.52.0.0.0">Mens en maatschappij</theme>
+				</themes>
+				<types>
+					<type catid="0.8.0.0.0">Feesten</type>
+					<type catid="0.50.0.0.0">Varia</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<admission>Enkel voor leden toegankelijk.</admission>
+					<calendarsummary>maandag 22/05/2006 om 18:30</calendarsummary>
+					<shortdescription>55 plussersfeest in de parochiezaal te Grasheide 
+	Voor kvlv leden .
+	Aanvang 18u30 Norbert 
+	Janssen van CM komt een voordracht geven die luidt "Stevig op beide benen" 
+	Inschrijving vereist</shortdescription>
+					<title>55 plussersfeest</title>
+				</eventdetail>
+			</eventdetails>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Putte</city>
+						<country>BE</country>
+						<street>Kerkhoflei</street>
+						<zipcode>2580</zipcode>
+					</physical>
+				</address>
+				<label>Parochiezaal Grasheide</label>
+			</location>
+			<organiser>
+				<label>Parochiezaal Grasheide</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Private en toegangsvoorwaarden</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/eventdetails/admission
+cdbxml/events/event/@private</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>"55-plussersfeest" betreft de (weinig gebruikte) velden admission en @private .</p>
+					<table cellspacing="0" cellpadding="0">
+					  <tr>
+						<td>Veld</td>
+						<td>Element</td>
+						<td>Type</td>
+						<td>Verpl.</td>
+					  </tr>
+					  <tr>
+						<td>Toegangsvoorwaarden</td>
+						<td>//event/eventdetails/admission</td>
+						<td>String(1000)</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>Publiek beschikbaar</td>
+						<td>//@private</td>
+						<td>Boolean(false)</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">Private info kan enkel gepubliceerd worden door de eigenaar van de gegevens. Dit is de gebruikersgroep die de gegevens toevoegde aan CultuurDatabank, als publisher of als invoerder via cultuurdatabank.be. Let wel, CultuurDatabank redacteuren kunnen eigenaarschap overdragen.</td>
+					  </tr>
+					</table>
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<!-- 17. Architectuur en Vrijmetselarij (Voorbeeld voor gebruik van meertalige velden) -->
+		<event availablefrom="2006-01-03T00:00:00+01:00" availableto="2006-12-24T00:00:00+01:00" cdbid="D7C8DC33-0006-37CA-59BBEB18EE035D18" externalid="Brussel SKB:SKB00001_120111">
+			<calendar>
+				<periods>
+					<period>
+						<datefrom>2006-02-28</datefrom>
+						<dateto>2006-12-23</dateto>
+						<weekscheme>
+							<monday opentype="closed"/>
+							<tuesday opentype="open">
+								<openingtime from="12:00:00+01:00" to="18:00:00+01:00"/>
+							</tuesday>
+							<wednesday opentype="open">
+								<openingtime from="12:00:00+01:00" to="21:00:00+01:00"/>
+							</wednesday>
+							<thursday opentype="open">
+								<openingtime from="12:00:00+01:00" to="18:00:00+01:00"/>
+							</thursday>
+							<friday opentype="open">
+								<openingtime from="12:00:00+01:00" to="18:00:00+01:00"/>
+							</friday>
+							<saturday opentype="open">
+								<openingtime from="12:00:00+01:00" to="18:00:00+01:00"/>
+							</saturday>
+							<sunday opentype="open">
+								<openingtime from="12:00:00+01:00" to="18:00:00+01:00"/>
+							</sunday>
+						</weekscheme>
+					</period>
+				</periods>
+			</calendar>
+			<contactinfo>
+				<phone type="phone">02-649.86.65</phone>
+				<phone type="fax">02-642.24.63</phone>
+				<url>http://www.vai.be/nl/actualiteit/actua_archi_detail.asp?id=1014</url>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.3.0.0.0">Nationaal</publicscope>
+				<themes>
+					<theme catid="1.2.0.0.0">Architectuur en Vormgeving</theme>
+					<theme catid="1.2.1.0.0">Architectuur</theme>
+				</themes>
+				<types>
+					<type catid="0.0.0.0.0">Tentoonstellingen</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>Van 28/02/2006 tot 23/12/2006, open op dinsdag 12:00, woensdag 12:00, donderdag 12:00, vrijdag 12:00, zaterdag 12:00, zondag 12:00, gesloten op maandag.</calendarsummary>
+					<price>
+						<pricevalue>3</pricevalue>
+					</price>
+					<shortdescription>Documenten, foto's, affiches, voorwerpen en boeken werpen een licht op de voornaamste Belgische tempels en hun plaats binnen de algemene vrijmetselaarsarchitectuur. De tentoonstelling zelf gaat door in een gebouw dat vroeger dienst deed als vrijmetselaarsloge.</shortdescription>
+					<title>Architectuur en Vrijmetselarij</title>
+				</eventdetail>
+				<eventdetail lang="fr">
+					<shortdescription>Documents, photos, publicités, affiches, objets, livres. Documents, photos, publicités, affiches, objets et livres illustrent dans cette exposition les principaux temples belges et leur situation dans le contexte architectural maçonnique. L'expo est elle-même accueillie sous les voûtes d'un ancien temple maçonnique.</shortdescription>
+					<title>Architectures maçonniques</title>
+				</eventdetail>
+			</eventdetails>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Elsene</city>
+						<country>BE</country>
+						<housenr>86</housenr>
+						<street>Kluisstr.</street>
+						<zipcode>1050</zipcode>
+					</physical>
+				</address>
+				<label>Museum voor Architectuur - De Loge</label>
+			</location>
+			<organiser>
+				<label>Archieven van Moderne Architectuur</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Meertaligheid</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/eventdetails</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>Meertaligheid van gegevens in CultuurDatabank groeit gestaag. Om concreet te weten welke informatie meertalig is en hoe je er inhoudelijk mee omspringt neem je best contact op met CultuurNet via <a href="mailto:vragen@cultuurdatabank.be">vragen@cultuurdatabank.be</a>.<p>
+					<p>In principe kunnen alle vrije tekstvelden behalve meertalig zijn. Vrije tekstvelden zijn gebundeld in //*detail. In de praktijk beschikt vooral aanbod dat doorgaat in Brussel over een tweetalige titel en een tweetalige korte beschrijving. Als de titel meertalig is maar de korte beschrijving niet, dan wordt in korte beschrijving "NB" opgeslagen. Is de korte beschrijving meertalig, maar de titel niet, dan wordt de beschikbare titel overgenomen in de andere taal.</p>
+					<p>Talen worden met hun ISO code opgenomen als attribuut van //*detail , bijv.</p>
+					<p>&lt;eventdetail lang="nl"&gt; <br/>
+					&lt;label&gt;titel&lt;/label&gt; <br/>
+					&lt;shortdescription&gt;korte beschrijving&lt;/shortdescription&gt;<br/>
+					&lt;/eventdetail&gt;</p>
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<!-- 18. Bij mij zijt ge veilig door Wim Helsen (Voorbeeld voor uitverkocht aanbod, verplaatst van locatie ) -->
+		<event availablefrom="2005-11-28T00:00:00+01:00" availableto="2006-01-27T00:00:00+01:00" cdbid="D72E99EC-B699-F6D1-612592841A225DBD">
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<availability>
+							<newlocation>
+								<location>
+									<address>
+										<physical>
+											<city>Hasselt</city>
+											<country>BE</country>
+											<housenr>5</housenr>
+											<street>Kunstlaan</street>
+											<zipcode>3500</zipcode>
+										</physical>
+									</address>
+									<label>Cultuurcentrum Hasselt</label>
+								</location>
+							</newlocation>
+							<soldout>true</soldout>
+						</availability>
+						<date>2006-01-26</date>
+						<timestart>20:00:00+01:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<phone>011 22 99 33</phone>
+				<url>http://www.ccha.be</url>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.0.0.0.0">Wijk/buurt</publicscope>
+				<themes>
+					<theme catid="1.3.0.0.0">Theater</theme>
+					<theme catid="1.3.8.0.0">Cabaret en Variété</theme>
+				</themes>
+				<types>
+					<type catid="0.2.0.0.0">Voorstellingen (concert, optreden, vertoning,...)</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>donderdag 26/01/2006 om 20:00</calendarsummary>
+					<performers>
+						<performer>
+							<label>Wim Helsen</label>
+						</performer>
+					</performers>
+					<shortdescription>Cabaret &amp; Humor.</shortdescription>
+					<title>Bij mij zijt ge veilig door Wim Helsen (CC Hasselt)</title>
+				</eventdetail>
+			</eventdetails>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Hasselt</city>
+						<country>BE</country>
+						<housenr>5</housenr>
+						<street>Kunstlaan</street>
+						<zipcode>3500</zipcode>
+					</physical>
+				</address>
+				<label>De Cirk (CC Hasselt)</label>
+			</location>
+			<organiser>
+				<label>De Cirk (CC Hasselt)</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Verplaatst van locatie &amp; uitverkocht</value>
+				</property>
+				<property type="operator" name="path">
+					<value>//availability</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>Dit voorbeeld "Bij mij zijt ge veilig door Wim Helsen" en het volgende "Herbert Kregelicnk" gaan over de beschikbaarheid van een aanbod. Het kan zijn dat een aanbod <strong>uitverkocht, geannuleerd, verplaatst van locatie of verplaatst in tijd</strong> is. In dit geval wordt het availibility element gevuld.<p>
+					<p>Availability of beschikbaarheid heeft altijd betrekking op &eacute;&eacute;n datum. In geval van //calender/timestamps (zie voorbeeld "Flat Earth Society") zal daarom availability aan //timestamps/timestamp hangen. In het geval van periodiek of permanent aanbod (zie resp. voorbeelden "Ren&eacute; Heyvaert" en "Monument Abdij Vlierbeek Leuven") zal een exception element toegevoegd worden.<p>
+					<table cellspacing="0" cellpadding="0">
+					  <tr>
+						<td>Veld</td>
+						<td>Element</td>
+						<td>Type</td>
+						<td>Verpl.</td>
+					  </tr>
+					  <tr>
+						<td>Tijdsinformatie</td>
+						<td>//calendar/timestamps</td>
+						<td>&nbsp;</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">Dit voorbeeld betreft een &eacute;&eacute;nmalig aanbod.</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//calendar/timestamp/availibility</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">//availability is een choice element met 4 keuzes: cancelled, newlocation, newtime en soldout.</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//calendar/timestamp/availability/soldout</td>
+						<td>Boolean</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//calendar/timestamp/availability/newlocation/location</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">Merk op dat in //event/location de <strong>originele </strong>locatie opgeslagen wordt. Hetzelfde geldt bij verplaatst naar een ander tijdstip. In het timestamp element wordt het originele tijdstip opgeslagen, in //newtime het nieuwe tijdstip.
+						  <p>
+						<p>Zie voorbeeld "Pukema Rock" voor meer uitleg bij het //location element.</td>
+					  </tr>
+					</table>
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<!-- 19. Herbert Kregelinck (Voorbeeld voor geannuleerd aanbod) -->
+		<event availablefrom="2005-08-05T00:00:00+01:00" availableto="2005-12-05T14:30:00+01:00" cdbid="86F1269A-B19B-405D-A658E331ABC5A749">
+			<calendar>
+				<periods>
+					<period>
+						<datefrom>2006-12-04</datefrom>
+						<dateto>2006-12-23</dateto>
+						<exceptions>
+							<timestamp opentype="open">
+								<availability>
+									<cancelled>true</cancelled>
+								</availability>
+								<date>2006-12-04</date>
+							</timestamp>
+						</exceptions>
+						<weekscheme>
+							<monday opentype="open">
+								<openingtime from="14:30:00+01:00"/>
+							</monday>
+							<tuesday opentype="open">
+								<openingtime from="14:30:00+01:00"/>
+							</tuesday>
+							<wednesday opentype="open">
+								<openingtime from="14:30:00+01:00"/>
+							</wednesday>
+							<thursday opentype="closed"/>
+							<friday opentype="closed"/>
+							<saturday opentype="closed"/>
+							<sunday opentype="closed"/>
+						</weekscheme>
+					</period>
+				</periods>
+			</calendar>
+			<contactinfo>
+				<phone reservation="true">+32 473 260 365</phone>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.3.0.0.0">Nationaal</publicscope>
+				<targetaudiences>
+					<targetaudience catid="2.1.5.0.0">Senioren</targetaudience>
+				</targetaudiences>
+				<themes>
+					<theme catid="1.8.0.0.0">Muziek</theme>
+				</themes>
+				<types>
+					<type catid="0.2.0.0.0">Voorstellingen (concert, optreden, vertoning,...)</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>Van 04/12/2006 tot 23/12/2006, open op maandag om 14:30, dinsdag om 14:30, woensdag om 14:30, gesloten op vrijdag, zaterdag , zondag.</calendarsummary>
+					<performers>
+						<performer>
+							<label>Herbert Kregelinck</label>
+						</performer>
+					</performers>
+					<price>
+						<pricevalue>5</pricevalue>
+						<pricedescription>VVK: 5 euro KA: 6 euro</pricedescription>
+					</price>
+					<shortdescription>Herbert Kregelinck werd vooral bekend door zijn deelname aan de Soundmix Show van Wieze met zijn hit 'Het Allerleukste'. Zijn stemgeluid verbaast menig publiek. Sommigen denken meteen aan Pharell Williams, anderen menen Garry Hagger te herkennen. Maar wij houden vooral van Herbert Kregelinck. Clown Blacky zorgt voor de komische noot.</shortdescription>
+					<title>Herbert Kregelinck</title>
+				</eventdetail>
+			</eventdetails>
+			<languages>
+				<language>nl</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Merksem (Antwerpen)</city>
+						<country>BE</country>
+						<housenr>31</housenr>
+						<street>Kasterveldenstraat</street>
+						<zipcode>2170</zipcode>
+					</physical>
+				</address>
+				<label cdbid="A9421F16-F202-A2DB-04BDDCA00A25DE28">De Sfinckx</label>
+			</location>
+			<organiser>
+				<label cdbid="A0521F16-F202-A2DB-04BDDCA00A25DE28">Kregelinck Managers</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Geannuleerd</value>
+				</property>
+				<property type="operator" name="path">
+					<value>//availability</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>De voorbeelden "Bij mij zijt ge veilig door Wim Helsen" en "Herbert Kregelinck" gaan over de beschikbaarheid van een aanbod. Het kan zijn dat een aanbod <strong>uitverkocht, geannuleerd, verplaatst van locatie of verplaatst in tijd</strong> is. In dit geval wordt het availibility element gevuld.<p>
+					<p>Availability of beschikbaarheid heeft altijd betrekking op &eacute;&eacute;n datum. In geval van //calender/timestamps (zie voorbeeld "Flat Earth Society") zal daarom availability aan //timestamps/timestamp hangen. In het geval van periodiek of permanent aanbod (zie resp. voorbeelden "Ren&eacute; Heyvaert" en "Monument Abdij Vlierbeek Leuven") zal een exception element toegevoegd worden.<p>
+					<table cellspacing="0" cellpadding="0">
+					  <tr>
+						<td>Veld</td>
+						<td>Element</td>
+						<td>Type</td>
+						<td>Verpl.</td>
+					  </tr>
+					  <tr>
+						<td>Tijdsinformatie</td>
+						<td>//calendar/timestamps</td>
+						<td>&nbsp;</td>
+						<td>X</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">Dit voorbeeld betreft een tijdelijk aanbod.</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//periods/period/exceptions/exception/availability</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td colspan="4">//availability is een choice element met 4 keuzes: cancelled, newlocation, newtime en soldout.</td>
+					  </tr>
+					  <tr>
+						<td>&nbsp;</td>
+						<td>//periods/period/exceptions/exception/availability/cancelled</td>
+						<td>Boolean</td>
+						<td>&nbsp;</td>
+					  </tr>
+					</table>					
+					]]></value>
+				</property>
+			</properties>
+		</event>
+		<!-- 20. Belyj orel (Voorbeeld voor de "keywords" tag) -->
+		<event availablefrom="2006-05-22T00:00:00+01:00" availableto="2006-05-25T00:00:00+01:00" cdbid="5D0EA792-D7D1-253E-F865DD1B55E4A977" externalid="Cultuurnet:aanbod_438597">
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2006-05-24</date>
+						<timestart>21:00:00+01:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<mail>filmarchief@ledoux.be</mail>
+				<phone>+32 2 5078370</phone>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.4.0.0.0">Internationaal</publicscope>
+				<themes>
+					<theme catid="1.7.0.0.0">Film</theme>
+				</themes>
+				<types>
+					<type catid="0.2.0.0.0">Voorstellingen (concert, optreden, vertoning,...)</type>
+					<type catid="0.50.6.0.0">Filmvoorstelling</type>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>woensdag 24/05/2006 om 21:00</calendarsummary>
+					<estimatedtime>93</estimatedtime>
+					<performers>
+						<performer>
+							<role>Acteur</role>
+							<label>Vsevolod Mejerhold</label>
+						</performer>
+						<performer>
+							<role>Regisseur</role>
+							<label>Iakov Protazanov</label>
+						</performer>
+					</performers>
+					<shortdescription>Briljante verkenning van het gekweld geweten van een gouverneur die demonstranten liet neerschieten.</shortdescription>
+					<title>Belyj orel</title>
+				</eventdetail>
+			</eventdetails>
+			<keywords>De witte arend, belly orel</keywords>
+			<languages>
+				<language type="subtitles">FR</language>
+			</languages>
+			<location>
+				<address>
+					<physical>
+						<city>Brussel</city>
+						<country>BE</country>
+						<housenr>9</housenr>
+						<street>Baron Hortastraat</street>
+						<zipcode>1000</zipcode>
+					</physical>
+				</address>
+				<label>Filmmuseum Brussel</label>
+			</location>
+			<organiser>
+				<label>Filmmuseum Brussel</label>
+			</organiser>
+			<properties>
+				<property type="operator" name="xmlcase">
+					<value>Keywords</value>
+				</property>
+				<property type="operator" name="path">
+					<value>cdbxml/events/event/keywords</value>
+				</property>
+				<property type="operator" name="description">
+					<value><![CDATA[
+					<p>Bij vrije zoekopdrachten moet in de titel en in keywords gezocht worden. In keywords worden bijvoorbeeld andere schrijfwijzen - S.M.A.K en SMAK - of synoniemen opgeslagen.<p>
+					]]></value>
+				</property>
+			</properties>
+		</event>
+	</events>
+</cdbxml>

@@ -1,0 +1,25 @@
+
+__Podiumdatabank__
+
+
+Deze database bevat informatie over professionele podiumkunsten geproduceerd door minstens één organisatie in Vlaanderen of Brussel. 
+De informatie wordt pro-actief verzameld en beheerd door [VTi](http://www.vti.be), steunpunt voor de podiumkunsten.
+
+Welke voorstellingen werden professioneel geproduceerd? 
+Welke dansers, acteurs, regisseurs en andere betrokkenen kregen credits voor die producties? 
+Zijn er ook nog documenten waarin iets over die producties geleerd kan worden?
+
+
+Voor elke productie is er een record aangemaakt in de database, waarin de volgende informatie opgenomen wordt: productie (titel, premièredatum, seizoen), speeldata, cast, producers en co-producers en ook genre.
+Er is extra informatie voor vele organisaties, zowel producerende als presenterende, met name over festivals, subsidies, theaterzalen & werkruimtes, etc.
+Elke persoon heeft ook een informatiefiche over hun opleiding en hun producties.
+Bovendien zijn onze gespecialiseerde bibliotheek- en archiefcollecties opgenomen in de databank en gekoppeld aan de vele personen, organisaties en producties:
+foto en video, persknippels, boeken en tijdschriften, archiefdocumenten en ephemera.
+
+
+In de context van VTi onderzoek werden de gegevens over twaalf seizoenen opnieuw nagekeken, namelijk van 1993-1994 tot 2004-2005. 
+Er is meer informatie in de databank, gedeeltelijk niet geverifieerd, maar daarvoor moet u eerst [inloggen](/login).
+
+Halfweg 2007 presenteerde VTi de veldanalyse "Metamorfose in podiumland", waarin een uitgebreide statistische analyse over de productie van podiumkunsten in Vlaanderen en Brussel in de periode 1993-2005 – de periode dat het Podiumkunstendecreet van kracht was. 
+Dit onderzoek steunde op [deze database](/), hier online beschikbaar in drie talen en als [linked data](http://linkeddata.org).
+

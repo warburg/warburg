@@ -1,0 +1,3 @@
+module PressCuttingLanguagesHelper
+  include BoxConfiguration
+end

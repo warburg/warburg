@@ -1,0 +1,2 @@
+class OrganisationFunction < Function
+end

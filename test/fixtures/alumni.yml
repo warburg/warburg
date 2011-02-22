@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  organisation_id: 1
+  person_id: 1
+  start_year: MyString
+  end_year: MyString
+
+two:
+  organisation_id: 1
+  person_id: 1
+  start_year: MyString
+  end_year: MyString

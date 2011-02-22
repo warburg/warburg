@@ -1,0 +1,37 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+invisible:
+  start_year: 1905
+  visible: false
+  
+visible: 
+  start_year: 2009
+  visible: true
+  
+implicit_invisible:
+  start_year: 2008
+
+with_permalink:
+  start_year: 2004
+  permalink: abc
+  visible: false
+  
+order_1:
+  start_year: 2000
+  visible: true
+  
+order_3:
+  start_year: 2010
+  visible: true
+  
+order_2:
+  start_year: 2005
+  visible: true
+  
+ripple_invisible:
+  start_year: 1999
+  visible: true
+  
+ripple_visible:
+  start_year: 1998
+  visible: false

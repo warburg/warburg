@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  role: MyString
+  cdb_actor_id: 1
+  label: MyString
+
+two:
+  role: MyString
+  cdb_actor_id: 1
+  label: MyString

@@ -1,0 +1,659 @@
+
+=========
+Relaties:
+=========
+
+
+
+## AVDoorOrganisaties
+Deze tabel registreert de corporatieve auteurs (organisaties als auteur) voor AV materialen.
+Functiecolofon is een tekstveld voor de credits zoals omschreven op het document zelf ; FunctieID verwijst naar de tabel ?? OrganisatieFuncties.
+
+Velden:
+	\[AVDoorOrganisatiesId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[AVTitelId\] \[int\] NULL ,
+	\[OrganisatieId\] \[int\] NULL ,
+	\[FunctieColofon\] \[nvarchar\] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[FunctieId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## AVDoorPersonen
+Deze tabel registreert de personele auteurs (personen als auteur) voor AV materialen.
+Functiecolofon is een tekstveld voor de credits zoals omschreven op het document zelf ; FunctieID verwijst naar de tabel ?? PersonenFuncties.
+
+Achtergrond:
+Auteurs kunnen zowel personen zijn als organisaties zoals voorzien in alle internationale standaarden voor bibliografie (ISBD sinds de jaren 1960, herbevestigd in FRBR en andere recente standaardiseringsinitiatieven). 
+Dit is ook letterlijk zo voorzien in MODS (http://mods.loc.gov) en het is dus algemeen zo geïmplementeerd voor alle documenttypes in de databank.
+
+Velden:
+	\[AVDoorPersonenId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[AVTitelId\] \[int\] NULL ,
+	\[PersoonId\] \[int\] NULL ,
+	\[FunctieColofon\] \[nvarchar\] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[FunctieId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## AVOverOrganisaties
+Er zijn in feite 4 verschillende niveau's van trefwoorden, of preciezer: 'inhoudelijke beschrijving' voor alle documenttypes: een trefwoordenlijst + de lijst van personen, producties en organisaties die al bestaan. Voor elk documenttype is er dus een veel op veel tussentabel.
+Deze tabel legt verbindingen tussen AVTitels en organisaties over wie deze AV iets vertelt.
+
+Velden:
+	\[AVOverOrganisatiesId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[AVTitelId\] \[int\] NULL ,
+	\[OrganisatieId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## AVOverPersonen
+Deze tabel legt verbindingen tussen AVTitels en personen over wie deze AV iets vertelt.
+
+Velden:
+	\[AVOverPersonenId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[AVTitelId\] \[int\] NULL ,
+	\[PersoonId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## AVOverProducties
+Deze tabel legt verbindingen tussen AVTitels en producties waarover deze AV iets vertelt.
+
+Velden:
+	\[AVOverProductiesId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[AVTitelId\] \[int\] NULL ,
+	\[ProductieId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## AVOverTrefwoorden
+Deze tabel legt verbindingen tussen AVTitels en trefwoorden, concepten waarover deze AV iets vertelt.
+
+Velden:
+	\[AVOverTrefwoordenId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[AVTitelId\] \[int\] NULL ,
+	\[TrefwoordId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## ArchiefBestanddelenOverOrganisaties
+Deze tabel legt verbindingen tussen Archiefbestanddelen en organisaties over wie dit archief iets vertelt.
+
+Velden:
+	\[ArchiefOverorganisatieId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[ArchiefBestanddeelid\] \[int\] NULL ,
+	\[OrganisatieId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## ArchiefBestanddelenOverPersonen
+Deze tabel legt verbindingen tussen Archiefbestanddelen en personen over wie dit archief iets vertelt.
+
+Velden:
+	\[ArchiefOverPersoonId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[ArchiefBestanddeelid\] \[int\] NULL ,
+	\[PersoonId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## ArchiefBestanddelenOverProducties
+Deze tabel legt verbindingen tussen Archiefbestanddelen en producties waarover dit archief iets vertelt.
+
+Velden:
+	\[ArchiefOverProductieId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[ArchiefBestanddeelid\] \[int\] NULL ,
+	\[ProductieId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## ArtikelsDoorOrganisaties
+Corporatieve auteurs voor artikels.
+
+Te evalueren: ooit gebruikt??
+
+Velden:
+	\[ArtikelsDoorOrganisatiesId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[ArtikelId\] \[int\] NULL ,
+	\[OrganisatieId\] \[int\] NULL ,
+	\[FunctieId\] \[int\] NULL ,
+	\[FunctieTekst\] \[nvarchar\] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## ArtikelsDoorPersonen
+Personele auteurs voor artikels
+
+Velden:
+	\[ArtikelsDoorPersonenId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[ArtikelId\] \[int\] NULL ,
+	\[PersoonId\] \[int\] NULL ,
+	\[FunctieId\] \[int\] NULL ,
+	\[FunctieTekst\] \[nvarchar\] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+## ArtikelsOverOrganisaties
+Deze tabel legt verbindingen tussen Artikels en organisaties over wie dit artikel iets vertelt.
+
+	\[ArtikelsOverOrganisatiesId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[ArtikelId\] \[int\] NULL ,
+	\[OrganisatieId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## ArtikelsOverPersonen
+Deze tabel legt verbindingen tussen Artikels en personen over wie dit artikel iets vertelt.
+
+Velden:
+	\[ArtikelsDoorPersonenId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[ArtikelId\] \[int\] NULL ,
+	\[PersoonId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## ArtikelsOverProducties
+Deze tabel legt verbindingen tussen Artikels en producties waarover dit artikel iets vertelt.
+
+Velden:
+	\[ArtikelsOverProductiesId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[ArtikelId\] \[int\] NULL ,
+	\[ProductieId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## ArtikelsOverTrefwoord
+Deze tabel legt verbindingen tussen Artikels en trefwoorden, concepten waarover wie dit artikel iets vertelt.
+
+Velden:
+	\[ArtikelsOverTrefwoordId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[ArtikelId\] \[int\] NULL ,
+	\[TrefwoordId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## BoekTitelDoorOrganisaties
+Corporatieve auteurs van boeken
+
+Velden:
+	\[BoekTitelDoorOrganisatiesId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[BoekTitelId\] \[int\] NULL ,
+	\[OrganisatieId\] \[int\] NULL ,
+	\[Volgnummer\] \[int\] NULL ,
+	\[OrganisatieFunctie\] \[nvarchar\] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## BoekTitelDoorPersonen
+Personele auteurs van boeken
+
+Auteursfuncties worden geregeld door een hulptabel, Personenfuncties, maar eigenlijk zou dat beter gemapt worden naar de standaard MARC Relators and Roles.
+
+Velden:
+	\[BoekTitelDoorPersonenId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[BoekTitelId\] \[int\] NULL ,
+	\[PersonenId\] \[int\] NULL ,
+	\[Volgnummer\] \[int\] NULL ,
+	\[FunctieId\] \[int\] NULL ,
+	\[FunctieColofon\] \[nvarchar\] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## BoekTitelOverOrganisaties
+Deze tabel legt verbindingen tussen boeken en de organisaties waarover het boek iets vertelt.
+
+Velden:
+	\[BoekTitelOverOrganisatiesId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[BoekTitelId\] \[int\] NULL ,
+	\[OrganisatieId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## BoekTitelOverPersonen
+Deze tabel legt verbindingen tussen boeken en de personen waarover het boek iets vertelt.
+
+Velden:
+	\[BoekTitelOverPersonen\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[BoekTitelId\] \[int\] NULL ,
+	\[PersoonId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## BoekTitelOverProducties
+Deze tabel legt verbindingen tussen boeken en de producties waarover het boek iets vertelt.
+
+Velden:
+	\[BoekTitelOverProductiesId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[BoekTitelId\] \[int\] NULL ,
+	\[ProductieId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## BoekTitelOverTrefwoord
+Deze tabel legt verbindingen tussen boeken en de trefwoorden waarover het boek iets vertelt.
+
+Velden:
+	\[BoekTitelOverTrefwoorden\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[BoekTitelId\] \[int\] NULL ,
+	\[TrefwoordId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## DocuDoorOrganisaties
+Corporatieve auteurs van documentatiestukken.
+
+Velden:
+	\[DocuDoorOrganisatiesId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[DocuId\] \[int\] NULL ,
+	\[OrganisatieId\] \[int\] NULL ,
+	\[FunctieColofon\] \[nvarchar\] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[FunctieId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## DocuDoorPersonen
+Personele auteurs van documentatiestukken.
+Zelfde opmerking over personenfuncties bij auteurs.
+
+Velden:
+	\[DocuDoorPersonenId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[DocuId\] \[int\] NULL ,
+	\[PersoonId\] \[int\] NULL ,
+	\[FunctieColofon\] \[nvarchar\] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[FunctieId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## DocuOverOrganisaties
+Deze tabel legt verbindingen tussen documentatie en de organisaties waarover het document iets vertelt.
+
+Velden:
+	\[DocuOverOrganisatiesId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[DocuId\] \[int\] NULL ,
+	\[OrganisatieId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## DocuOverPersonen
+Deze tabel legt verbindingen tussen documentatie en de organisaties waarover het document iets vertelt.
+
+Velden:
+	\[DocuOverPersonenId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[DocuId\] \[int\] NULL ,
+	\[PersoonId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## DocuOverProducties
+Deze tabel legt verbindingen tussen documentatie en de producties waarover het document iets vertelt.
+
+Velden:
+	\[DocuOverProductiesId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[DocuId\] \[int\] NULL ,
+	\[ProductieId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## DocuOverTrefwoorden
+Deze tabel legt verbindingen tussen documentatie en de trefwoorden waarover het document iets vertelt.
+
+Velden:
+	\[DocuOverTrefwoordenId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[DocuId\] \[int\] NULL ,
+	\[TrefwoordId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## IcoDoorOrganisaties
+Corporatieve auteurs voor iconografisch materiaal
+
+Velden:
+	\[IcoDoorOrganisatiesId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[IcoTitelId\] \[int\] NULL ,
+	\[OrganisatieId\] \[int\] NULL ,
+	\[FunctieId\] \[int\] NULL ,
+	\[FunctieColofon\] \[nvarchar\] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## IcoDoorPersonen
+Personele auteurs van iconografisch materiaal
+
+Velden:
+	\[IcoDoorPersonenId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[IcoTitelId\] \[int\] NULL ,
+	\[PersoonId\] \[int\] NULL ,
+	\[FunctieId\] \[int\] NULL ,
+	\[FunctieColofon\] \[nvarchar\] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## IcoOverOrganisaties
+Linktabel naar de organisaties over wie een iconografisch document iets vertelt.
+
+Velden:
+	\[IcoOverOrganisatiesId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[IcoTitelId\] \[int\] NULL ,
+	\[OrganisatieId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## IcoOverPersonen
+Linktabel naar de personen over wie een iconografisch document iets vertelt.
+
+Velden:
+	\[IcoOverPersonenId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[IcoTitelId\] \[int\] NULL ,
+	\[PersoonId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## IcoOverProducties
+Linktabel naar de producties waarover een iconografisch document iets vertelt.
+
+Velden:
+	\[IcoOverProductiesId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[IcoTitelId\] \[int\] NULL ,
+	\[ProductieId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## IcoOverTrefwoorden
+Linktabel naar de trefwoorden waarover een iconografisch document iets vertelt.
+
+Velden:
+	\[IcoOverTrefwoordenId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[IcoTitelId\] \[int\] NULL ,
+	\[TrefwoordId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## ProductiesDoorOrganisaties
+Wie zijn de producenten en coproducenten van een productie?
+Altijd één van de producenten wordt aangestipt als de referentieproducent.
+
+Velden:
+	\[OrganisatiesBijProductiesId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[ProductieId\] \[int\] NULL ,
+	\[OrganisatieId\] \[int\] NULL ,
+	\[OrganisatieFunctieId\] \[int\] NULL ,
+	\[OrganisatieFunctie\] \[nvarchar\] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[Referentie\] \[bit\] NOT NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## ProductiesDoorPersonen
+Welke personen doen mee in deze productie?
+De functie wordt op 3 niveau's weergegeven: welke functie uit de lijst (bijv. zanger) ; hoe staat dat op het programmaboekje (bijv. tenor) ; welke rol vertolkt die dan in het boekje (bijv. Don Giovanni)
+
+Velden:
+	\[ProductiesDoorPersonenId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[ProductieId\] \[int\] NULL ,
+	\[PersoonId\] \[int\] NULL ,
+	\[FunctieId\] \[int\] NULL ,
+	\[FunctieTekst\] \[nvarchar\] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[RolInfo\] \[nvarchar\] (150) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## ProductiesOverGenres
+Welke genres zijn relevant voor deze productie? Meerdere per productie is de regel.
+
+Velden:
+	\[ProductieOverGenresId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[ProductieId\] \[int\] NULL ,
+	\[ProductiesGenreId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## ProductiesOverRepertoire
+Een productie kan een nieuwe creatie zijn of een instuderen van bestaand repertoire.
+
+Te evalueren of dit de beste structuur is om een en ander te registreren...
+
+Velden:
+	\[ProductiesOverRepertoireId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[ProductieId\] \[int\] NULL ,
+	\[RepertoireId\] \[int\] NULL ,
+	\[SoortVerwijzing\] \[nvarchar\] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## RepertoireDoorPersonen
+Personele auteurs van repertoire.
+
+Velden:
+	\[RepertoireDoorPersonenId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[RepertoireId\] \[int\] NULL ,
+	\[PersoonId\] \[int\] NULL ,
+	\[FunctieId\] \[int\] NULL ,
+	\[FunctieTekst\] \[nvarchar\] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## OrganisatiesBijRuimtes
+Koppeltabel tussen het ruimtebestand en de MasterOrganisatie: meerdere ruimtes mogelijk per organisatie ; gedeeld beheer mogelijk.
+
+Velden:
+	\[OrganisatiesBijRuimtesId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[OrganisatieId\] \[int\] NULL ,
+	\[RuimteId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+## TrefwoordenBijTijdschrift
+Koppeltabel voor trefwoorden bij een tijdschrifttitel.
+
+Velden:
+	\[TrefwoordenBijTijdschriftID\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[TijdschriftID\] \[int\] NULL ,
+	\[TrefwoordID\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+## VerwervingOverTrefwoorden
+Koppeltabel voor trefwoorden bij de verwervingstabel.
+
+Velden:
+	\[VerwervingOverTrefwoordenId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[VerwervingId\] \[int\] NULL ,
+	\[TrefwoordId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+## RepertoireTalen
+Taal van het oorspronkelijke repertoire.
+Waarom veel op veel?
+
+Velden:
+	\[RepertoireTalenId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[RepertoireId\] \[int\] NULL ,
+	\[IsoTaalcode\] \[nvarchar\] (3) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[Taalnota\] \[nvarchar\] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+## BestellingenBoeken
+Hier dus de kopeltabel tusse BoekTitel en Bestelling.
+Op het moment van de bestelling wordt nog geen exemplaar-record aangemaakt, alleen een titelrecord.
+Leverdatum wordt ingevuld op het moment van levering ; NULL value betekent nog niet geleverd.
+
+Aanpassing van de structuur: BestellingID en LeverDatum worden toegevoegd aan de BoekExemplaar tabel.
+
+Velden:
+	\[BestellingenBoekenId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[BestellingId\] \[int\] NULL ,
+	\[BoekTitelId\] \[int\] NULL ,
+	\[LeverDatum\] \[datetime\] NULL ,
+	\[Nota\] \[nvarchar\] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+===========================
+Voorlopig niet overgenomen:
+===========================
+
+## RepertoireGenres
+Genrelink voor repertoire: zinvol?
+
+Velden:
+	\[RepertoireGenresId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[RepertoireId\] \[int\] NULL ,
+	\[GenreId\] \[int\] NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL 
+
+
+## RepertoireOverRepertoire
+Blijkbaar een veel op veel relatie tussen repertoire?
+Zinvol?
+
+Velden:
+	\[RepertoireBijRepertoireId\] \[int\] IDENTITY (1, 1) NOT NULL ,
+	\[RepertoireId\] \[int\] NULL ,
+	\[RepertoireRelatieId\] \[int\] NULL ,
+	\[RelatieSoort\] \[nvarchar\] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[Nota\] \[ntext\] COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	\[InvoerUser\] \[int\] NULL ,
+	\[WijzigUser\] \[int\] NULL ,
+	\[InvoerDatum\] \[datetime\] NULL ,
+	\[WijzigDatum\] \[datetime\] NULL ,
+	\[upsize_ts\] \[timestamp\] NULL 
+
+## ClasseringscodeBuitenland
+Voor buitenlandse organisaties heeft een soortgelijk systeem bestaan.
+
+Is nog in gebruik voor buitenlandse documentatie, maar misschien niet meer pertinent?
+
+Velden:
+	\[OrganisatieId\] \[int\] NOT NULL ,
+	\[Oude_Code\] \[nvarchar\] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL 
+
+
+
+

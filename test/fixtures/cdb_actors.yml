@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  cdbid: MyString
+  externalid: MyString
+  person: false
+  private: false
+
+two:
+  cdbid: MyString
+  externalid: MyString
+  person: false
+  private: false

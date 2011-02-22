@@ -1,0 +1,9 @@
+<div class="dialog">
+	<h3>The page you were looking for doesn't exist (404)</h3>
+	<p class="error"><%= "\"#{params[:id]}\""%></p>
+	<% if @current_user.admin == true %>
+		<p><%= logger.error $!%></p>
+		<p>&nbsp;</p>
+	<% end %>
+	<p class="error_back"><%= link_to "GO BACK", eval("#{params[:controller]}_path") %></p>
+</div>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: One
+  periodical_issue_id: 1
+  reference: MyString
+  available: false
+  permalink: one
+
+two:
+  title: Two
+  periodical_issue_id: 1
+  reference: MyString
+  available: false
+  permalink: two

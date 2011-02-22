@@ -1,0 +1,4 @@
+To generate a mapping file
+==========================
+
+./generate-mapping -u tomklaasen -d org.postgresql.Driver -o vti-mapping.n3 -b http://data.vti.be:2020 jdbc:postgresql:vti

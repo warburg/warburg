@@ -1,0 +1,38 @@
+.translation_missing {
+	color: red;
+}
+
+.error{
+	font-size:16px;
+	margin: 10px 0 25px;
+	color:#f00;
+}
+
+.error_back a{
+	display: block;
+    height: 20px;
+	width: 100px;
+    padding: 1px 5px 2px 0;
+    text-align: center;
+	color: #FFFFFF;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 20px;
+ 	background: none repeat scroll 0 0 #414141;
+}
+
+h1 { 
+    font-size: 100%; 
+	color: #f00; 
+	line-height: 1.5em;
+}
+
+.dialog {
+	width: 30em;
+	padding: 10px;
+	margin: 50px auto 250px auto;
+	border: 1px solid #ccc;
+	border-right-color: #999;
+	border-bottom-color: #999;
+}

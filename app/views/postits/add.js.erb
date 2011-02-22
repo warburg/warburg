@@ -1,0 +1,3 @@
+$("#postits").append("<%= escape_javascript render(:partial => 'postits/postit', :object => @postit) %>");
+$("#addpostit")[0].reset();
+$('.add-a-postit').toggle();

@@ -1,0 +1,2002 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+ Author: CultuurNet Vlaanderen
+ Last updated: 2006-09-18 by Luk Verhelst (luk.verhelst@cultuurnet.be)
+ Homepage: http://www.cultuurdatabank.com/CdbXML
+
+ Update: 2007-04-04 by Luk Verhelst 
+    - changed minlength from 0 to 1 for datatypes String60 en String250 
+      this prevents empty tags
+    - changed mail addresses validation for compliance with other XML 
+      parser API's
+-->
+<xs:schema xmlns="http://www.cultuurdatabank.com/XMLSchema/CdbXSD/3.0/FINAL" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.cultuurdatabank.com/XMLSchema/CdbXSD/3.0/FINAL" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="cdbxml">
+		<xs:annotation>
+			<xs:documentation>Root: container for information to be delivered and published</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="metadata" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Metadata on the delivered cdbxml document</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="documentinfo" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>For information purposes. Contains one or more of following values separated by line feed: subscriptioncode (contract under which information is send), subsriptionversion, creationdate (of XML document), exporttype (delta or full), filesequencenumber (10 digit number) and name of publisher</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="processing" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>processing information defining the owner, validator and process status</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="owner">
+											<xs:annotation>
+												<xs:documentation>Description of the owner of the information</xs:documentation>
+											</xs:annotation>
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="250"/>
+													<xs:minLength value="1"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="validator">
+											<xs:annotation>
+												<xs:documentation>Description of the validator of the information</xs:documentation>
+											</xs:annotation>
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="250"/>
+													<xs:minLength value="1"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="status">
+										<xs:annotation>
+											<xs:documentation>Status description for the processing</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="concept"/>
+												<xs:enumeration value="draft"/>
+												<xs:enumeration value="ready for validation"/>
+												<xs:enumeration value="published"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="versions" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="categorisation">
+											<xs:complexType>
+												<xs:attribute name="url" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="regions">
+											<xs:complexType>
+												<xs:attribute name="url" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="events" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Event information, contains: production information + location (where) + calender (when) info</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="event" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="actors" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Actors are: organisations and persons of cultural relevance (artists, locations, organisors, ...)</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="actor" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="links" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Links to web sites of cultural relevance</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="link" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="productions" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>"potential" event, ready to be organised. Contains common event data such as title, description, images, ...</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="production" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="categorisation" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Categorisation information. Used to categorise the various information elements in order to allow fine grained selection and searching.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="item" maxOccurs="unbounded"/>
+						</xs:sequence>
+						<xs:attribute name="url" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="regions" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Cities in Flanders and Brussels divided in regions defined by CultuurNet</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element name="region">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded">
+										<xs:element ref="city"/>
+									</xs:sequence>
+									<xs:attribute name="type" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="cdbregio"/>
+												<xs:enumeration value="provincie"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="label" type="string60" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="url" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="deletes" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Deleted objects</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="delete" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="objecttype">
+										<xs:annotation>
+											<xs:documentation>Defines the type of the deleted object, e.g. event, actor, link.</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="production"/>
+												<xs:enumeration value="event"/>
+												<xs:enumeration value="actor"/>
+												<xs:enumeration value="link"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="cdbid">
+										<xs:annotation>
+											<xs:documentation>Internal CDB ID</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:minLength value="1"/>
+												<xs:maxLength value="60"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="externalid">
+										<xs:annotation>
+											<xs:documentation>External (publishers) identifier for the information unit sent</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:minLength value="1"/>
+												<xs:maxLength value="250"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="actor">
+		<xs:annotation>
+			<xs:documentation>Actor (organisor, location, executor, reservator, ...)</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="actorcategories">
+					<xs:annotation>
+						<xs:documentation>Categories for the actor: required are type and theme </xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="facilities" minOccurs="0"/>
+							<xs:element ref="publicscope" minOccurs="0"/>
+							<xs:element name="sector" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="catid" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element ref="targetaudiences" minOccurs="0"/>
+							<xs:element ref="themes"/>
+							<xs:element ref="types"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="actordetails">
+					<xs:annotation>
+						<xs:documentation>Actor details, containing the ability for multiple languages.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="actordetail" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="calendarsummary" minOccurs="0"/>
+										<xs:element ref="longdescription" minOccurs="0"/>
+										<xs:element ref="media" minOccurs="0"/>
+										<xs:element ref="shortdescription"/>
+										<xs:element ref="title"/>
+									</xs:sequence>
+									<xs:attribute name="lang" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="nl"/>
+												<xs:enumeration value="en"/>
+												<xs:enumeration value="fr"/>
+												<xs:enumeration value="de"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="contactinfo" minOccurs="0"/>
+				<xs:element ref="keywords" minOccurs="0"/>
+				<xs:element ref="properties" minOccurs="0"/>
+				<xs:element name="relatedactors" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Actors related to each other</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="relatedactor" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="role" minOccurs="0"/>
+										<xs:choice>
+											<xs:element ref="actor"/>
+											<xs:element ref="label"/>
+										</xs:choice>
+									</xs:sequence>
+									<xs:attribute name="type" use="required">
+										<xs:annotation>
+											<xs:documentation>Relation type</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="heeft als ouder"/>
+												<xs:enumeration value="andere"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="weekscheme" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="availablefrom" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>Date the information is allowed to be published</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="availableto" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>Date untill, the information is allowed to be published</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="cdbid">
+				<xs:annotation>
+					<xs:documentation>Internal CDB ID</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="60"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="externalid">
+				<xs:annotation>
+					<xs:documentation>External (publishers) identifier for the information unit sent</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="250"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="private" type="xs:boolean" default="0">
+				<xs:annotation>
+					<xs:documentation>Only publishable by the owner and his trusted parties</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="person" type="xs:boolean" default="0"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="address">
+		<xs:annotation>
+			<xs:documentation>Address details</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="physical">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="city"/>
+							<xs:element name="country">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="AF"/>
+										<xs:enumeration value="AL"/>
+										<xs:enumeration value="DZ"/>
+										<xs:enumeration value="AS"/>
+										<xs:enumeration value="AD"/>
+										<xs:enumeration value="AO"/>
+										<xs:enumeration value="AI"/>
+										<xs:enumeration value="AQ"/>
+										<xs:enumeration value="AG"/>
+										<xs:enumeration value="AR"/>
+										<xs:enumeration value="AM"/>
+										<xs:enumeration value="AW"/>
+										<xs:enumeration value="AU"/>
+										<xs:enumeration value="AT"/>
+										<xs:enumeration value="AZ"/>
+										<xs:enumeration value="BS"/>
+										<xs:enumeration value="BH"/>
+										<xs:enumeration value="BD"/>
+										<xs:enumeration value="BB"/>
+										<xs:enumeration value="BY"/>
+										<xs:enumeration value="BE"/>
+										<xs:enumeration value="BZ"/>
+										<xs:enumeration value="BJ"/>
+										<xs:enumeration value="BM"/>
+										<xs:enumeration value="BT"/>
+										<xs:enumeration value="BO"/>
+										<xs:enumeration value="BA"/>
+										<xs:enumeration value="BW"/>
+										<xs:enumeration value="BV"/>
+										<xs:enumeration value="BR"/>
+										<xs:enumeration value="IO"/>
+										<xs:enumeration value="BN"/>
+										<xs:enumeration value="BG"/>
+										<xs:enumeration value="BF"/>
+										<xs:enumeration value="BI"/>
+										<xs:enumeration value="KH"/>
+										<xs:enumeration value="CM"/>
+										<xs:enumeration value="CA"/>
+										<xs:enumeration value="CV"/>
+										<xs:enumeration value="KY"/>
+										<xs:enumeration value="CF"/>
+										<xs:enumeration value="TD"/>
+										<xs:enumeration value="CL"/>
+										<xs:enumeration value="CN"/>
+										<xs:enumeration value="CX"/>
+										<xs:enumeration value="CC"/>
+										<xs:enumeration value="CO"/>
+										<xs:enumeration value="KM"/>
+										<xs:enumeration value="CG"/>
+										<xs:enumeration value="CD"/>
+										<xs:enumeration value="CK"/>
+										<xs:enumeration value="CR"/>
+										<xs:enumeration value="CI"/>
+										<xs:enumeration value="HR"/>
+										<xs:enumeration value="CU"/>
+										<xs:enumeration value="CY"/>
+										<xs:enumeration value="CZ"/>
+										<xs:enumeration value="DK"/>
+										<xs:enumeration value="DJ"/>
+										<xs:enumeration value="DM"/>
+										<xs:enumeration value="DO"/>
+										<xs:enumeration value="TP"/>
+										<xs:enumeration value="EC"/>
+										<xs:enumeration value="EG"/>
+										<xs:enumeration value="SV"/>
+										<xs:enumeration value="GQ"/>
+										<xs:enumeration value="ER"/>
+										<xs:enumeration value="EE"/>
+										<xs:enumeration value="ET"/>
+										<xs:enumeration value="FK"/>
+										<xs:enumeration value="FO"/>
+										<xs:enumeration value="FJ"/>
+										<xs:enumeration value="FI"/>
+										<xs:enumeration value="FR"/>
+										<xs:enumeration value="GF"/>
+										<xs:enumeration value="PF"/>
+										<xs:enumeration value="TF"/>
+										<xs:enumeration value="GA"/>
+										<xs:enumeration value="GM"/>
+										<xs:enumeration value="GE"/>
+										<xs:enumeration value="DE"/>
+										<xs:enumeration value="GH"/>
+										<xs:enumeration value="GI"/>
+										<xs:enumeration value="GR"/>
+										<xs:enumeration value="GL"/>
+										<xs:enumeration value="GD"/>
+										<xs:enumeration value="GP"/>
+										<xs:enumeration value="GU"/>
+										<xs:enumeration value="GT"/>
+										<xs:enumeration value="GN"/>
+										<xs:enumeration value="GW"/>
+										<xs:enumeration value="GY"/>
+										<xs:enumeration value="HT"/>
+										<xs:enumeration value="HM"/>
+										<xs:enumeration value="VA"/>
+										<xs:enumeration value="HN"/>
+										<xs:enumeration value="HK"/>
+										<xs:enumeration value="HU"/>
+										<xs:enumeration value="IS"/>
+										<xs:enumeration value="IN"/>
+										<xs:enumeration value="ID"/>
+										<xs:enumeration value="IR"/>
+										<xs:enumeration value="IQ"/>
+										<xs:enumeration value="IE"/>
+										<xs:enumeration value="IL"/>
+										<xs:enumeration value="IT"/>
+										<xs:enumeration value="JM"/>
+										<xs:enumeration value="JP"/>
+										<xs:enumeration value="JO"/>
+										<xs:enumeration value="KZ"/>
+										<xs:enumeration value="KE"/>
+										<xs:enumeration value="KI"/>
+										<xs:enumeration value="KP"/>
+										<xs:enumeration value="KR"/>
+										<xs:enumeration value="KW"/>
+										<xs:enumeration value="KG"/>
+										<xs:enumeration value="LA"/>
+										<xs:enumeration value="LV"/>
+										<xs:enumeration value="LB"/>
+										<xs:enumeration value="LS"/>
+										<xs:enumeration value="LR"/>
+										<xs:enumeration value="LY"/>
+										<xs:enumeration value="LI"/>
+										<xs:enumeration value="LT"/>
+										<xs:enumeration value="LU"/>
+										<xs:enumeration value="MO"/>
+										<xs:enumeration value="MK"/>
+										<xs:enumeration value="MG"/>
+										<xs:enumeration value="MW"/>
+										<xs:enumeration value="MY"/>
+										<xs:enumeration value="MV"/>
+										<xs:enumeration value="ML"/>
+										<xs:enumeration value="MT"/>
+										<xs:enumeration value="MH"/>
+										<xs:enumeration value="MQ"/>
+										<xs:enumeration value="MR"/>
+										<xs:enumeration value="MU"/>
+										<xs:enumeration value="YT"/>
+										<xs:enumeration value="MX"/>
+										<xs:enumeration value="FM"/>
+										<xs:enumeration value="MD"/>
+										<xs:enumeration value="MC"/>
+										<xs:enumeration value="MN"/>
+										<xs:enumeration value="MS"/>
+										<xs:enumeration value="MA"/>
+										<xs:enumeration value="MZ"/>
+										<xs:enumeration value="MM"/>
+										<xs:enumeration value="NA"/>
+										<xs:enumeration value="NR"/>
+										<xs:enumeration value="NP"/>
+										<xs:enumeration value="NL"/>
+										<xs:enumeration value="AN"/>
+										<xs:enumeration value="NC"/>
+										<xs:enumeration value="NZ"/>
+										<xs:enumeration value="NI"/>
+										<xs:enumeration value="NE"/>
+										<xs:enumeration value="NG"/>
+										<xs:enumeration value="NU"/>
+										<xs:enumeration value="NF"/>
+										<xs:enumeration value="MP"/>
+										<xs:enumeration value="NO"/>
+										<xs:enumeration value="OM"/>
+										<xs:enumeration value="PK"/>
+										<xs:enumeration value="PW"/>
+										<xs:enumeration value="PS"/>
+										<xs:enumeration value="PA"/>
+										<xs:enumeration value="PG"/>
+										<xs:enumeration value="PY"/>
+										<xs:enumeration value="PE"/>
+										<xs:enumeration value="PH"/>
+										<xs:enumeration value="PN"/>
+										<xs:enumeration value="PL"/>
+										<xs:enumeration value="PT"/>
+										<xs:enumeration value="PR"/>
+										<xs:enumeration value="QA"/>
+										<xs:enumeration value="RE"/>
+										<xs:enumeration value="RO"/>
+										<xs:enumeration value="RU"/>
+										<xs:enumeration value="RW"/>
+										<xs:enumeration value="SH"/>
+										<xs:enumeration value="KN"/>
+										<xs:enumeration value="LC"/>
+										<xs:enumeration value="PM"/>
+										<xs:enumeration value="VC"/>
+										<xs:enumeration value="WS"/>
+										<xs:enumeration value="SM"/>
+										<xs:enumeration value="ST"/>
+										<xs:enumeration value="SA"/>
+										<xs:enumeration value="SN"/>
+										<xs:enumeration value="SC"/>
+										<xs:enumeration value="SL"/>
+										<xs:enumeration value="SG"/>
+										<xs:enumeration value="SK"/>
+										<xs:enumeration value="SI"/>
+										<xs:enumeration value="SB"/>
+										<xs:enumeration value="SO"/>
+										<xs:enumeration value="ZA"/>
+										<xs:enumeration value="GS"/>
+										<xs:enumeration value="ES"/>
+										<xs:enumeration value="LK"/>
+										<xs:enumeration value="SD"/>
+										<xs:enumeration value="SR"/>
+										<xs:enumeration value="SJ"/>
+										<xs:enumeration value="SZ"/>
+										<xs:enumeration value="SE"/>
+										<xs:enumeration value="CH"/>
+										<xs:enumeration value="SY"/>
+										<xs:enumeration value="TW"/>
+										<xs:enumeration value="TJ"/>
+										<xs:enumeration value="TZ"/>
+										<xs:enumeration value="TH"/>
+										<xs:enumeration value="TG"/>
+										<xs:enumeration value="TK"/>
+										<xs:enumeration value="TO"/>
+										<xs:enumeration value="TT"/>
+										<xs:enumeration value="TN"/>
+										<xs:enumeration value="TR"/>
+										<xs:enumeration value="TM"/>
+										<xs:enumeration value="TC"/>
+										<xs:enumeration value="TV"/>
+										<xs:enumeration value="UG"/>
+										<xs:enumeration value="UA"/>
+										<xs:enumeration value="AE"/>
+										<xs:enumeration value="GB"/>
+										<xs:enumeration value="US"/>
+										<xs:enumeration value="UM"/>
+										<xs:enumeration value="UY"/>
+										<xs:enumeration value="UZ"/>
+										<xs:enumeration value="VU"/>
+										<xs:enumeration value="VE"/>
+										<xs:enumeration value="VN"/>
+										<xs:enumeration value="VG"/>
+										<xs:enumeration value="VI"/>
+										<xs:enumeration value="WF"/>
+										<xs:enumeration value="EH"/>
+										<xs:enumeration value="YE"/>
+										<xs:enumeration value="YU"/>
+										<xs:enumeration value="ZM"/>
+										<xs:enumeration value="ZW"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="gis" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="xcoordinate" type="xs:decimal"/>
+										<xs:element name="ycoordinate" type="xs:decimal"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="housenr" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="1"/>
+										<xs:maxLength value="15"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="street" minOccurs="0">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="string250">
+											<xs:attribute name="cdbid">
+												<xs:annotation>
+													<xs:documentation>Internal CDB ID</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:minLength value="1"/>
+														<xs:maxLength value="60"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="zipcode">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="4"/>
+										<xs:maxLength value="15"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="virtual">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="title"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+			<xs:attribute name="main" type="xs:boolean" use="optional">
+				<xs:annotation>
+					<xs:documentation>Indicator if this is the main item</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="reservation" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation>Indicator if this actor can be used for reservation purposes</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="admission">
+		<xs:annotation>
+			<xs:documentation>Admission (e.g. not allowed under 18)</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="1000"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="admittance">
+		<xs:annotation>
+			<xs:documentation>Open or closed, implying open to all public or not: e.g. movie "children not admitted"</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="catid" type="xs:string" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="agefrom" type="xs:nonNegativeInteger">
+		<xs:annotation>
+			<xs:documentation>Age class</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="availability">
+		<xs:annotation>
+			<xs:documentation>Actor (location) availability information</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="cancelled" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="newlocation" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="location"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="newtime" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="date"/>
+							<xs:element ref="timestart" minOccurs="0"/>
+							<xs:element ref="timeend" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="soldout" type="xs:boolean" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:attribute name="availablefrom" type="xs:dateTime">
+		<xs:annotation>
+			<xs:documentation>Date the information is allowed to be published</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="availableto" type="xs:dateTime">
+		<xs:annotation>
+			<xs:documentation>Date untill, the information is allowed to be published</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:element name="cdbid">
+		<xs:annotation>
+			<xs:documentation>Object ID as defined by CultuurDatabank. (UUID)</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="60"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="city">
+		<xs:annotation>
+			<xs:documentation>id = uppercase join of zip and city without special characters, e.g. 2970_S_GRAVENWEZEL</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="string250">
+					<xs:attribute name="cdbid">
+						<xs:annotation>
+							<xs:documentation>Internal CDB ID</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:minLength value="1"/>
+								<xs:maxLength value="60"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:attribute name="creationdate" type="xs:dateTime">
+		<xs:annotation>
+			<xs:documentation>Date the information was created</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="lastupdated" type="xs:dateTime">
+		<xs:annotation>
+			<xs:documentation>Date the information was last updated</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:element name="calendarsummary">
+		<xs:annotation>
+			<xs:documentation>subscribers only</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string"/>
+		</xs:simpleType>
+	</xs:element>
+	<xs:attribute name="cdbid">
+		<xs:annotation>
+			<xs:documentation>Internal CDB ID</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="60"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:element name="contactinfo">
+		<xs:annotation>
+			<xs:documentation>information, contact info, reservations</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element ref="address" minOccurs="0"/>
+				<xs:element name="mail" minOccurs="0">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="mailaddress">
+								<xs:attribute name="main" type="xs:boolean">
+									<xs:annotation>
+										<xs:documentation>Indicator if this is the main item</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+								<xs:attribute name="reservation" type="xs:boolean">
+									<xs:annotation>
+										<xs:documentation>Indicator if this actor can be used for reservation purposes</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="phone" minOccurs="0">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="main" type="xs:boolean"/>
+								<xs:attribute name="reservation" type="xs:boolean"/>
+								<xs:attribute name="type" default="phone">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="phone"/>
+											<xs:enumeration value="fax"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="url" minOccurs="0">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="url">
+								<xs:attribute name="main" type="xs:boolean">
+									<xs:annotation>
+										<xs:documentation>Indicator if this is the main item</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+								<xs:attribute name="reservation" type="xs:boolean">
+									<xs:annotation>
+										<xs:documentation>Indicator if this actor can be used for reservation purposes</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="date" type="xs:date">
+		<xs:annotation>
+			<xs:documentation>Date</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="datefrom" type="xs:date">
+		<xs:annotation>
+			<xs:documentation>Date from</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="dateto" type="xs:date">
+		<xs:annotation>
+			<xs:documentation>Date to</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="estimatedtime">
+		<xs:annotation>
+			<xs:documentation>Description of the 'time' the event takes.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="250"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="event">
+		<xs:annotation>
+			<xs:documentation>Event information</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="agefrom" minOccurs="0"/>
+				<xs:element name="calendar">
+					<xs:annotation>
+						<xs:documentation>Calendar information defined in a structured way to allow extensive searching.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice>
+							<xs:element name="periods">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="period">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="datefrom"/>
+													<xs:element ref="dateto"/>
+													<xs:element ref="exceptions" minOccurs="0"/>
+													<xs:element ref="weekscheme" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="permanentopeningtimes">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="permanent">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="exceptions" minOccurs="0"/>
+													<xs:element ref="weekscheme" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="timestamps">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="timestamp" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="contactinfo"/>
+				<xs:element name="eventcategories">
+					<xs:annotation>
+						<xs:documentation>Categories for the event: required are type, theme and public scope</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="admittance" minOccurs="0"/>
+							<xs:element ref="facilities" minOccurs="0"/>
+							<xs:element ref="publicscope" minOccurs="0"/>
+							<xs:element ref="targetaudiences" minOccurs="0"/>
+							<xs:element ref="themes"/>
+							<xs:element ref="types"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eventdetails">
+					<xs:annotation>
+						<xs:documentation>Event details, containing the ability for multiple languages.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="eventdetail" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="admission" minOccurs="0"/>
+										<xs:element ref="calendarsummary" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Generated calendar information that is a textual representation of the structured calendar information. Is provided by the publisher (free text)</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element ref="estimatedtime" minOccurs="0"/>
+										<xs:element ref="performers" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Performing parties</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element ref="longdescription" minOccurs="0"/>
+										<xs:element ref="media" minOccurs="0"/>
+										<xs:element name="price" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="pricevalue" type="xs:double"/>
+													<xs:element ref="pricedescription" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element ref="shortdescription"/>
+										<xs:element ref="title">
+											<xs:annotation>
+												<xs:documentation>Title of the element</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="lang" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="nl"/>
+												<xs:enumeration value="en"/>
+												<xs:enumeration value="fr"/>
+												<xs:enumeration value="de"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eventrelations" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Reference to the externalid and/or cdbid of the production or the event. Used to generate "speellijsten" and "grouped events"</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="relatedproduction" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Reference to the externalid and/or cdbid of the production.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="string250">
+											<xs:attribute name="cdbid">
+												<xs:annotation>
+													<xs:documentation>Internal CDB ID</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:minLength value="1"/>
+														<xs:maxLength value="60"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="externalid">
+												<xs:annotation>
+													<xs:documentation>External (publishers) identifier for the information unit sent</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:minLength value="1"/>
+														<xs:maxLength value="250"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="parentevent" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>Reference to the externalid and/or cdbid of the event. Used to define "koepelaanbod".</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="string250">
+											<xs:attribute name="cdbid">
+												<xs:annotation>
+													<xs:documentation>Internal CDB ID</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:minLength value="1"/>
+														<xs:maxLength value="60"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="externalid">
+												<xs:annotation>
+													<xs:documentation>External (publishers) identifier for the information unit sent</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:minLength value="1"/>
+														<xs:maxLength value="250"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="keywords" minOccurs="0"/>
+				<xs:element ref="languages" minOccurs="0"/>
+				<xs:element ref="location"/>
+				<xs:element name="organiser">
+					<xs:annotation>
+						<xs:documentation>The event organisor</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice>
+							<xs:element ref="actor"/>
+							<xs:element ref="label"/>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="properties" minOccurs="0"/>
+				<xs:element name="reservations" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Reservator party related to the publisher. </xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice>
+							<xs:element ref="actor"/>
+							<xs:element ref="label"/>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="availablefrom" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>Date the information is allowed to be published</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="availableto" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>Date untill, the information is allowed to be published</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="cdbid">
+				<xs:annotation>
+					<xs:documentation>Internal CDB ID</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="60"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="externalid">
+				<xs:annotation>
+					<xs:documentation>External (publishers) identifier for the information unit sent</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="250"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="private" type="xs:boolean" default="0">
+				<xs:annotation>
+					<xs:documentation>Only publishable by the owner and his trusted parties</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="exceptions">
+		<xs:annotation>
+			<xs:documentation>Exception definition</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element ref="timestamp"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="performers">
+		<xs:annotation>
+			<xs:documentation>Executing/performing parties</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="performer" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Performing actor</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="role" minOccurs="0"/>
+							<xs:choice>
+								<xs:element ref="actor"/>
+								<xs:element ref="label"/>
+							</xs:choice>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:attribute name="externalid">
+		<xs:annotation>
+			<xs:documentation>External (publishers) identifier for the information unit sent</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="250"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:element name="facilities">
+		<xs:annotation>
+			<xs:documentation>Facilities of a location, e.g. bus parking, audioguide etc.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="facility" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="catid" type="xs:string" use="required"/>
+								<xs:attribute name="description" type="string250"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="item">
+		<xs:annotation>
+			<xs:documentation>Categorisation tree item</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="item" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="catid" type="xs:string"/>
+			<xs:attribute name="label" type="string60"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="keywords">
+		<xs:annotation>
+			<xs:documentation>Keywords used for searching. Keywords are language independant and will contain a combination of keywords for multiple languages.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="1000"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="title">
+		<xs:annotation>
+			<xs:documentation>Label (content) of the element</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="250"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="languages">
+		<xs:annotation>
+			<xs:documentation>Languages supported/provided</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="language" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="language">
+		<xs:annotation>
+			<xs:documentation>Languages used for the event</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="type">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="dubbed"/>
+								<xs:enumeration value="spoken"/>
+								<xs:enumeration value="subtitles"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="link">
+		<xs:annotation>
+			<xs:documentation>Link information</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="keywords" minOccurs="0"/>
+				<xs:element ref="languages" minOccurs="0"/>
+				<xs:element name="linkcategories">
+					<xs:annotation>
+						<xs:documentation>Categories for a link: both type and theme are required.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="themes"/>
+							<xs:element ref="types"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="linkdetails">
+					<xs:annotation>
+						<xs:documentation>Link details, containing the ability for multiple languages.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="linkdetail" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="shortdescription"/>
+										<xs:element ref="title"/>
+									</xs:sequence>
+									<xs:attribute name="lang" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="nl"/>
+												<xs:enumeration value="en"/>
+												<xs:enumeration value="fr"/>
+												<xs:enumeration value="de"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="properties" minOccurs="0"/>
+				<xs:element ref="url"/>
+			</xs:sequence>
+			<xs:attribute name="availablefrom" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>Date the information is allowed to be published</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="availableto" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>Date untill, the information is allowed to be published</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="cdbid">
+				<xs:annotation>
+					<xs:documentation>Internal CDB ID</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="60"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="externalid">
+				<xs:annotation>
+					<xs:documentation>External (publishers) identifier for the information unit sent</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="250"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="private" type="xs:boolean" default="0">
+				<xs:annotation>
+					<xs:documentation>Only publishable by the owner and his trusted parties</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="location">
+		<xs:annotation>
+			<xs:documentation>Location the event takes place</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="address"/>
+				<xs:choice>
+					<xs:element ref="actor"/>
+					<xs:element ref="label"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="longdescription" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>Long description of the information element</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:attribute name="main" type="xs:boolean">
+		<xs:annotation>
+			<xs:documentation>Indicator if this is the main item</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:element name="media">
+		<xs:annotation>
+			<xs:documentation>Container for the provided media information</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="file" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="copyright">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="2"/>
+										<xs:maxLength value="250"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="filename">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="2"/>
+										<xs:maxLength value="250"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="filetype">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="jpeg"/>
+										<xs:enumeration value="gif"/>
+										<xs:enumeration value="png"/>
+										<xs:enumeration value="mp3"/>
+										<xs:enumeration value="qt"/>
+										<xs:enumeration value="mov"/>
+										<xs:enumeration value="wmv"/>
+										<xs:enumeration value="wav"/>
+										<xs:enumeration value="rm"/>
+										<xs:enumeration value="avi"/>
+										<xs:enumeration value="mpg"/>
+										<xs:enumeration value="swf"/>
+										<xs:enumeration value="pdf"/>
+										<xs:enumeration value="rtf"/>
+										<xs:enumeration value="doc"/>
+										<xs:enumeration value="xls"/>
+										<xs:enumeration value="txt"/>
+										<xs:enumeration value="htm(l)"/>
+										<xs:enumeration value="zip"/>
+										<xs:enumeration value="onbepaald"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="hlink">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="3"/>
+										<xs:maxLength value="400"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="mediatype" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="poster"/>
+										<xs:enumeration value="other"/>
+										<xs:enumeration value="audio"/>
+										<xs:enumeration value="brochure"/>
+										<xs:enumeration value="photo"/>
+										<xs:enumeration value="logo"/>
+										<xs:enumeration value="video"/>
+										<xs:enumeration value="roadmap"/>
+										<xs:enumeration value="text"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element ref="title" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attribute name="cdbid">
+							<xs:annotation>
+								<xs:documentation>Internal CDB ID</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="1"/>
+									<xs:maxLength value="60"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="private" type="xs:boolean" default="0">
+							<xs:annotation>
+								<xs:documentation>Only publishable by the owner and his trusted parties</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="main" type="xs:boolean">
+							<xs:annotation>
+								<xs:documentation>Indicator if this is the main item</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="openingtime">
+		<xs:annotation>
+			<xs:documentation>Opening time</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="from" type="xs:time"/>
+			<xs:attribute name="to" type="xs:time"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="openingtimes">
+		<xs:annotation>
+			<xs:documentation>Opening times of the event or organisation</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="timeend" minOccurs="0"/>
+				<xs:element ref="timestart" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="opentype">
+		<xs:annotation>
+			<xs:documentation>Types of availability of the event/production</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="open"/>
+				<xs:enumeration value="closed"/>
+				<xs:enumeration value="byappointment"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="label">
+		<xs:annotation>
+			<xs:documentation>Reference to existing actor, require cdbid and label.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="string250">
+					<xs:attribute name="cdbid">
+						<xs:annotation>
+							<xs:documentation>Internal CDB ID</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:minLength value="1"/>
+								<xs:maxLength value="60"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="externalid">
+						<xs:annotation>
+							<xs:documentation>Internal CDB ID</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:minLength value="1"/>
+								<xs:maxLength value="250"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="pricedescription">
+		<xs:annotation>
+			<xs:documentation>Description (free text) containing pricing information</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="1000"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:attribute name="private" type="xs:boolean" default="0">
+		<xs:annotation>
+			<xs:documentation>Only publishable by the owner and his trusted parties</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:element name="production">
+		<xs:annotation>
+			<xs:documentation>Production information</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="agefrom" minOccurs="0"/>
+				<xs:element ref="keywords" minOccurs="0"/>
+				<xs:element ref="languages" minOccurs="0"/>
+				<xs:element name="productioncategories">
+					<xs:annotation>
+						<xs:documentation>Categories for the event: required are type, theme and public scope</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="admittance" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>open or closed, implying open to all public or not: e.g. movie "children not admitted"</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element ref="publicscope" minOccurs="0"/>
+							<xs:element ref="targetaudiences" minOccurs="0"/>
+							<xs:element ref="themes"/>
+							<xs:element ref="types"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="productiondetails">
+					<xs:annotation>
+						<xs:documentation>Production details, containing the ability for multiple languates.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element name="productiondetail">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="estimatedtime" minOccurs="0"/>
+										<xs:element ref="performers" minOccurs="0"/>
+										<xs:element ref="longdescription" minOccurs="0"/>
+										<xs:element ref="media" minOccurs="0"/>
+										<xs:element ref="shortdescription"/>
+										<xs:element ref="title"/>
+									</xs:sequence>
+									<xs:attribute name="lang" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="nl"/>
+												<xs:enumeration value="en"/>
+												<xs:enumeration value="fr"/>
+												<xs:enumeration value="de"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="properties" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="availablefrom" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>Date the information is allowed to be published</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="availableto" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>Date untill, the information is allowed to be published</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="cdbid">
+				<xs:annotation>
+					<xs:documentation>Internal CDB ID</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="60"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="externalid">
+				<xs:annotation>
+					<xs:documentation>External (publishers) identifier for the information unit sent</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="250"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="private" type="xs:boolean" default="0">
+				<xs:annotation>
+					<xs:documentation>Only publishable by the owner and his trusted parties</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="properties">
+		<xs:annotation>
+			<xs:documentation>Name-value pairs to be added freely by the partners</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="property" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:choice>
+							<xs:element ref="value"/>
+							<xs:any namespace="##other" processContents="lax" maxOccurs="unbounded"/>
+						</xs:choice>
+						<xs:attribute name="type" use="required">
+							<xs:annotation>
+								<xs:documentation>Type of property information</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="partner"/>
+									<xs:enumeration value="operator"/>
+									<xs:enumeration value="validator"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="name" use="required">
+							<xs:annotation>
+								<xs:documentation>Name of the information provided</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="1"/>
+									<xs:maxLength value="60"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="publicscope">
+		<xs:annotation>
+			<xs:documentation>The target public (regional, local, national, international)</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="catid" type="xs:string" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:attribute name="reservation" type="xs:boolean">
+		<xs:annotation>
+			<xs:documentation>Indicator if this actor can be used for reservation purposes</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:element name="role">
+		<xs:annotation>
+			<xs:documentation>Free text description of the rol the actor executes</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="1000"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="shortdescription">
+		<xs:annotation>
+			<xs:documentation>Short description of the information element</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+				<xs:maxLength value="600"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="targetaudiences">
+		<xs:annotation>
+			<xs:documentation>Which group is targeted by the event or organisation, e.g. children, elderly</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="targetaudience" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="catid" type="xs:string" use="required"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="themes">
+		<xs:annotation>
+			<xs:documentation>The theme of the event, actor, production, link</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="theme" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="catid" type="xs:string" use="required"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="timeend" type="xs:time">
+		<xs:annotation>
+			<xs:documentation>End time of the event/exception</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="timestamp">
+		<xs:annotation>
+			<xs:documentation>Combination date, timestart and timeend</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="availability" minOccurs="0"/>
+				<xs:element ref="date"/>
+				<xs:element ref="timestart" minOccurs="0"/>
+				<xs:element ref="timeend" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="opentype">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="open"/>
+						<xs:enumeration value="closed"/>
+						<xs:enumeration value="byappointment"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="timestart" type="xs:time">
+		<xs:annotation>
+			<xs:documentation>Start time of the event/exception</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="types">
+		<xs:annotation>
+			<xs:documentation>The type of event, link, production, actor</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="type" maxOccurs="10">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="catid" type="xs:string" use="required"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="url" type="url">
+		<xs:annotation>
+			<xs:documentation>URL</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="value">
+		<xs:annotation>
+			<xs:documentation>Value of the information provided (used in name-value pairs)</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:minLength value="1"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="weekscheme">
+		<xs:annotation>
+			<xs:documentation>Weekly schedule: opening times of the location, organisation (actor)</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="monday">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element ref="openingtime" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attribute name="opentype" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="open"/>
+									<xs:enumeration value="closed"/>
+									<xs:enumeration value="byappointment"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="tuesday">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element ref="openingtime" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attribute name="opentype" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="open"/>
+									<xs:enumeration value="closed"/>
+									<xs:enumeration value="byappointment"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="wednesday">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element ref="openingtime" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attribute name="opentype" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="open"/>
+									<xs:enumeration value="closed"/>
+									<xs:enumeration value="byappointment"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="thursday">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element ref="openingtime" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attribute name="opentype" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="open"/>
+									<xs:enumeration value="closed"/>
+									<xs:enumeration value="byappointment"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="friday">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element ref="openingtime" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attribute name="opentype" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="open"/>
+									<xs:enumeration value="closed"/>
+									<xs:enumeration value="byappointment"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="saturday">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element ref="openingtime" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attribute name="opentype" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="open"/>
+									<xs:enumeration value="closed"/>
+									<xs:enumeration value="byappointment"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="sunday">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element ref="openingtime" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attribute name="opentype" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="open"/>
+									<xs:enumeration value="closed"/>
+									<xs:enumeration value="byappointment"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="string60" final="restriction">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="mailaddress">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="250"/>
+			<xs:pattern value="[A-Za-z0-9!#-'\*\+\-/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-'\*\+\-/=\?\^_`\{-~]+)*@[A-Za-z0-9!#-'\*\+\-/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-'\*\+\-/=\?\^_`\{-~]+)*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="url">
+		<xs:restriction base="xs:anyURI">
+			<xs:maxLength value="400"/>
+			<xs:pattern value="https://.*"/>
+			<xs:pattern value="http://.*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="string250">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="250"/>
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

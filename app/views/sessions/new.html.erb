@@ -1,0 +1,17 @@
+<% form_tag session_path, :id => "signin-form" do -%>
+    <h3><%= t('label.sign_in_with_openid')  %> </h3>
+    <% if flash[:signin_error] %>
+      <p id="signin-error"><%= flash[:signin_error] %></p>
+    <%   flash[:signin_error] = nil
+
+       end %>
+    
+    <p><%= text_field_tag 'openid_url' %></p>
+    <p id="getyourown"><a href="http://openid.net/"><%=t("label.get_your_own_openid")%></a></p>
+    <p id="submitsignin"><a href="#" onclick="$('#signin-form').submit();"><%= t('label.sign_in')%> </a></p>
+
+<% end -%><!-- signin-form -->
+
+<div id="signin-info" class="markdown">                               
+  <%= markdown @text %>
+</div><!-- signin-info -->

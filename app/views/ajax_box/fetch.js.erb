@@ -1,0 +1,7 @@
+<% last = @dls.last %>
+$("#<%= @pid %>").after("<%= escape_javascript(render(:partial => "box_detail", :collection => @dls, :locals => {:last => last, :pid => @pid })) %>");
+toggleArrow("#<%= @pid %>");
+$("#<%= @pid %>").bind("click", function(){
+	 	$(".tr-p-<%= @pid %>").toggle(); 
+		toggleArrow("#<%= @pid %>") 
+});

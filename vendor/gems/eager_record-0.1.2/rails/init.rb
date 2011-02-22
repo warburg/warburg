@@ -1,0 +1,1 @@
+EagerRecord::EagerPreloading.install

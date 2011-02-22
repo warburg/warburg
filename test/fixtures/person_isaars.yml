@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  key_name: MyString
+  alias_of_person_id: 1
+  country_id: 1
+  description: MyString
+
+two:
+  key_name: MyString
+  alias_of_person_id: 1
+  country_id: 1
+  description: MyString

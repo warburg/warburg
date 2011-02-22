@@ -1,0 +1,61 @@
+<ul id="sidebar">
+ 		<li id="incomplete" <%= "style='display:none'" unless incomplete? %>>
+        <p><em><%=t('label.incomplete')%></em></p>
+    </li>
+
+    <% if show_tags? %>
+        <li class="node">
+            <h3>Tags</h3>
+            <div class="content">
+                <%= render(:partial => "/shared/tags", :object => @object) %>
+            </div><!-- content -->
+        </li><!-- node -->
+    <% end %>
+
+    <% if show_postits? %>
+		<li class="node">
+          <h3><%=t('title.user.postits') %></h3>
+          <div class="content">
+              <ul class="postits" id='postits'>
+                <%= render :partial => 'postits/postit', :collection => postits(@object) %>
+              </ul><!-- postits -->
+            <% user_area do %>
+              <p class="add add-a-postit"><a href="#" onclick="$('.add-a-postit').toggle(); return false;"><%=t('postits.add')%>&hellip;</a></p>
+              <%- form_tag(add_postits_path(@object.class, @object.id), :id => "addpostit", :class => "add-a-postit addpostit", :style => "display:none") do -%>
+              <h4><%= t('postits.add') %></h4>
+              <p>
+                  <%= text_area_tag("postit") %>
+                  <a href="#" class="button" onclick="$('#addpostit').submit(); return false;"><span><%=t('button.save')%></span></a>
+                  <a class="cancel" href="#" onclick="$('#addpostit')[0].reset();$('.add-a-postit').toggle(); return false;"><%=t('button.cancel')%></a>
+              </p>
+              <%- end -%>
+            <% end %>
+          </div><!-- content -->
+      </li><!-- node -->
+    <% end %>
+
+  <% if show_error_reports? %>
+      <li class="node">
+        <h3><%=t('title.error_reports') %></h3>
+        <div class="content">
+            <ul id="error-reports" class='postits'>
+              <%= render :partial => 'error_reports/error_report', :collection => error_reports(@object) %>
+            </ul><!-- postits -->
+          <% user_area do %>
+            <p class="add add-an-error-report"><a href="#" onclick="$('.add-an-error-report').toggle(); return false;"><%=t('error_reports.add')%>&hellip;</a></p>
+            <%- form_tag(add_error_reports_path(@object.class, @object.id), :id => "add-error-report", :class => "add-an-error-report addpostit", :style => "display:none") do -%>
+            <h4><%= t('error_reports.add') %></h4>
+            <p>
+                <%= text_area_tag("error_report") %>
+                <a href="#" class="button" onclick="$('#add-error-report').submit(); return false;"><span><%=t('button.save')%></span></a>
+                <a class="cancel" href="#" onclick="$('#add-error-report')[0].reset();$('.add-an-error-report').toggle(); return false;"><%=t('button.cancel')%></a>
+            </p>
+            <%- end -%>
+          <% end %>
+        </div><!-- content -->
+    </li><!-- node -->
+  <% end %>
+
+
+
+</ul><!-- sidebar -->

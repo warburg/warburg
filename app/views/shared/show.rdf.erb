@@ -1,0 +1,46 @@
+
+<% 
+	 namespace = object.class.name.underscore
+%>
+
+<rdf:Description rdf:about="<%= full_url_for(object) %>">
+	<% object.attributes.each do |key, value| %>
+		<% unless value.nil? %>
+			<%= "<#{namespace}:#{key.underscore}>" %><%= value %><%= "</#{namespace}:#{key.underscore}>" %>
+		<% end %>
+	<% end %>
+
+	<% object.class.reflect_on_all_associations.each do |assoc| %>
+		<% arr = object.send(assoc.name) %>
+		<% unless arr.nil? %>
+			<% if arr.class.name == 'Array' %>
+				<% arr.each do |target| %>
+					<%= "<#{namespace}:#{assoc.name.to_s.underscore} rdf:resource='#{full_url_for target}' />" %>
+				<% end %>
+			<% else %>
+				<%= "<#{namespace}:#{assoc.name.to_s.underscore} rdf:resource='#{full_url_for arr}' />" %>
+			<% end %>
+		<% end %>
+	<% end %>
+	
+
+<%#	<dc:title><%= @person.first_name % > <%= @person.last_name % ></dc:title>
+	<%= publisher_tag % >
+	<foaf:firstName><%= @person.first_name % ></foaf:firstName>
+	<foaf:surname><%= @person.last_name % ></foaf:surname>
+	<vti:language><%= @person.language % ></vti:language>
+	%>
+	
+<%#  t.string   "last_name"
+  t.string   "first_name"
+  t.integer  "language_id"
+  t.integer  "publicid"
+  t.datetime "created_at"
+  t.datetime "updated_at"
+  t.integer  "gender_id"
+  t.integer  "version"
+  t.integer  "lock_version", :default => 0
+  t.string   "permalink"
+ %>
+                                                      
+</rdf:Description>

@@ -1,0 +1,80 @@
+--- !ruby/object:Gem::Specification 
+name: eager_record
+version: !ruby/object:Gem::Version 
+  prerelease: false
+  segments: 
+  - 0
+  - 1
+  - 2
+  version: 0.1.2
+platform: ruby
+authors: 
+- Mat Brown
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2010-06-21 00:00:00 +02:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: rspec
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        segments: 
+        - 0
+        version: "0"
+  type: :development
+  version_requirements: *id001
+description: EagerRecord extends ActiveRecord to automate association preloading. Each time a collection of more than one record is loaded from the database, each record remembers the collection that it is part of; then when one of those records has an association accessed, EagerRecord triggers a preload_associations for all the records in the originating collection. Never worry about that :include option again!
+email: mat@patch.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- rails/init.rb
+- lib/eager_record/version.rb
+- lib/eager_record/unmarshallable.rb
+- lib/eager_record/scoped_preloading.rb
+- lib/eager_record/eager_preloading.rb
+- lib/eager_record.rb
+- README.rdoc
+- History.txt
+has_rdoc: true
+homepage: http://github.com/outoftime/eager_record
+licenses: []
+
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: eager_record
+rubygems_version: 1.3.6
+signing_key: 
+specification_version: 3
+summary: Automatic association preloading for ActiveRecord collections.
+test_files: []
+

@@ -1,0 +1,8 @@
+<% detail = box_detail[:value] %>
+
+<tr class="details tr-p-<%= pid %> <%- if (box_detail == last) -%>last<%- end -%>">
+    <td valign="top">&nbsp;</td>
+    <td valign="top" class="label"><%= t "label.#{box_detail[:title]}" %></td>
+    <td valign="top" class="value" colspan="2"><span><%= detail %></span>
+    </td>
+</tr>

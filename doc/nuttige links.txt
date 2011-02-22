@@ -1,0 +1,9 @@
+Nuttige links:
+
+allesovercultuurdatabank.be : documentatie over de xml structuur van de xml databank
+
+http://www4.wiwiss.fu-berlin.de/bizer/d2r-server/ : d2r rdf server
+triplify.org 
+mulgara.org : triple store
+neo4j.org : triple store
+

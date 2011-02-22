@@ -1,0 +1,54 @@
+<%= render :partial => '/main_klass/sidebar' %>
+
+<ul id="node-grid" class='edit'>
+  <% html_options = @object.respond_to?("save_attached_files") ? { :multipart => true } : {} %>
+  <% form_for @object, :html => html_options do |f| %>
+    <li class='node detailnode'>
+      <h3><%=t 'title.details' %></h3>
+      <div class='content'>
+        <ul>
+            <%= details_rows(@object, f, :edit) %>
+        </ul>
+        <p>
+          <a href="#" class="button" onclick="$('<%= edit_form_id(@object) %>').submit(); return false;">
+            <span><%= t('button.save') %></span>
+          </a>
+        </p>
+      </div>
+    </li>
+<% end %>
+
+
+<li class='node'>
+<% unless @object.id.nil? %>
+
+    <% relations_in_sequence(@object).each do |relation| %>
+    	<%= render :partial => 'main_klass/edit_relation', :locals => {:relation => relation} %>
+    <% end %>
+
+<%#
+	<% @object.class.shown_relations.each do |relation| % >
+	    <!-- shown relation -->
+		<%= render :partial => 'main_klass/edit_relation', :locals => {:relation => relation} % >
+	<% end % >
+	
+  <% has_one_relations_in_selector(@object).each do |relation| % >
+      <!-- has_one_relations_in_selector -->
+    <%= render :partial => 'main_klass/edit_relation', :locals => {:relation => relation} % >
+  <% end % >
+%>
+
+	<% if @object.class.hidden_relations.present? %>
+		<a href='#' class='hidden' onclick="$('.hidden').toggle();return false;">More relations...</a>
+		<div class='hidden' style='display:none'>
+		<% @object.class.hidden_relations.each do |relation| %>
+		    <!-- hidden_relation -->
+			<%= render :partial => 'main_klass/edit_relation', :locals => {:relation => relation} %>
+		<% end %>
+	<% end %>
+	</div>
+  
+<% end %>
+  
+</li>
+</ul>

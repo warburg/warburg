@@ -1,0 +1,3 @@
+module NestedOrganisationRelationsHelper
+  include OrganisationBoxConfiguration
+end

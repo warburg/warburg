@@ -1,0 +1,10 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+belgium:
+  iso_code: BE
+  name_en: Belgium
+  name_nl: Belgi‘
+  name_fr: Belgique
+  updated_at: <%=Time.parse('2009-04-24 09:59:38 UTC') %>
+  created_at: <%=Time.parse('2009-04-24 09:59:38 UTC') %>
+  id: 762200240

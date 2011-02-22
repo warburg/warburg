@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  cdb_physical_address_id: 1
+  xcoordinate: MyString
+  ycoordinate: MyString
+
+two:
+  cdb_physical_address_id: 1
+  xcoordinate: MyString
+  ycoordinate: MyString

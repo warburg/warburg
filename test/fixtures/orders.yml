@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  organisation_id: 1
+  date: 2008-11-25
+  type: MyString
+  sent: false
+  order_number: MyString
+
+two:
+  organisation_id: 1
+  date: 2008-11-25
+  type: MyString
+  sent: false
+  order_number: MyString

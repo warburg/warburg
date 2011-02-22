@@ -1,0 +1,5 @@
+
+How to start Thinking Sphinx
+============================
+rake ts:conf RAILS_ENV=production
+rake ts:start RAILS_ENV=production

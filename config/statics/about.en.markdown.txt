@@ -1,0 +1,26 @@
+
+__Performing Arts database__
+
+
+This database contains data on professional stage productions which involved producers in Flanders or Brussels. 
+It is actively maintained by [VTi](http://www.vti.be), a research and documentation centre for contemporary performing arts.
+
+What productions were put on by professional artists? 
+Which artists and organisations deserve the credits for these? 
+What documents remain about these productions?
+
+
+Each production is represented as a record in the database containing the following information: production (title, date of première, season), touring dates, cast, producers and co-producers and genre.
+For every organisation, producer or co-producer, there is additional information about festivals, government grants, venues & working spaces, etc.
+Every person is also represented as a record with information about e.g. training, and also pointing to their productions.
+Moreover, our specialized library and archival collections are presented and linked to the many records about people, organisations and productions: photo and video, press cuttings, books and periodicals, archival documents and ephemera.
+
+
+In the context of our research, we double-checked data from twelve seasons, i.e. 1993-1994 until 2004-2005. 
+More data, partially unverified, is available upon [login](/login).
+
+
+Halfway through 2007 VTi presented the field study "Metamorfose in podiumland", of which an excerpt has now appeared in English as "Metamorphoses. Performing Arts in Flanders Since 1993." 
+This research report contains a great deal of statistical analysis about the production of the performing arts in Flanders and Brussels during the
+period 1993-2005 – the time when the Performing Arts Decree was in effect within the Flemish Community. In this study we mapped out the artists and organisations who were involved in the production of the performing arts. The basis for this research was [this database](/), available online in a three languages and as [linked data](http://linkeddata.org).
+

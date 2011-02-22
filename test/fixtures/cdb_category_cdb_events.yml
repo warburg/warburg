@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  cdb_category_id: 1
+  cdb_event_id: 1
+
+two:
+  cdb_category_id: 1
+  cdb_event_id: 1

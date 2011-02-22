@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdbxml xmlns="http://www.cultuurdatabank.com/XMLSchema/CdbXSD/3.0/FINAL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cultuurdatabank.com/XMLSchema/CdbXSD/3.0/FINAL http://www.cultuurdatabank.com/XMLSchema/CdbXSD/3.0/FINAL/CdbXSD.xsd">
+	<events>
+		<event>
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2006-05-02</date>
+						<timestart>11:30:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-02</date>
+						<timestart>14:30:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-02</date>
+						<timestart>17:00:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-02</date>
+						<timestart>19:30:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-02</date>
+						<timestart>22:00:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-03</date>
+						<timestart>11:30:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-03</date>
+						<timestart>14:30:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-03</date>
+						<timestart>17:00:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-03</date>
+						<timestart>19:30:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-03</date>
+						<timestart>22:00:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-04</date>
+						<timestart>11:30:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-04</date>
+						<timestart>14:30:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-04</date>
+						<timestart>17:00:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-04</date>
+						<timestart>19:30:00</timestart>
+					</timestamp>
+					<timestamp>
+						<date>2006-05-04</date>
+						<timestart>22:00:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<phone>0900/10440</phone>
+				<url>http://www.ugc.be</url>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.0.0.0.0"/>
+				<themes>
+					<theme catid="1.7.0.0.0"/>
+				</themes>
+				<types>
+					<type catid="0.2.0.0.0"/>
+					<type catid="0.50.6.0.0"/>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<estimatedtime>136 min.</estimatedtime>
+					<performers>
+						<performer>
+							<role>Regisseur</role>
+							<label>Ang Lee</label>
+						</performer>
+					</performers>
+					<shortdescription>Film over de liefde tussen twee cowboys van de Taiwanese regisseur Ang Lee (Crouching Tiger Hidden Dragon). Brokeback Mountain viel wereldwijd in de prijzen maar mag in China niet vertoond worden.</shortdescription>
+					<title>Brokeback mountain</title>
+				</eventdetail>
+			</eventdetails>
+			<location>
+				<address>
+					<physical>
+						<city>Antwerpen 18</city>
+						<country>BE</country>
+						<street>De Keyserlei</street>
+						<zipcode>2018</zipcode>
+					</physical>
+				</address>
+				<label>UGC Cinema's Antwerpen</label>
+			</location>
+			<organiser>
+				<label>UGC Cinema's Antwerpen</label>
+			</organiser>
+		</event>
+		<event>
+			<calendar>
+				<timestamps>
+					<timestamp>
+						<date>2006-05-27</date>
+						<timestart>20:00:00</timestart>
+					</timestamp>
+				</timestamps>
+			</calendar>
+			<contactinfo>
+				<mail>info@cactusmusic.be</mail>
+				<phone>+32 50 33 20 14</phone>
+				<url>http://www.cactusmusic.be/supervielle.asp</url>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.0.0.0.0"/>
+				<themes>
+					<theme catid="1.9.0.0.0"/>
+					<theme catid="1.8.0.0.0"/>
+					<theme catid="1.8.3.3.0"/>
+					<theme catid="1.8.4.0.0"/>
+				</themes>
+				<types>
+					<type catid="0.44.0.0.0"/>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<performers>
+						<performer>
+							<role>Muziekgroep</role>
+							<label>Bajofondo Tango Club</label>
+						</performer>
+					</performers>
+					<longdescription>Vanuit zowat elke muzikale hoek wordt hét Argentijnse geluid belaagd door elektronische en andere experimenten. Bajofondo Tango Club, Gotan Project, en, meer recent, Supervielle, een spin-off van het grote Bajofondo. Wat Luciano Supervielle, pianist en jongste lid van de Tango Club op zijn opmerkelijke debuut laat horen is een unieke mix van traditie en verrassing, een trip naar de tango underground die je laat zwalpen op het manische ritme van de bandonéon, en de ademhaling van candombe, murga, milonga in de clinch met elektronica, rock, hiphop, dub en drum 'n' bass. Kom verdwalen in Supervielles supersonisch landschap, opgetrokken uit beeld en geluid, verdriet, woede en liefde.
+
+Concert ihkv Airbag Bis
+Co-productie Cactus vzw Muziekcentrum ? Cultuurcentrum Brugge</longdescription>
+					<price>
+						<pricevalue>12.00</pricevalue>
+						<pricedescription>12 euro in vvk, 15 euro add</pricedescription>
+					</price>
+					<shortdescription>Vanuit zowat elke muzikale hoek wordt hét Argentijnse geluid belaagd door elektronische en andere experimenten. Bajofondo Tango Club, Gotan Project, en, meer recent, Supervielle, een spin-off van het grote Bajofondo. Een trip naar de tango underground die je laat zwalpen op het manische ritme van de bandonéon, en de ademhaling van candombe, murga en milonga.</shortdescription>
+					<title>Bajofondo Tango Club presents Supervielle</title>
+				</eventdetail>
+			</eventdetails>
+			<location>
+				<address>
+					<physical>
+						<city>Brugge</city>
+						<country>BE</country>
+						<housenr>27</housenr>
+						<street>Magdalenastraat</street>
+						<zipcode>8000</zipcode>
+					</physical>
+				</address>
+				<label>MaZ</label>
+			</location>
+			<organiser>
+				<label cdbid="1AZ-SDFSGFTH6543424EAQSDFGSDH-ZSD">Cactus Muziekcentrum</label>
+			</organiser>
+		</event>
+		<event>
+			<calendar>
+				<periods>
+					<period>
+						<datefrom>2006-01-28</datefrom>
+						<dateto>2007-03-26</dateto>
+						<weekscheme>
+							<monday opentype="closed"/>
+							<tuesday opentype="open">
+								<openingtime from="10:00:00" to="12:00:00"/>
+								<openingtime from="14:00:00" to="18:00:00"/>
+							</tuesday>
+							<wednesday opentype="byappointment">
+								<openingtime from="10:00:00" to="18:00:00"/>
+							</wednesday>
+							<thursday opentype="open">
+								<openingtime from="10:00:00" to="18:00:00"/>
+							</thursday>
+							<friday opentype="open">
+								<openingtime from="10:00:00" to="18:00:00"/>
+							</friday>
+							<saturday opentype="open">
+								<openingtime from="10:00:00" to="18:00:00"/>
+							</saturday>
+							<sunday opentype="open">
+								<openingtime from="10:00:00" to="18:00:00"/>
+							</sunday>
+						</weekscheme>
+					</period>
+				</periods>
+			</calendar>
+			<contactinfo>
+				<phone>+32(0)9 2211703</phone>
+				<url>http://www.smak.be</url>
+			</contactinfo>
+			<eventcategories>
+				<publicscope catid="6.0.0.0.0"/>
+				<themes>
+					<theme catid="1.1.0.0.0"/>
+				</themes>
+				<types>
+					<type catid="0.0.0.0.0"/>
+				</types>
+			</eventcategories>
+			<eventdetails>
+				<eventdetail lang="nl">
+					<calendarsummary>Van 28/1/2006 tem 26/3/2007
+Ma Gesloten
+Di-Zo: van 10:00 tot 18:00</calendarsummary>
+					<shortdescription>Stefaan Dheedene laat zich leiden door ontmoetingen, toevalsbeelden en -objecten die hij verwerkt tot documentaires, ruimtelijke reconstructies en copies. De videodocumenten richten zich vooral op productieve werkzaamheden en effecten waarbij hij speelt met de conventies van het documentairegenre.</shortdescription>
+					<title>Stefaan Dheedene</title>
+				</eventdetail>
+			</eventdetails>
+			<location>
+				<address>
+					<physical>
+						<city>Gent</city>
+						<country>BE</country>
+						<street>Citadelpark</street>
+						<zipcode>9000</zipcode>
+					</physical>
+				</address>
+				<label>SMAK</label>
+			</location>
+			<organiser>
+				<label>SMAK</label>
+			</organiser>
+		</event>
+	</events>
+</cdbxml>

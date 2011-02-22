@@ -1,0 +1,19 @@
+
+__Welcome!__
+
+By logging in, you'll be able to do more:
+
+* access more data, some of it not yet fully vetted by our quality checks: e.g. very new information or data for the current season, but also production data for the the years 1950-1993 ;
+* browse the full archive of CultuurDatabank since January 2006 ;
+* leave simple, private comments and 'post-its' as a memento when using our resources ;
+* add some tags where you judge it relevant ; these tags will be publicly visible.
+
+
+No need to create a new account or password. Through OpenID you can reuse one of your existing accounts, e.g. from Myspace or Flickr. Or you enroll at one of the free openID services. You'll find more help here: [openid.net](http://openid.net).
+
+
+By logging into our website, you immediately accept the [conditions of use](/legal). In two words: You grant us the right to copy and/or publish all your tags or comments as you create these in our systems. Swearing and shouting will not be tolerated. Everyone is answerable for their own actions. We can send you emails from time to time.
+
+
+[Call us](/about) if you have more questions or if you don't agree. 
+

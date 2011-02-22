@@ -1,0 +1,29 @@
+one:
+  ico_type_id: 1
+  title: One
+  description_nl: MyString
+  date: 2008-11-24
+  season: MyString
+  part_of_ico_title_id: 1
+  copyright: MyString
+  donation_id: 1
+  archive_part_id: 1
+  number_of_objects: 1
+  library_location: MyString
+  available: false
+  permalink: one
+
+two:
+  ico_type_id: 1
+  title: Two
+  description_nl: MyString
+  date: 2008-11-24
+  season: MyString
+  part_of_ico_title_id: 1
+  copyright: MyString
+  donation_id: 1
+  archive_part_id: 1
+  number_of_objects: 1
+  library_location: MyString
+  available: false
+  permalink: two

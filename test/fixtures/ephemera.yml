@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  ephemerum_type_id: 1
+  title: One
+  source_id: 1
+  donation_id: 1
+  warehouse_id: 1
+  date: 2008-11-20
+  season: MyString
+  library_location: MyString
+  available: false
+  permalink: one
+
+two:
+  ephemerum_type_id: 1
+  title: Two
+  source_id: 1
+  donation_id: 1
+  warehouse_id: 1
+  date: 2008-11-20
+  season: MyString
+  library_location: MyString
+  available: false
+  permalink: two

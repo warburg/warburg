@@ -1,0 +1,20 @@
+<li class="postit postit-<%=postit.id%>">
+    <ul class="actions ">
+      <li class="edit"><a href="#" onclick="$('#edit-postit-<%=postit.id%>')[0].reset();$('.postit-<%=postit.id%>').toggle(); return false;"><%= t("postits.edit") %></a></li>
+      <li class="remove"><%= link_to(t('postits.remove'), delete_postits_path(postit, @object.class, @object.id), :method => 'delete', :confirm => t('label.are_you_sure')) %></li>
+    </ul>
+
+    <h4 title="<%=postit.user.email%>"><%= postit.user.to_s %>: </h4>
+    <blockquote>
+        <p>&ldquo;<%=h postit.text %>&rdquo;</p>
+    </blockquote>
+
+</li><!-- postit -->
+
+<% form_tag(edit_postits_path(postit.id, @object.class, @object.id), :id => "edit-postit-#{postit.id}",  :class => "addpostit postit-#{postit.id}", :style => "display:none") do %>
+  <p>
+    <%= text_area_tag :postit, postit.text %>
+    <a href="#" class="button" onclick="$('#edit-postit-<%=postit.id%>').submit(); return false;"><span><%=t('button.save')%></span></a>
+    <a class="cancel" href="#" onclick="$('#edit-postit-<%=postit.id%>')[0].reset();$('.postit-<%=postit.id%>').toggle(); return false;"><%=t('button.cancel')%></a>
+  </p>
+<% end %>

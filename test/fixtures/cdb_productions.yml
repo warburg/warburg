@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  long_description_nl: MyText
+  long_description_fr: MyText
+  short_description_nl: MyString
+  short_description_fr: MyString
+  language_id: 1
+  cdb_organisation_id: 1
+
+two:
+  title: MyString
+  long_description_nl: MyText
+  long_description_fr: MyText
+  short_description_nl: MyString
+  short_description_fr: MyString
+  language_id: 1
+  cdb_organisation_id: 1

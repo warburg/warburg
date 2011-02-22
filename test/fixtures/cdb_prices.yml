@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  pricevalue: 1.5
+  pricedescription: MyString
+
+two:
+  pricevalue: 1.5
+  pricedescription: MyString

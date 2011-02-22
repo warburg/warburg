@@ -1,0 +1,11 @@
+man:
+  code: M
+  name_nl: Man
+  name_fr: Homme
+  name_en: Man
+  
+vrouw:
+  code: F
+  name_nl: Vrouw
+  name_fr: Femme
+  name_en: Woman

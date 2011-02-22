@@ -1,0 +1,17 @@
+<dt><%=t "label.#{field.to_s}" %></dt>
+<dd>
+  <% assoc = f.object.class.reflect_on_association(field.to_s[0..-4].to_sym) %>
+  <input type="text" id="<%= assoc.name.to_s %>" size="30" value="<%=  f.object.send(assoc.name).title if f.object.send(assoc.name) %>"/>
+  <%= f.hidden_field field, :id => field.to_s %>
+  <script lang="javascript">
+    <% path = "lookup_#{assoc.class_name.tableize}_path" %>
+    var url = '<%= eval(path) %>';
+    $("#<%= assoc.name.to_s %>").autocomplete(url,{
+                                            formatItem: function(item) {
+                                              return item[0];
+                                            }
+                                          }).result(function(event, item) {
+                                              $("#<%=  field.to_s %>").val(item[1])
+                                          });
+  </script>
+</dd>

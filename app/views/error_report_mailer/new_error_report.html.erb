@@ -1,0 +1,15 @@
+Hallo,
+
+
+Er is een nieuwe foutmelding binnengekomen voor <%= @application_name %>.
+
+<% if defined? @url -%>
+Object: <%= @url %>
+<% end -%>
+
+Foutmelding:
+<%= @error_report.message %>
+
+
+Groetjes,
+De foutmeldingsmailerrobot.

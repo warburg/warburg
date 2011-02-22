@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  cdb_event_id: 1
+  cdbid: MyString
+  externalid: MyString
+
+two:
+  cdb_event_id: 1
+  cdbid: MyString
+  externalid: MyString

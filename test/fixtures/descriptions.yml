@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  description_nl: MyString
+  description_fr: MyString
+  description_en: MyString
+  creator_id: 1
+  updater_id: 1
+  cached_slug: MyString
+
+two:
+  description_nl: MyString
+  description_fr: MyString
+  description_en: MyString
+  creator_id: 1
+  updater_id: 1
+  cached_slug: MyString

@@ -1,0 +1,484 @@
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  custom:
+    name: VTI
+    home: VTI
+  
+  title:
+    cdb_event_details: Event details
+    grants: Grants
+    show: Show
+    object: Object
+    sessions: Sessions
+    book_title_by_people: Authors
+    role: Role
+    user: User
+    tags: Tags
+    error_reports: Error reports
+    press_cutting: Press cutting
+    organisation_relation_type: Type of relation
+    details: Details
+    periodical_issues: Issues
+    cdb_event_detail: Event details
+    cdb_actors: Actors
+    subject: Subject
+    actor: Actor
+    label: Label
+    festival: Festival
+    audio_video_medium: A/V Medium
+    cdb_cities: Cities
+    cdb_events: Events
+    grant: Grant
+    festivals: Festivals
+    text: Text
+    shows: Shows
+    documents: Documents
+    venue: Venue
+    vhss: VHS
+    tag: Tag
+    cdb_organisations: Organisations
+    press_cuttings: Press cuttings
+    results: Results
+    cdb_location: Location
+    dvds: DVD
+    audio_video_media: A/V Media
+    periodical_issue: Issue
+    cdb_event: Event
+    users: Users
+    cdb_addresses: Addresses
+    venues: Venues
+    cdb_locations: Locations
+    archive_part_about_people: People
+    cdb_physical_addresses: Physical address
+    archive_parts: Archival records
+    articles: Articles
+    audio_video_titles: A/V
+    book_copies: Book copies
+    book_titles: Book titles
+    title: Title
+    help: Help
+    about: About
+    legal: Rights
+    date: Date
+    subject_of_documents: Documents on
+    author_of_documents: Author of documents
+    donations: Donations
+    ephemera: Ephemera
+    function: Function
+    ico_titles: Iconography
+    login: Log in
+    logout: Log out
+    most_popular: Zeitgeist
+    name: Name
+    organisations: Organisations
+    people: People
+    productions: Productions
+    recently_added: Added recently
+    recently_updated: Updated recently
+    recently_viewed: Viewed recently
+    periodicals: Periodicals
+    season_name: Season
+    seasons: Seasons
+    type: Type
+    warehouses: Storage boxes
+    archive_part:
+      new: Add an archival record
+      archive_part_about_organisations: Organisations
+      archive_part_about_productions: Productions
+      subject_relations: About
+      archive_part_about_people: People
+    article:
+      author_relations: Authors
+      new: Add an article
+      subject_relations: About
+      article_about_productions: Productions
+      article_about_people: People
+      article_about_organisations: Organisations
+      article_by_organisations: Corporate authors
+      article_by_people: Authors
+    audio_video_title:
+      author_relations: Authors
+      new: Add A/V materials
+      subject_relations: About
+      audio_video_title_about_productions: Productions
+      audio_video_title_about_people: People
+      audio_video_title_about_organisations: Organisations
+      audio_video_title_by_people: Authors
+      audio_video_title_on_media: Media
+      audio_video_title_by_organisations: Corporate Authors
+    book_copy:
+      new: Add a copy of a book
+    book_title:
+      author_relations: Authors
+      new: Add a book (new title)
+      subject_relations: About
+      book_title_orders: Book orders
+      book_copies: Book copies
+      book_title_about_productions: Productions
+      book_title_by_organisations: Corporate authors
+      book_title_by_people: Authors
+      book_title_about_people: People
+      book_title_about_organisations: Organisations
+    donation:
+      donors: Donors
+      new: Add a donation
+      contains_documents: Relevant Documents
+      archive_parts: Relevant Archives
+    ephemerum:
+      author_relations: Authors
+      new: Add a piece of ephemera
+      subject_relations: About
+      ephemerum_about_people: People
+      ephemerum_about_productions: Productions
+      ephemerum_by_people: Authors
+      ephemerum_about_organisations: Organisations
+      ephemerum_by_organisations: Corporate authors
+    ico_title:
+      author_relations: Authors
+      new: Add some iconography
+      subject_relations: About
+      ico_title_about_organisations: Organisations
+      ico_title_about_productions: Productions
+      ico_title_by_organisations: Corporate authors
+      ico_title_about_people: People
+      ico_title_by_people: Authors
+    organisation:
+      subject_of_documents: Documentation
+      author_of_documents: Author of documents
+      new: Add an organisation
+      production_by_organisations: Productions
+      organisation_venues: Venues
+      organisation_relations: Relations
+      grants: Grants
+      audio_video_title_about_organisations: A/V
+      article_about_organisations: Articles
+      ico_title_about_organisations: Images
+      creation_date: Date created
+      article_by_organisations: Author of
+      archive_part_about_organisations: Archives
+      book_title_by_organisations: Books
+      press_cutting_about_organisations: Press cuttings
+      ico_title_by_organisations: Author of
+      end_activities_date: Date ended
+      ephemerum_about_organisations: Ephemera
+      ephemerum_by_organisations: Author of
+      audio_video_title_by_organisations: Author of
+      press_cutting_by_organisations: Author of
+      organisation_relations_to: Related with
+      book_title_about_organisations: Books
+    periodical:
+      new: Add a periodical
+      contains_documents: Referenced articles
+      press_cuttings: Available press cuttings
+    person:
+      author_of_documents: Author of documents
+      subject_of_documents: Documentation
+      new: Add a person
+      production_by_people: Productions
+      audio_video_title_about_people: A/V
+      article_about_people: Articles
+      ephemerum_about_people: Ephemera
+      press_cutting_by_people: Author of press cuttings
+      audio_video_title_by_people: Author of A/V
+      ephemerum_by_people: Author of Ephemera
+      press_cutting_about_people: Press cuttings
+      article_by_people: Author of articles
+      ico_title_about_people: Images
+      ico_title_by_people: Author of images
+      book_title_by_people: Author of books
+      book_title_about_people: Books
+      archive_part_about_people: Archives
+    production:
+      subject_of_documents: Documentation
+      new: Add a production
+      production_by_organisations: (Co-)Producers
+      production_by_people: Credits
+      shows: Shows
+      audio_video_title_about_productions: A/V
+      article_about_productions: Articles
+      ico_title_about_productions: Images
+      ephemerum_about_productions: Ephemera
+      book_title_about_productions: Books
+      press_cutting_about_productions: Press cuttings
+      archive_part_about_productions: Archives
+      rerun_of: Rerun of
+      production_about_genres: Genres
+    season:
+      documents: Documentation
+      new: Add a season
+      productions: Productions
+    warehouse:
+      new: Add a storage box
+      contains_documents: Contains documents
+      archive_parts: Contains Archives
+
+
+  label:
+    categories: categories
+    periodical_issue: issue
+    grant_state: grant status
+    long_description_nl: description in dutch
+    creation_year: year of creation
+    volume: volume
+    cdb_event: event
+    email: email
+    label: label
+    address_manager: at the same address
+    size: size
+    production: production
+    price_description: price
+    number_by_country: number of performances by country
+    creator: creator
+    key_name: name key
+    isbn: ISBN
+    venue: venue
+    period: period
+    female_roles: number of female roles
+    incomplete: incomplete
+    donation_date: date of donation
+    quality: quality
+    postal_code: postal code
+    more_details: more details
+    external_id: external identification
+    default_start_hour: default schedule
+    cdb_location: location
+    copy_id: identification of the item
+    time: time
+    no_title: no title
+    creation_date_text: creation date (description)
+    issue_id: identification of the item
+    ex_dono: ex dono
+    dating: approximation of dates
+    created_at: created at
+    source: source
+    short_description_nl: short description in dutch
+    festivals: festivals
+    contactinfo: contact details
+    publicid: VTi identifier (deprecated)
+    admin: admin
+    languages: languages
+    stop_text: stop (description)
+    long_description_fr: description in french
+    copy_of: copy of
+    book_title: book title
+    search_date: date (search index)
+    part_of_ico_title: part of another image record
+    cdb_street: street
+    date_text: date (description)
+    zipcode: postal code
+    audio_video_media: audiovisual media
+    cdb_timestamps: timestamps
+    title_nl: title
+    subscription_expiration_date: subscription expires by
+    visible: visible
+    print_barcode: print barcode
+    periodicity: periodical frequency
+    viewed_at: viewed at
+    housenr: street number
+    version: version
+    sign_in_with_openid: sign in using openid
+    fax: fax
+    audio_video_medium_type: type of audiovisual media
+    part_of_book_title: part of another book record
+    updated_at: updated at
+    temporary_location: temporary location
+    stop: stop
+    sign_in: log in
+    player_position: player position
+    cached_slug: permanent hyperlink
+    id: identification
+    male_roles: number of male roles
+    start: start
+    cdb_organisation: organisation
+    shortdescription: short description
+    function: function
+    cdb_address: address
+    number_count: count
+    views: views
+    short_description_fr: short description in french
+    organisation_relation_type: type of relation
+    function_text: function
+    cdb_city: city
+    street: street
+    start_text: start (description)
+    creation_month: month of creation
+    alumnus_organisations: schools/institutes
+    cdbid: cdbid
+    phone: phone
+    address: address
+    alias_of: alias for another person
+    barcode: barcode
+    cdb_physical_address: address
+    updater: updater
+    number_of_roles: number of roles
+    donor_person: donor
+    donor_organisation: corporate donor
+    get_your_own_openid: get your own openid
+    legal_form: legal form of corporation
+    child_roles: number of children's roles
+    show_type: type of show
+    title_fr: title in french
+    number_of_objects: number of objects
+    inspiration: inspired by
+    cdb_actor: actor
+    calendarsummary: summary schedule
+    grant_system: grant system
+    price: price
+    person: person
+    number: number
+    externalid: external identification
+    subscription_end_date: subscription expires by
+    part_of_issue: part of another periodical
+    identity_url: URI
+    edit_login_page: edit login page
+    code: code
+    holdings: holdings
+    lock_version: locked version
+    date_info: date information
+    iso_code: ISO code
+    target_audience_text: target audience (description)
+    antilope_index: Antilope
+    archive_part: Archival record
+    archive_part_id: Archival record
+    are_you_sure: Are you sure?
+    available: Available
+    birthdate: Born
+    book_title_id: Title
+    borrowable: Lending allowed
+    box_id: Number
+    box_location: Location
+    box_type: Type
+    cancellation_date: Date of ceasure
+    child_roles:
+    city: City
+    class: Class
+    classification_code: VTi Classification
+    collation: Collation
+    content: Contents
+    copyright: Copyright
+    country: Country
+    creation_date: Date of creation
+    date: Date
+    death_date: Death
+    description: Description
+    description_en: Description ENG
+    description_fr: Description FRE
+    description_nl: Description DUT
+    donation: Donation
+    donation_id: Donation
+    duration_minutes: Length (min.)
+    ean: EAN
+    end_activities_date: Date of last activities
+    end_year: End (year)
+    ephemerum_type: Type
+    female_roles: 
+    first_name: First name
+    gender: Gender
+    genres: Genres
+    ico_type: Type
+    inspiration_number: Background
+    inspiration_sources: Background
+    issn: ISSN
+    language: Language
+    last_name: Name
+    library_location: Shelf
+    login: Log in
+    name: Name
+    note: Note
+    male_roles: 
+    no_title: 
+    number_of_objects: 
+    number_of_roles: 
+    organisation: Organisation
+    part_of: Part of
+    part_of_book_title_id: Part of book
+    part_of_ico_title_id: Part of iconographic material
+    periodical: Periodical
+    periodical_id: Periodical
+    pick_a_letter: Pick a letter
+    publication_year: Year of publication
+    reference: Reference
+    rerun_of: Rerun
+    rerun_of_id: Rerun
+    role: Role
+    save: Save
+    season: Season
+    season_id: Season
+    source_id: Organisation
+    start_activities_date: Date of first activities
+    start_year: Start (year)
+    subscription_periodicity: Periodicity
+    subscription_running: Current subscription
+    subscription_type: Subscription type 
+    subscription_note: Note
+    target_audience: Target audience
+    target_audience_from: Minimum intended age (years)
+    target_audience_text_nl: Audience DUT
+    target_audience_text_fr: Audience FRE
+    target_audience_text_en: Audience ENG
+    target_audience_to: Maximum intended age (years)
+    title: Title
+    title_extra: Extra title information
+    type: Type
+    url: Hyperlink
+    verified: Verified by the producers
+    vti_info: Try out the beta test of the new database of VTi - Platform for the performing arts. Documentation & research centre for theatre, dance and music-theatre in a culturally diverse and international Flanders.
+    warehouse: Storage location
+    warehouse_id: Storage
+    yesno:
+      'true': 'Yes'
+      'false': 'No'
+  message:
+    ean_not_valid: The code entered seems to be invalid according to EAN rules. We are validating for the new ISBN-13 full code.
+    need_email: Sorry, we need your email address and were unable to receive it from your openID server.
+    top: This site is still beta - <a href="mailto:ticket+10to1.18110-wujtknu6@lighthouseapp.com?subject=Feedback%20VTi%20Knowledge%20Database">Give us your feedback please</a>
+    errors_occurred: One or more errors occurred trying to save. Consider your work not saved.
+    no_search_results: No hits. You could try typing more or fewer letters, we'll check alternative spelling.
+    object_saved: Saved OK
+    
+  button:
+    save: Save
+    cancel: Cancel
+    search: Search
+  class:
+    BookTitle: BOOK
+    article: ART
+    organisation: ORGAN
+    person: PERSON
+    production: PRO
+    AudioVideoTitle: A/V
+    Article: ART
+    Ephemerum: DOCU
+    IcoTitle: ICO
+    PressCutting: KNI
+    ArchivePart: ARX
+    Organisation: ORGAN
+    Periodical: MAG
+    Donation: DON
+    PeriodicalIssue: ISSUE
+    BookCopy: BOOK
+  postits:
+    add: Add a post-it to this resource
+    edit: Edit this post-it
+    remove: Delete this post-it
+  search:
+    search: Search
+    people: Search for people
+    productions: Search for productions
+    organisations: Search for organisations
+    seasons: Search for Seasons
+    search_for: Search for
+  tags:
+    add: Tag this resource
+    remove: Remove this tag
+  static:
+    about: About VTi
+    help: Help
+    legal: Disclaimer & Conditions of use
+    login: Log in
+  support:
+    array:
+      sentence_connector: ','
+  values:
+    more_details: more

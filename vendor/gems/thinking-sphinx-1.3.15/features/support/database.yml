@@ -1,0 +1,5 @@
+username: thinking_sphinx
+host: localhost
+password: thinking_sphinx
+pool: 1
+min_messages: warning

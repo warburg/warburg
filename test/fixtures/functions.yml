@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+organisation_function:
+  name_nl: Organisator
+  type: OrganisationFunction
+
+person_function:
+  name_nl: Acteur
+  type: PersonFunction

@@ -1,0 +1,5 @@
+--- Freetds KATJA settings ---
+
+freetds.conf 	in ~/.freetds.conf
+odbc.ini 			in /etc
+odbcinst.ini 	in /etc

@@ -1,0 +1,81 @@
+--- !ruby/object:Gem::Specification 
+name: dbd-odbc
+version: !ruby/object:Gem::Version 
+  version: 0.2.4
+platform: ruby
+authors: 
+- Erik Hollensbe
+- Christopher Maujean
+autorequire: 
+bindir: bin
+cert_chain: 
+date: 2008-09-27 00:00:00 +02:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: dbi
+  type: :runtime
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: 0.4.0
+    version: 
+description: ODBC DBI DBD
+email: ruby-dbi-users@rubyforge.org
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- README
+- LICENSE
+- ChangeLog
+files: 
+- test/dbd/general/test_database.rb
+- test/dbd/general/test_statement.rb
+- test/dbd/general/test_types.rb
+- test/dbd/odbc/base.rb
+- test/dbd/odbc/down.sql
+- test/dbd/odbc/test_statement.rb
+- test/dbd/odbc/test_transactions.rb
+- test/dbd/odbc/up.sql
+- test/dbd/odbc/test_ping.rb
+- lib/dbd/ODBC.rb
+- lib/dbd/odbc/database.rb
+- lib/dbd/odbc/driver.rb
+- lib/dbd/odbc/statement.rb
+- test/DBD_TESTS
+- README
+- LICENSE
+- ChangeLog
+- test/ts_dbd.rb
+has_rdoc: true
+homepage: http://www.rubyforge.org/projects/ruby-dbi
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: 1.8.0
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+requirements: []
+
+rubyforge_project: ruby-dbi
+rubygems_version: 1.3.1
+signing_key: 
+specification_version: 1
+summary: ODBC DBI DBD
+test_files: 
+- test/ts_dbd.rb

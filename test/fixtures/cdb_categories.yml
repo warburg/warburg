@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  catid: MyString
+  description: MyString
+
+two:
+  catid: MyString
+  description: MyString

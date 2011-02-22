@@ -1,0 +1,58 @@
+opbouw barcodes
+= cijferreeks tussen twee asterisken
+geprint in Free 3 of 9
+http://www.squaregear.net/fonts/free3of9.shtml
+
+
+
+
+- boeken: gebruik exemplaarID
+prefix = 2
+totale lengte = 9
+
+- tijdschriften: gebruik exemplaarID
+prefix = 4
+totale lengte = 9
+
+- magazijnboxen: gebruik boxID
+prefix = 5
+totale lengte = 9
+
+
+NEW:
+prefix = 7 voor IcoID
+prefix = 8 voor EphemeraID
+
+
+
+Public Function BarcodeX(Prefix As String, Getal As Long)
+    Dim xs As String
+    xs = Right(String(8, "0") & Trim(Str(Getal)), 8)
+    BarcodeX = "*" & Prefix & xs & "*"
+End Function
+
+
+
+
+SPECIALE GEVALLEN
+
+- gebruikerskaarten worden afgeschaft, barcodes dus ook
+
+
+- ISBN-nummers op boeken worden als cijferreeks in de databank opgeslagen, uitprinten als barcode hoeft niet
+- alle oude ISBN-nummers zijn omgerekend tot de nieuwe EAN, ik denk niet dat EAN afprinten gratis kan/mag. Zou wel nuttig kunnen zijn op bestelbons bijv.
+https://portal5.boekhuis.nl/isbn13/final/ISBN13voorDummies.pdf
+
+
+
+- te digitaliseren VHS-tape
+prefix = 6
+totale lengte = 11
+barcode wordt filename van gedigitaliseerde video
+
+
+Public Function BarcodeY(Prefix As String, Getal As Long)
+    Dim xs As String
+    xs = Right(String(10, "0") & Trim(Str(Getal)), 10)
+    BarcodeY = "*" & Prefix & xs & "*"
+End Function

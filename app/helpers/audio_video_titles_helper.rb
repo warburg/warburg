@@ -1,0 +1,3 @@
+module AudioVideoTitlesHelper
+  include AudioVideoTitleBoxConfiguration
+end

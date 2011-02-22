@@ -1,0 +1,3 @@
+module AudioVideoMediaHelper
+  include AudioVideoMediumBoxConfiguration
+end

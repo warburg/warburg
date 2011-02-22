@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  cdb_contactinfo_id: 1
+  main: false
+  reservation: false
+  url: MyString
+
+two:
+  cdb_contactinfo_id: 1
+  main: false
+  reservation: false
+  url: MyString

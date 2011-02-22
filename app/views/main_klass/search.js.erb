@@ -1,0 +1,48 @@
+$("#search_results_<%= @relationship_type %>").html('<h4><%=t 'title.results' %> &ldquo;<%= @query_params.join("&rdquo; &ldquo;") %>&rdquo;</h4>')
+
+<% results = '<ul>'
+
+		results << "<li>#{link_to t("title.#{@model_class.to_s.tableize.singularize}.new"), send("new_#{@model_class.to_s.tableize.singularize}_path"), :target => "_blank"}</li>"
+
+ @objects.each do |object|
+
+		if @relationship_type == "organisation_relations"
+			object_class_reference = "organisation_from"
+			parent_class_reference = "organisation_to"
+			relationship_type_reference = "organisation_relation"
+			rel_controller = "organisation_relations"
+		# elsif @relationship_type == "organisation_to_organisations"
+		# 	object_class_reference = "organisation_to"
+		# 	parent_class_reference = "organisation_from"
+		# 	relationship_type_reference = "organisation_relation"
+		else
+			object_class_reference = object.class.name.underscore
+			parent_class_reference = @parent.class.name.underscore
+			relationship_type_reference = @relationship_type
+			rel_controller = "relationships"
+		end
+
+     url = url_for(	:controller => rel_controller,
+					:relationship_type => @relationship_type,
+					:relationship_type_reference => relationship_type_reference,
+                   	:parent_class => @parent.class.name,
+                   	:parent_id => @parent.id,
+                   	:object_class => object.class.name,
+									 :parent_class_reference => parent_class_reference,
+									 :object_class_reference => object_class_reference,
+                   	:object_id => object.id,
+                   	:authenticity_token => form_authenticity_token)
+
+		 search_title = object.class.name.underscore == "venue" ? "#{object.search_title} (#{object.city})" : object.search_title
+		 detail_link   = link_to search_title, object, :target => "_BLANK"
+		 relation_link = link_to "+", "#", :onclick => "$('##{@parent.class.name.underscore}_#{@relationship_type.to_s}_spinner').css('display', 'inline'); $.post('#{url}', null, null, 'script');return false;", :style => "float: right"
+
+     results << "<li>#{escape_javascript(relation_link)} #{escape_javascript(detail_link)}</li>"
+ end
+
+ results << '</ul>'
+ %>
+
+$("#search_results_<%= @relationship_type %>").append('<%= results %>');
+
+$("#<%= @parent.class.name.underscore %>_<%= @relationship_type.to_s %>_spinner").css('display', 'none');

@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  cdb_actor_id: 1
+  language_id: 1
+  longdescription: MyText
+  shortdescription: MyString
+  title: MyString
+
+two:
+  cdb_actor_id: 1
+  language_id: 1
+  longdescription: MyText
+  shortdescription: MyString
+  title: MyString

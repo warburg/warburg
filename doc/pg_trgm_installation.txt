@@ -1,0 +1,7 @@
+1: pg_config --sharedir
+De output hiervan noemen we SHAREDIR
+
+2: psql -d vti -f SHAREDIR/contrib/pg_trgm.sql
+
+of in één stap:
+	psql -d vti -f `pg_config --sharedir`/contrib/pg_trgm.sql

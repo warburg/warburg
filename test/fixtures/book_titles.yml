@@ -1,0 +1,30 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: One
+  title_extra: MyString
+  publication_year: 1
+  ean: 9781591841999
+  part_of_book_title_id: 1
+  collation: MyString
+  subscription_running: false
+  subscription_type: MyString
+  subscription_expiration_date: 2008-11-19
+  number_count: 1
+  subscription_note: MyString
+  permalink: one
+
+two:
+  title: Two
+  title_extra: MyString
+  publication_year: 1
+  ean: MyString
+  part_of_book_title_id: 1
+  collation: MyString
+  issn: MyString
+  subscription_running: false
+  subscription_type: MyString
+  subscription_expiration_date: 2008-11-19
+  number_count: 1
+  subscription_note: MyString
+  permalink: two
